@@ -1,0 +1,493 @@
+ object
+object
+host 10.20.20.1
+host 10.20.20.5
+10.30.0.0 255.255.0.0
+ object
+
+object
+eq 100
+gt 200
+neq 300
+ ip access
+ permit tcp addrgroup   object_group_name   addrgroup   object_group_name
+ exit
+ip access
+permit tcp addrgroup myAG portgroup myPG any
+deny tcp any any
+exit
+exit
+show ip access
+show ip access
+int vlan 100
+ip access
+ interface
+interface vlan 4018
+mac packet
+end
+show running
+interface gigabitethernet 6
+mac packet
+end
+show running
+interface gigabitethernet 3
+mac packet
+end
+show running
+ mac packet
+ no mac packet
+ mac host   name mac_addr
+ mac access
+mac access
+deny 0000.4700.0001 0.0.0 0000.4700.0009 0.0.0 dec
+permit any any
+ arp access
+arp access
+permit ip host 1.1.1.1 mac any
+ logging ip access
+ interface
+ logging ip access
+ logging ip access
+configure session session_name
+ip access
+configure session test
+ip access
+permit tcp host 10.20.0.1 host 11.20.0.1
+permit tcp host 10.20.0.2 host 11.20.0.2
+permit tcp host 10.20.0.3 host 11.20.0.3
+permit tcp host 10.20.0.4 host 11.20.0.4
+permit tcp host 10.20.0.5 host 11.20.0.5
+exit
+validate
+exit
+show configuration session test status
+clear configuration session test
+configure terminal
+ip access
+permit tcp host 10.20.0.1 host 11.20.0.1
+permit tcp host 10.20.0.2 host 11.20.0.2
+permit tcp host 10.20.0.3 host 11.20.0.3
+permit tcp host 10.20.0.4 host 11.20.0.4
+permit tcp host 10.20.0.5 host 11.20.0.5
+end
+ip access
+permit ip host 1.1.1.1 host 2.2.2.2
+permit ip host 3.3.3.3 host 4.4.4.4
+deny ip any any
+end
+show ip access
+qQFJ1
+qQFJ1
+qQFJ1
+no permit tcp 10.0.0.0
+no 101
+config t
+no hardware access
+config t
+hardware access
+config t
+no hardware access
+hardware access
+configure terminal switch
+ip access
+permit ip 192.168.2.0
+statistics per
+show ip access
+copy running
+configure terminal switch
+ip access
+100 permit ip 192.168.2.0
+no 80
+statistics per
+show ip access
+copy running
+configure terminal switch
+resequence access
+show ip access
+copy running
+configure terminal switch
+no ip access
+show ip access
+copy running
+configure terminal switch
+interface ethernet 2
+interface port
+interface tunnel 13 switch
+interface vlan 11 switch
+interface mgmt 0 switch
+ip access
+show running
+copy running
+configure terminal switch
+interface ethernet 2
+interface port
+ip port access
+show running
+copy running
+configure terminal switch
+object
+host 10.99.32.6
+no host 10.99.32.6
+show object
+copy running
+config t switch
+object
+host 2001
+no host 2001
+show object
+copy running
+configure terminal switch
+object
+eq 80
+no eq 80
+show object
+copy running
+configure terminal switch
+no object
+show object
+copy running
+configure terminal switch
+time
+periodic monday 00
+periodic weekdays 06
+absolute start 1
+absolute end 23
+show time
+copy running
+configure terminal switch
+time
+periodic monday 00
+100 periodic weekdays 05
+absolute start 1
+absolute end 23
+no 80
+show time
+copy running
+configure terminal switch
+no time
+show time
+copy running
+configure terminal switch
+resequence time
+show time
+copy running
+configure terminal
+configure terminal
+interface interface
+no switchport
+ipv6 address ipv6
+ipv6 traffic
+show running
+ipv6 traffic
+ipv6 traffic
+ipv6 traffic
+show access
+show ipv6 access
+ipv6 access
+deny tcp any any gt 5000
+deny
+permit icmp any any
+permit any any
+interface TenGigabitEthernet 1
+no switchport
+ipv6 address 2001
+ipv6 traffic
+show ipv6 access
+vlan configuration 100
+configure terminal
+ipv6 nd ra
+throttle
+allow at
+vlan configuration 100 Example
+ipv6 nd suppress
+ipv6 nd ra
+ipv6 nd raguard policy MyPolicy
+trusted
+device
+device
+interface tenGigabitEthernet 1
+ipv6 nd raguard attach
+vlan configuration 19
+ipv6 nd suppress
+ipv6 snooping
+ipv6 nd raguard attach
+ipv6 neighbor binding vlan 19 2001
+qQFJ1
+access
+access
+access
+access
+configure terminal
+access
+show running
+copy running
+configure terminal
+access
+access
+access
+access
+access
+configure terminal
+ip access
+deny 192.168.0.0 0.0.255.255 255.255.0.0 0.0.255.255
+permit 10.108.0.0 0.0.0.0 255.255.255.0 0.0.0.0
+show running
+copy running
+configure terminal
+ip access
+permit 0 any any
+show running
+copy running
+enable
+configure terminal
+time
+absolute start 00
+periodic weekdays 8
+show running
+copy running
+enable
+configure terminal
+line console 0
+access
+show running
+copy running
+configure terminal
+interface gigabitethernet1
+ip access
+show running
+copy running
+configure terminal
+mac access
+deny any any decnet
+permit any any
+show running
+copy running
+configure terminal
+interface gigabitethernet1
+mac access
+show mac access
+show running
+copy running
+action forward
+action drop
+vlan access
+match ip address ip2
+action forward
+action drop
+vlan filter map 1 vlan
+configure terminal
+vlan access
+match ip address ip2
+action forward
+show running
+copy running
+configure terminal
+vlan filter map 1 vlan
+show running
+copy running
+configure terminal
+vlan access
+action drop log
+exit
+vlan access
+show time
+access
+access
+show access
+ip access
+deny tcp any any time
+exit
+ip access
+permit tcp any any time
+show ip access
+access
+access
+access
+access
+ip access
+remark Do not allow Jones subnet to telnet out
+deny tcp host 171.69.2.88 any eq telnet
+access
+how access
+interface gigabitethernet1
+ip access
+access
+show access
+interface gigabitethernet1
+ip access
+access
+access
+access
+interface gigabitethernet2
+ip access
+access
+access
+access
+interface gigabitethernet2
+ip access
+access
+access
+interface gigabitethernet1
+ip access
+access
+access
+interface gigabitethernet1
+ip access
+ip access
+permit 1.2.3.4
+exit
+ip access
+permit tcp any 171.69.0.0 0.0.255.255 eq telnet
+deny tcp any any
+permit icmp any any
+deny udp any 171.69.0.0 0.0.255.255 lt 1024
+deny ip any any log
+exit
+interface gigabitethernet3
+no switchport
+ip address 2.0.5.1 255.255.255.0
+ip access
+ip access
+ip access
+no permit ip host 10.1.1.3 any
+time
+periodic weekdays 8
+time
+periodic weekend 12
+ip access
+deny tcp any any eq www time
+permit udp any any time
+exit
+interface gigabitethernet2
+ip access
+access
+access
+access
+access
+access
+access
+access
+access
+ip access
+remark Do not allow Jones subnet through
+deny 171.69.0.0 0.0.255.255
+ip access
+remark Do not allow Jones subnet to telnet out
+deny tcp 171.69.0.0 0.0.255.255 any eq telnet
+ip access
+deny 10.1.1.0 0.0.0.255 log
+permit any log
+exit
+interface gigabitethernet1
+ip access
+show logging
+ip access
+permit icmp any 10.1.1.0 0.0.0.255 log
+deny udp any any log
+exit
+interface gigabitethernet1
+ip access
+ip access
+permit tcp any any
+exit
+vlan access
+match ip address ip1
+action drop
+ip access
+permit udp any any
+exit
+vlan access
+match ip address ip2
+action forward
+access
+ip access
+permit igmp any any
+permit tcp any any
+exit
+vlan access
+match ip address 101
+action forward
+exit
+vlan access
+match ip address igmp
+action drop
+exit
+vlan access
+match ip address tcp
+action forward
+mac access
+permit host 000.0c00.0111 any
+permit host 000.0c00.0211 any
+exit
+action forward
+mac access
+permit any any vines
+exit
+vlan access
+match mac address good
+action forward
+exit
+vlan access
+match mac address good
+action forward
+vlan access
+match ip address tcp
+action forward
+exit
+vlan access
+match mac address good
+action forward
+ip access
+permit tcp host 10.1.1.32 host 10.1.1.34 eq www
+exit
+vlan access
+match ip address http
+action drop
+exit
+ip access
+permit ip any any
+exit
+vlan access
+match ip address match_all
+action forward
+vlan filter map2 vlan 1
+ip access
+permit ip 10.1.2.0 0.0.0.255 host 10.1.1.100
+permit ip host 10.1.1.4 host 10.1.1.100
+permit ip host 10.1.1.8 host 10.1.1.100
+exit
+vlan access
+match ip address SERVER1_ACL
+action drop
+vlan access
+action forward
+exit
+vlan filter SERVER1_MAP vlan
+qQFJ1
+qQFJ1
+show vlan access
+configure terminal
+ip access
+deny ip any any option traceroute
+permit ip any any option security
+show ip access
+show ip access
+configure terminal
+ip receive access
+ipv6 receive access
+show access
+execute
+show ip access
+show ipv6 access
+configure
+no hw
+configure terminal
+exit
+show ipv6 access
+configure terminal
+no hw
+exit
+show ipv6 access
+show ipv6 access
+show ipv6 access
+show ipv6 access

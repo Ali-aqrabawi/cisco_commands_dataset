@@ -1,0 +1,764 @@
+aaa new
+no aaa new
+reactivation
+accounting
+reactivation
+exit
+key TACPlusUauthKey
+exit
+key TACPlusUauthKey2
+exit
+timeout 15
+server
+key myexamplekey1
+sasl
+ldap
+server
+tunnel
+tunnel
+authorization
+ldap
+ldap
+ldap
+ldap attribute
+ldap attribute
+ldap
+show running
+clear configuration ldap attribute
+ldap attribute
+username name
+username username attributes
+username admin password passw0rd privilege 15
+username bcham34 nopassword
+username rwilliams password gOgeOus
+username rwilliams attributes
+exit
+reactivation
+accounting
+reactivation
+exit
+key TACPlusUauthKey
+exit
+key TACPlusUauthKey2
+exit
+exit
+key RadUauthKey
+exit
+exit
+exit
+kerberos
+exit
+configure terminalrouter
+configure terminalrouter
+configure terminalrouter
+configure terminalrouter
+configure terminal
+radius server rad1
+aaa group server radius group1
+server 172.16.1.1 acct
+configure terminal
+aaa group server radius group1
+deadtime 1
+configure terminal
+vpdn enable
+configure terminal
+vpdn search
+configure terminal
+vpdn authen
+configure terminal
+vpdn
+request
+protocol l2tp
+exit
+authen
+configure terminal
+aaa new model
+aaa authentication login default local
+aaa authentication ppp default radius
+aaa authorization network default radius
+vpdn aaa attribute nas
+configure terminal
+radius
+tacacs
+aaa group server radius group1
+aaa group server tacacs
+server 10.1.1.1 auth
+server 10.2.2.2
+configure terminal
+radius
+aaa group server radius group1
+server 10.1.1.1 auth
+exit
+vpdn tunnel authorization network default
+vpdn tunnel authorization virtual
+vpdn tunnel authorization password my
+show vpdn tunnel L2TP Tunnel and Session Information Total tunnels 1 sessions 1 LocID RemID Remote Name State Remote Address Port Sessions VPDN Group 4571 61568 csidtw13 est 10.0.195.4 1701 1
+debug radius
+show logging 00
+show debugging General OS
+show debugging General OS
+debug ppp negotiation
+debug ppp authentication
+configure terminal
+ip host example.com 10.3.3.3
+radius
+tacacs
+vpdn authorize directed
+configure terminal
+ip host example.com 10.3.3.3
+radius
+tacacs
+vpdn authorize directed
+configure terminal
+radius
+tacacs
+radius
+tacacs
+configure terminal
+hostname tunnelserver12
+username nas4 password mysecret
+configure terminal
+vpdn
+local name tunnelserver2
+exit
+username nas7 password mysecret
+configure terminal
+vpdn
+l2tp tunnel password mysecret
+local name tunnelserver2
+exit
+username nas64 password mysecret
+configure terminal
+vpdn
+no l2tp tunnel authentication
+configure terminal
+aaa accounting network list1 start
+vpdn tunnel accounting network list1
+vpdn session accounting network list1
+configure terminal
+vpdn
+exit
+configure terminal
+radius
+exit
+configure terminal
+radius
+exit
+configure terminal
+vendor
+debug radius 02
+configure terminal
+vpdn enable
+vpdn
+vpdn
+l2tp rx
+l2tp tx
+end
+configure terminal
+vpdn enable
+vpdn
+vpdn
+l2tp rx
+l2tp tx
+end
+configure terminal
+vpdn enable
+vpdn
+vpdn
+l2tp rx
+l2tp tx
+end
+configure terminal
+vpdn enable
+vpdn
+l2tp security ip address
+exit
+show vpdn dead
+exit
+clear vpdn dead
+exit
+configure terminal
+snmp
+exit
+configure terminal
+vpdn logging dead
+exit
+as the suffix delimiter. If the full username is cisco
+as suffix delimiters
+vrf myvrf
+show vpdn dead
+clear vpdn dead
+show vpdn dead
+clear vpdn dead
+show vpdn dead
+username name
+aaa authorization exec authentication
+username username attributes
+service
+username admin password passw0rd privilege 15
+username bcham34 nopassword
+aaa authorization exec authentication
+username rwilliams password gOgeOus
+username rwilliams attributes
+service
+merge
+reactivation
+accounting
+reactivation
+exit
+key TACPlusUauthKey
+exit
+key TACPlusUauthKey2
+exit
+exit
+key RadUauthKey
+exit
+exit
+exit
+kerberos
+exit
+sasl
+ldap
+server
+tunnel
+tunnel
+authorization
+ldap
+ldap
+ldap
+ldap attribute
+ldap attribute
+ldap
+show running
+clear configuration ldap attribute
+ldap attribute
+ldap
+ldap
+ldap
+ldap
+server
+ldap
+ldap attribute
+username admin password mysecret123 privilege 15
+username admin attributes
+service
+username ra
+service
+ldap attribute
+ldap
+configure terminal 
+exit 
+ show aaa authentication 
+copy running
+configure terminal
+aaa authentication login console group tacgroup
+exit
+show aaa authentication
+copy running
+configure terminal
+aaa authentication login default group tacacs
+aaa authentication login console group tacacs
+configure terminal 
+ aaa authentication login error
+exit 
+show aaa authentication login error
+copy running
+configure terminal
+aaa authentication login error
+exit
+show aaa authentication login error
+show aaa authentication login error
+show running
+show startup
+configure terminal 
+exit 
+ show aaa authentication 
+copy running
+configure terminal
+aaa authentication login console group tacgroup
+exit
+show aaa authentication
+copy running
+configure terminal
+aaa authentication login default group tacacs
+aaa authentication login console group tacacs
+configure terminal 
+ aaa authentication login error
+exit 
+show aaa authentication login error
+copy running
+configure terminal
+aaa authentication login error
+exit
+show aaa authentication login error
+show aaa authentication login error
+show running
+show startup
+username anyuser attributes hostname
+username exampleuser1 privilege 1
+aaa authorization exec authentication
+username exampleuser1
+service
+username admin password passw0rd privilege 15
+username user34 nopassword
+aaa authorization exec authentication
+username user1 password gOgeOus
+username user1 attributes
+service
+reactivation
+reactivation
+exit
+key TACPlusUauthKey
+exit
+key TACPlusUauthKey2
+exit
+exit
+key RadUauthKey
+exit
+exit
+exit
+kerberos
+exit
+sasl
+ldap
+server
+tunnel
+tunnel
+authorization
+tunnel
+tunnel
+authorization
+ldap
+ldap
+ldap
+ldap attribute
+ldap
+ldap attribute
+ldap
+ldap
+ldap
+ldap
+server
+ldap
+ldap attribute
+username admin password mysecret123 privilege 15
+username admin attributes
+service
+username ra
+service
+ldap attribute
+ldap
+configure terminal
+aaa new
+radius
+radius
+debug aaa dead
+show aaa dead
+show aaa server private
+aaa new
+radius
+radius
+debug aaa dead
+show aaa dead
+show redundancy
+admin
+show redundancy
+show user tasks
+show user tasks
+radius
+radius
+radius
+aaa group server radius radgroup1
+server
+server
+server
+server
+vrf v2.44.com
+deadtime 1
+vrf abc
+aaa authentication login default group tacacs
+aaa authorization commands listname1 group tacacs
+aaa accounting commands default stop
+authorization commands listname5
+accounting commands listname7
+line template alpha
+timeout login response 20
+reactivation
+reactivation
+exit
+key TACPlusUauthKey
+exit
+key TACPlusUauthKey2
+exit
+exit
+key RadUauthKey
+exit
+exit
+exit
+kerberos
+exit
+tunnel
+tunnel
+authorization
+tunnel
+tunnel
+authorization
+ldap
+ldap
+ldap
+ldap attribute
+ldap
+ldap attribute
+ldap
+ldap
+ldap
+ldap
+server
+ldap
+ldap attribute
+username exampleuser1 privilege 1
+aaa authorization exec authentication
+username exampleuser1
+service
+username admin password password privilege 15
+username user34 nopassword
+aaa authorization exec authentication
+username user1 password gOgeOus
+username user1 attributes
+service
+password
+password
+password
+password
+password
+password
+password
+password
+change
+username anyuser ssh authentication publickey key
+username admin password mysecret123 privilege 15
+username admin attributes
+service
+username ra
+service
+ldap attribute
+ldap
+attribute indicates which prefixes to advertise in router advertisement messages of the Neighbor Discovery Protocol. When this attribute is used
+configure terminal
+ipv6 dhcp pool pool1
+prefix
+configure terminal
+ipv6 dhcp pool pool1
+prefix
+configure terminal
+aaa authentication login console group radius
+exit
+show aaa authentication
+copy running
+configure terminal
+aaa authentication login default group radius
+exit
+show aaa authentication
+copy running
+configure terminal
+no aaa authentication login console fallback error local
+exit
+show aaa authentication
+copy running
+configure terminal
+aaa user default
+exit
+show aaa user default
+copy running
+configure terminal
+aaa authentication login error
+exit
+show aaa authentication
+copy running
+configure terminal
+no aaa authentication login ascii
+aaa authentication login chap enable
+exit
+show aaa authentication login chap
+copy running
+configure terminal
+no aaa authentication login ascii
+aaa authentication login mschap enable
+exit
+show aaa authentication login mschap
+copy running
+key config
+configure terminal
+feature password encryption aes
+show encryption service stat
+copy running
+encryption re
+encryption decrypt type6
+encryption delete type6
+configure terminal
+aaa accounting default group radius
+exit
+show aaa accounting
+copy running
+configure terminal
+login block
+login quiet
+exit
+show login
+login block
+login quiet
+show login
+show login failures
+show login failures
+configure terminal
+aaa authentication rejected 3 in 20 ban 300
+exit
+show running config
+show aaa local user blocked
+clear aaa local user blocked username testuser
+aaa authentication rejected 5 in 60 ban 300
+show run | i rejected
+show aaa local user blocked
+clear aaa local user blocked username testuser
+configure terminal
+user max
+exit
+userpassphrase
+userpassphrase
+show userpassphrase
+userpassphrase
+show userpassphrase all
+userpassphrase
+username
+username
+show username
+username
+username
+show locked
+configure terminal
+password prompt username
+exit
+show file bootflash
+configure terminal
+generate type7_encrypted_secret
+exit
+show accounting log
+clear aaa accounting log
+config t n1000v
+aaa authentication login console group tacgroup
+exit n1000v
+show aaa authentication  default
+copy running
+config t n1000v
+aaa authentication login error
+exit n1000v
+show aaa authentication login error
+copy running
+show aaa authentication login error
+show running
+show startup
+configure terminal
+ldap server server1
+ipv4 192.0.2.1
+transport port 200
+timeout retransmit 20
+exit
+configure terminal
+aaa new
+ldap server server1
+bind authenticate root
+search
+base
+mode secure no
+secure cipher 3des
+exit
+configure terminal
+aaa new
+aaa group server ldap name1
+server server1
+exit
+configure terminal
+aaa new
+ldap server server1
+authentication bind
+authentication compare
+exit
+configure terminal
+ldap attribute
+map type department supplicant
+exit
+ldap server ldap_dir_1
+ipv4 192.0.2.1
+bind authenticate root
+base
+attribute map map1
+exit
+clear ldap server
+debug ldap
+show ldap server
+show ldap attributes
+configure terminal
+aaa new
+ldap server server1
+ipv6 2001
+transport port 200
+timeout retransmit 20
+exit
+configure terminal
+aaa new
+ldap server server1
+authentication bind
+authentication compare
+exit
+configure terminal
+ldap server server1
+ipv4 192.0.2.1
+transport port 200
+timeout retransmit 20
+exit
+configure terminal
+aaa new
+ldap server server1
+bind authenticate root
+search
+base
+mode secure no
+secure cipher 3des
+exit
+configure terminal
+aaa new
+aaa group server ldap name1
+server server1
+exit
+configure terminal
+aaa new
+ldap server server1
+authentication bind
+authentication compare
+exit
+configure terminal
+ldap attribute
+map type department supplicant
+exit
+ldap server ldap_dir_1
+ipv4 192.0.2.1
+bind authenticate root
+base
+attribute map map1
+exit
+clear ldap server
+debug ldap
+show ldap server
+show ldap attributes
+configure terminal
+aaa new
+ldap server server1
+ipv6 2001
+transport port 200
+timeout retransmit 20
+exit
+configure terminal
+aaa new
+ldap server server1
+authentication bind
+authentication compare
+exit
+configure terminal
+aaa new
+aaa group server radius rad1
+domain
+configure terminal
+aaa new
+aaa group server radius rad1
+domain
+configure terminal
+aaa authentication login console group radius
+exit
+show aaa authentication
+copy running
+configure terminal
+aaa authentication login default group radius
+exit
+show aaa authentication
+copy running
+configure terminal
+no aaa authentication login console fallback error local
+exit
+show aaa authentication
+copy running
+configure terminal
+aaa user default
+exit
+show aaa user default
+copy running
+configure terminal
+aaa authentication login error
+exit
+show aaa authentication
+copy running
+configure terminal
+no aaa authentication login ascii
+aaa authentication login chap enable
+exit
+show aaa authentication login chap
+copy running
+configure terminal
+no aaa authentication login ascii
+aaa authentication login mschap enable
+exit
+show aaa authentication login mschap
+copy running
+configure terminal
+aaa accounting default group radius
+exit
+show aaa accounting
+copy running
+show accounting log
+clear aaa accounting log
+configure terminal
+aaa preauthorization
+group radius
+dnis password dnispass
+configure terminal
+aaa dnis map enable
+aaa dnis map 7777 authentication ppp group sg1
+aaa dnis map 7777 authorization network group sg1
+aaa dnis map 8888 accounting network stop
+exit
+configure terminal
+aaa preauthorization
+group sg2
+clid required
+ctype required
+dnis required
+dnis bypass group1
+configure terminal
+interface serial 1
+isdn guard
+call guard
+aaa accounting resource method
+aaa accounting resource method
+aaa session
+show redundancy
+admin
+show redundancy
+show user tasks
+show user tasks
+radius
+radius
+radius
+aaa group server radius radgroup1
+server
+server
+server
+server
+vrf v2.44.com
+deadtime 1
+vrf abc
+aaa authentication login default group tacacs
+aaa authorization commands listname1 group tacacs
+aaa accounting commands default stop
+authorization commands listname5
+accounting commands listname7
+line template alpha
+timeout login response 20

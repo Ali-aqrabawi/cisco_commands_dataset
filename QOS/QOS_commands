@@ -1,0 +1,2813 @@
+qos map cos 3 to 26
+qos dbl
+qos map cos 5 to 46
+qos map dscp 24 25 26 27 b28 29 30
+qos map dscp 32 33 34 35 36 37 38 39
+qos trust cos
+qos trust dscp
+policy
+class class
+qos trust device cisco
+priority high
+shape percent 33
+bandwidth percent 33
+debug auto qos
+configure terminal
+interface interface
+auto qos voip
+end
+show auto qos interface interface
+interface fastethernet1
+auto qos voip cisco
+interface gigabitethernet1
+auto qos voip trust
+debug auto qos
+configure terminal
+interface gigabitethernet1
+auto qos voip cisco
+debug auto qos
+configure terminal
+cdp enable
+interface fastethernet2
+auto qos voip cisco
+interface fastethernet2
+auto qos voip cisco
+interface fastethernet2
+auto qos voip cisco
+interface gigabit1
+auto qos voip trust
+end
+show auto qos
+show auto qos interface interface
+copy running
+conf terminal
+qos
+end
+show qos
+config terminal
+qos
+end
+show qos
+configure terminal
+interface interface
+qos trust
+qos trust device cisco
+end
+show qos interface interface
+copy running
+qos dbl
+end
+show qos dbl
+qos dbl
+end
+show qos dbl
+qos aggregate
+config terminal
+qos aggregate
+show qos aggregate
+match flow ip
+end
+show class
+configure terminal
+class
+match ip precedence 5
+end
+show class
+configure terminal
+class
+match cos 5
+show class
+configure terminal
+policy
+class ipp5
+set ip precedence 6
+police 2000000000 2000000 conform
+end
+class
+match cos 5
+exit
+policy
+class cs2
+int g5
+service
+sh class
+sh policy
+end
+show policy
+show policy
+interface
+end
+show policy
+configure terminal
+interface fastethernet 5
+service
+show policy
+class
+match flow ip
+end
+show class
+class
+match flow ip
+show class
+class
+match flow ip destination
+show class
+conf t
+class
+match flow ip source
+exit
+policy
+class c1
+police 1000000 9000
+exit
+exit
+interface fa6
+service
+write memory
+show policy
+conf terminal
+class
+match flow ip destination
+exit
+policy
+class c1
+police 1000000 9000
+exit
+exit
+interface fa6
+service
+write memory
+show policy
+conf terminal
+class
+match flow ip source
+exit
+policy
+class c1
+police 1000000 9000
+exit
+exit
+interface fastEthernet 6
+service
+write memory
+show policy
+show class
+show policy
+show policy
+policy
+class class_name
+service
+config terminal
+policy
+class aggregate
+service
+show policy
+show policy
+show policy
+interface
+vlan
+service
+exit
+end
+show policy
+configure terminal
+interface gigabitethernet 6
+vlan
+service
+exit
+vlan
+service
+show policy
+show policy
+interface
+end
+show qos interface
+configure terminal
+interface vlan 5
+no qos
+end
+show qos | begin QoS is disabled
+interface
+end
+show qos
+configure terminal
+interface fastethernet 5
+qos vlan
+end
+show qos | begin QoS is vlan
+interface
+end
+show qos
+configure terminal
+interface gigabitethernet 1
+qos trust cos
+end
+show qos interface gigabitethernet 1
+interface
+end
+show qos interface
+configure terminal
+interface fastethernet 5
+qos cos 5
+end
+show qos interface fastethernet 5
+interface
+end
+show qos interface
+configure terminal
+interface fastethernet 5
+qos dscp 5
+end
+show qos interface fastethernet 6
+end
+show qos maps dscp tx
+configure terminal
+qos map dscp 50 to tx
+end
+show qos maps dscp tx
+interface gigabitethernet
+end
+show qos interface
+configure terminal
+interface gigabitethernet 1
+end
+interface
+end
+show qos interface
+configure terminal
+interface gigabitethernet 1
+shape 1000000
+end
+interface
+end
+show qos interface
+configure terminal
+interface gigabitethernet 1
+priority high
+end
+configure terminal
+qos map cos cos1 ... cos8
+show qos maps cos
+copy running
+configure terminal
+qos map cos 0 to dscp 20
+show qos maps cos dscp
+no qos map cos to dscp
+configure terminal
+qos map dscp policed
+show qos maps dscp policed
+copy running
+configure terminal
+qos map dscp policed 50 51 52 53 54 55 56 57 to dscp 0
+show qos maps dscp policed
+configure terminal
+qos map dscp dscp
+show qos maps dscp to cos
+copy running
+configure terminal
+qos map dscp 0 8 16 24 32 40 48 50 to cos 0
+show qos maps dscp cos
+configure terminal
+access
+access
+class
+match access
+exit
+class
+match access
+exit
+policy
+class class1
+bandwidth 3000
+queue
+exit
+class class2
+bandwidth 2000
+interface gigabitethernet 0
+service output policy1
+exit
+configure terminal
+class
+match access
+policy
+class voice
+priority 50 60
+class bar
+bandwidth 20
+class class
+fair
+interface serial 0
+service
+exit
+configure terminal
+policy
+class c1
+shape average 384000 15440
+end
+interface Serial 0
+service out shape
+configure terminal
+class
+match access
+policy
+class access
+police 8000 1000 1000 conform
+violate
+interface gigabitethernet 0
+service
+exit
+class
+match access
+policy
+class c1
+bandwidth 48
+random
+random
+service
+configure terminal
+class
+match protocol citrix
+end
+policy
+class class1
+bandwidth percent 50
+end
+configure terminal
+interface gigabitethernet 0
+service
+end
+configure terminal
+class
+match access
+match any
+match class
+match cos cos
+match destination
+match discard
+match input
+match ip rtp starting
+match not match
+match
+match protocol protocol
+match qos
+match source
+exit
+configure terminal
+bandwidth
+fair
+police bps
+priority
+queue
+random
+set atm
+set cos
+set
+set precedence
+set mpls
+set qos
+shape
+exit
+configure terminal
+interface serial0
+exit
+show class
+show policy
+show policy
+show policy
+exit
+class
+match access
+exit
+class
+match access
+exit
+policy
+class class1
+bandwidth 3000
+queue
+exit
+class class2
+bandwidth 2000
+exit
+interface e1
+service
+exit
+interface fa1
+service
+exit
+class
+match not protocol ip
+exit
+class
+match protocol ip
+match qos
+match access
+class
+match protocol ip
+match qos
+match access
+class
+match protocol ip
+match qos
+exit
+class
+match destination
+match access
+exit
+policy
+class class4
+policy
+class voice
+priority 50
+policy
+class class
+shape average 10000000
+service
+mls qos map cos
+class
+match ip dscp ef
+policy
+class AutoQoS
+set dscp ef
+police 320000 8000 exceed
+access
+class
+match access
+policy
+class tcp
+set dscp cs4
+access
+class
+match access
+policy
+class default
+set dscp cs3
+interface
+service
+configure terminal
+class
+exit
+class
+exit
+policy
+class cmap
+priority
+exit
+class classmap1
+exit
+exit
+interface gigabitethernet 0
+service
+configure terminal
+class
+match access
+match cos 2 3 4 5
+match dscp af11 af12
+match ip dscp af11 af12
+match qos
+match vlan 210
+configure terminal
+policy
+class test_1000
+bandwidth 50
+exit
+police 100000
+priority percent 50
+queue
+queue
+service
+set cos 7
+configure terminal
+policy
+class class1
+set cos 5
+set dscp af11
+set ip dscp c3
+set precedence 5
+set qos
+show policy
+configure terminal
+interface fortyigabitEthernet1
+service
+show policy map
+configure terminal
+class
+exit
+match access
+exit
+policy
+class ipclass1
+set dscp 45
+police 100000 conform
+exit
+exit
+interface
+service
+show policy
+copy
+configure terminal
+class
+match vlan 100
+exit
+policy
+description vlan 100
+class class_vlan100
+set dscp af23
+police 200000 conform
+exit
+exit
+interface
+service
+show policy
+copy
+configure terminal
+table
+map from 0 to 2
+map from 1 to 4
+map from 24 to 3
+map from 40 to 6
+default 0
+exit
+show table
+configure terminal
+policy
+class  class
+set cos dscp table table01
+configure terminal
+policy
+class class_bandwidth01
+bandwidth 200000
+show policy
+configure terminal
+policy
+class class_police01
+police 8000 conform
+show policy
+configure terminal
+policy
+class class_priority01
+priority level 1
+show policy
+configure terminal
+policy
+class class_queuebuffer01
+bandwidth percent 80
+queue
+show policy
+configure terminal
+policy
+class class_queuelimit01
+bandwidth 500000
+queue
+queue
+queue
+show policy
+configure terminal
+policy
+class class_shaping01
+shape average percent 50
+show policy
+configure terminal
+access
+class
+description match on access
+match access
+configure terminal
+class
+match cos
+match cos 3 4 5
+configure terminal
+class
+match dscp af21 af22 af23
+configure terminal
+class
+match vlan
+match vlan 120
+configure terminal
+class
+description matching precedence 2 packets
+match ip precedence 2
+exit
+class
+description EF traffic
+match ip dscp ef
+configure terminal
+class
+match ip precedence 2
+exit
+class
+match class child
+configure terminal
+class
+match dscp 30
+exit
+class
+match precedence 4
+exit
+class
+exit
+policy
+class c1
+priority level 1
+police rate percent 20 conform
+exit
+exit
+class c2
+bandwidth 20000
+exit
+class class
+bandwidth 20000
+exit
+exit
+policy
+class class
+shape average 1000000
+service
+table
+default copy
+table
+map from 46 to 6
+map from 34 to 5
+default copy
+policy
+class voice
+priority level 1
+police 15000000
+class video
+priority level 2
+police 10000000
+policy
+class class
+shape average 30000000
+queue
+set dscp dscp table dscp2dscp
+service
+class
+match ip precedence 5
+exit
+class
+match ip precedence 6
+exit
+class
+match ip dscp ef
+exit
+class
+match ip dscp af11
+exit
+policy
+class voice
+set qos
+exit
+class video
+set qos
+policy
+class voice
+set qos
+class video
+set qos
+exit
+exit
+class
+match qos
+exit
+class
+match qos
+policy
+class voice
+police 256000 conform
+exit
+exit
+class video
+police 1024000 conform
+exit
+exit
+configure terminal
+class
+description matching precedence 1 packets
+match ip precedence 1
+configure terminal
+class
+description matching precedence 2 packets
+match ip precedence 2
+exit
+policy
+class prec1
+shape average 512000
+exit
+policy
+class prec2
+shape average 512000
+exit
+class class
+shape average 1024000
+configure terminal
+policy
+class dscp
+bandwidth percent 20
+queue
+queue
+queue
+exit
+class dscp
+bandwidth percent 20
+queue
+queue
+queue
+exit
+class dscp
+bandwidth percent 20
+queue
+queue
+queue
+exit
+class dscp
+bandwidth percent 20
+queue
+queue
+queue
+exit
+class dscp
+bandwidth percent 10
+queue
+queue
+queue
+end
+
+configure terminal
+policy
+class class1001
+bandwidth remaining ratio 10
+queue
+queue
+configure terminal
+interface gigabitEthernet2
+service
+configure terminal
+policy
+class class
+police cir 1000000 pir 2000000
+conform
+exceed
+violate
+configure terminal
+class
+match vlan 100
+exit
+policy
+policy
+police 100000 bc conform
+configure terminal
+interface gigabitEthernet1
+ service
+policy
+class class
+police rate 256000 bps burst 1000 bytes
+policy
+class class
+police rate 5000 pps burst 100 packets
+class
+match ip precedence 1
+exit
+policy
+class prec1
+police cir 256000 conform
+exit
+configure terminal
+policy
+class class
+police cir 64000 bc 2000 pir 128000 be 2000
+conform
+exceed
+violate
+exit
+table
+map from 0 to 1
+map from 2 to 3
+default 4
+exit
+policy map policy1
+class class
+set cos dscp table table
+exit
+interface GigabitEthernet1
+service
+exit
+configure terminal
+table
+default copy
+exit
+policy map cos
+class class
+set cos cos table cos2cos
+exit
+interface GigabitEthernet1
+service
+exit
+configure
+class
+match qos
+commit
+configure
+interface HundredGigE 0
+service
+commit
+show qos interface hundredGigE 0
+mls qos trust device cisco
+mls qos map policed
+class
+match ip dscp ef
+class
+match ip dscp cs3 af31
+policy
+class AutoQoS
+set dscp ef
+police 320000 8000 exceed
+class AutoQoS
+set dscp cs3
+ police 32000 8000 exceed
+ service
+ mls qos trust device cisco
+mls qos map policed
+class
+match ip dscp ef
+class
+match ip dscp cs3 af31
+policy
+class AutoQoS
+set dscp ef
+police 320000 8000 exceed
+class AutoQoS
+set dscp cs3
+ police 32000 8000 exceed
+ service
+ mls qos map cos
+mls qos map policed
+mls qos map cos
+class
+match access
+class
+match access
+class
+match access
+class
+match access
+class
+match access
+class
+match access
+policy
+class AUTOQOS_MULTIENHANCED_CONF_CLASS
+set dscp af41
+class AUTOQOS_BULK_DATA_CLASS
+set dscp af11
+class AUTOQOS_TRANSACTION_CLASS
+set dscp af21
+class AUTOQOS_SCAVANGER_CLASS
+set dscp cs1
+class AUTOQOS_SIGNALING_CLASS
+set dscp cs3
+class AUTOQOS_DEFAULT_CLASS
+set dscp default
+service
+mls qos map policed
+mls qos map cos
+class
+match access
+class
+match access
+class
+match access
+class
+match access
+class
+match access
+class
+match access
+policy
+class AUTOQOS_MULTIENHANCED_CONF_CLASS
+set dscp af41
+police 5000000 8000 exceed
+class AUTOQOS_BULK_DATA_CLASS
+set dscp af11
+police 10000000 8000 exceed
+class AUTOQOS_TRANSACTION_CLASS
+set dscp af21
+police 10000000 8000 exceed
+class AUTOQOS_SCAVANGER_CLASS
+set dscp cs1
+police 10000000 8000 exceed
+class AUTOQOS_SIGNALING_CLASS
+set dscp cs3
+police 32000 8000 exceed
+class AUTOQOS_DEFAULT_CLASS
+set dscp default
+police 10000000 8000 exceed
+service
+mls qos map policed
+mls qos map cos
+class
+match ip dscp ef
+class
+match access
+class
+match ip dscp cs3
+policy
+class AUTOQOS_VOIP_DATA_CLASS
+set dscp ef
+police 128000 8000 exceed
+class AUTOQOS_VOIP_SIGNAL_CLASS
+set dscp cs3
+police 32000 8000 exceed
+class AUTOQOS_DEFAULT_CLASS
+set dscp default
+police 10000000 8000 exceed
+service
+mls qos map policed
+mls qos map cos
+class
+match access
+class
+match ip dscp ef
+class
+match access
+class
+match access
+class
+match ip dscp cs3
+class
+match access
+class
+match access
+class
+match access
+policy
+class AUTOQOS_VOIP_DATA_CLASS
+set dscp ef
+police 128000 8000 exceed
+class AUTOQOS_VOIP_SIGNAL_CLASS
+set dscp cs3
+police 32000 8000 exceed
+class AUTOQOS_MULTIENHANCED_CONF_CLASS
+set dscp af41
+police 5000000 8000 exceed
+class AUTOQOS_BULK_DATA_CLASS
+set dscp af11
+police 10000000 8000 exceed
+class AUTOQOS_TRANSACTION_CLASS
+set dscp af21
+police 10000000 8000 exceed
+class AUTOQOS_SCAVANGER_CLASS
+set dscp cs1
+police 10000000 8000 exceed
+class AUTOQOS_SIGNALING_CLASS
+set dscp cs3
+police 32000 8000 exceed
+class AUTOQOS_DEFAULT_CLASS
+set dscp default
+service
+mls qos map dscp
+interface gigabitethernet0
+mls qos trust dscp
+mls qos dscp
+end
+access
+access
+access
+access
+access
+access
+mac access
+permit 0001.0000.0001 0.0.0 0002.0000.0001 0.0.0
+permit 0001.0000.0002 0.0.0 0002.0000.0002 0.0.0 xns
+access
+class
+match access
+end
+class
+match ip dscp 10 11 12
+end
+class
+match ip precedence 5 6 7
+end
+access
+class
+match access
+exit
+policy
+class ipclass1
+trust dscp
+police 1000000 8000 exceed
+exit
+exit
+interface gigabitethernet0
+service
+mac access
+permit 0001.0000.0001 0.0.0 0002.0000.0001 0.0.0
+permit 0001.0000.0002 0.0.0 0002.0000.0002 0.0.0 xns
+exit
+mac access
+permit 0001.0000.0003 0.0.0 0002.0000.0003 0.0.0
+permit 0001.0000.0004 0.0.0 0002.0000.0004 0.0.0 aarp
+exit
+class
+match access
+exit
+policy
+class macclass1
+set dscp 63
+exit
+class macclass2 maclist2
+set dscp 45
+exit
+exit
+interface gigabitethernet0
+mls qos trust cos
+service
+ip access
+ipv6 access
+class
+match access
+exit
+class
+match access
+exit
+policy
+class cm
+set dscp 4
+exit
+class cm
+set dscp 6
+exit
+class class
+set dscp 10
+exit
+exit
+interface G0
+switch mode access
+service
+configure terminal
+access
+class
+match access 101
+exit
+exit
+configure terminal
+class
+match input g3
+exit
+policy
+class cm
+police 900000 9000 exc policed
+exit
+exit
+policy
+class cm
+set dscp 7
+service
+exit
+class cm
+service
+set dscp 10
+exit
+class cm
+service
+set dscp 20
+exit
+class cm
+trust dscp
+exit
+interface vlan 10
+service
+exit
+exit
+configure terminal
+class
+match ip dscp 30
+match protocol ipv6
+exit
+class
+match ip dscp 40
+match protocol ip
+exit
+policy
+class class
+set dscp 10
+exit
+class cm
+exit
+class cm
+trust cos
+exit
+exit
+show policy
+access
+access
+mls qos aggregate
+class
+match access
+exit
+class
+match access
+exit
+policy
+class ipclass1
+trust dscp
+police aggregate transmit1
+exit
+class ipclass2
+set dscp 56
+police aggregate transmit1
+exit
+class class
+set dscp 10
+exit
+exit
+interface gigabitethernet0
+service
+exit
+mls qos map cos
+end
+show mls qos maps cos
+mls qos map ip
+end
+show mls qos maps ip
+mls qos map policed
+end
+show mls qos maps policed
+mls qos map dscp
+end
+show mls qos maps dscp
+mls qos map dscp
+mls qos map dscp
+mls qos map dscp
+mls qos map dscp
+interface gigabitethernet0
+mls qos trust dscp
+mls qos dscp
+end
+show mls qos maps dscp
+mls qos srr
+mls qos srr
+mls qos srr
+mls qos srr
+mls qos srr
+mls qos srr
+mls qos srr
+mls qos srr
+mls qos queue
+mls qos queue
+interface gigabitethernet0
+queue
+mls qos srr
+interface gigabitethernet0
+interface gigabitethernet0
+interface gigabitethernet0
+priority
+end
+interface gigabitethernet0
+configure
+policy
+class qos
+queue
+priority level 7
+exit
+exit
+interface HundredGigE 0
+service
+commit
+show qos int hundredGigE 0
+configure
+policy
+class qos
+random
+shape average percent 10
+commit
+interface HundredGigE 0
+service
+commit
+show qos int hundredGigE 0
+configure
+policy
+class qos
+random
+random
+shape average percent 10
+commit
+interface HundredGigE 0
+service
+commit
+show qos int hundredGigE 0
+configure terminal
+mls qos
+show mls qos
+copy running
+configure terminal
+interface
+mls qos vlan
+show mls qos interface
+copy running
+configure terminal
+interface
+mls qos trust cos
+show mls qos interface
+copy running
+configure terminal
+interface
+mls qos
+show mls qos interface
+copy running
+configure terminal
+cdp run
+interface
+cdp enable
+mls qos trust cos
+mls qos trust
+show mls qos interface
+copy running
+configure terminal
+mls qos
+no mls qos rewrite ip dscp
+show mls qos interface gigabitethernet 2
+copy running
+configure terminal
+mls qos map
+interface
+mls qos trust dscp
+mls qos dscp
+show mls qos maps
+copy
+configure terminal
+access
+show access
+copy
+configure terminal
+access
+show access
+copy
+configure terminal
+ipv6
+show ipv6
+copy
+configure terminal
+mac access
+permit 0001.0000.0001
+permit 0001.0000.0002
+show access
+copy
+configure terminal
+access
+class
+match ip dscp 10 11 12
+show class
+copy
+configure terminal
+class
+ match protocol ip
+match ip dscp 10
+show class
+copy
+configure terminal
+class
+policy
+class ipclass1
+trust dscp
+set dscp 45
+police 100000
+exit
+exit
+interface
+service
+show policy
+copy
+configure terminal
+class
+match ip dscp 10
+match protocol ipv6
+exit
+exit
+class
+match
+exit
+exit
+policy
+class
+police 900000
+exit
+exit
+policy
+class cm
+trust dscp
+set dscp 10
+service
+exit
+exit
+interface vlan 10
+service
+show mls qos vlan
+copy
+configure terminal
+mls qos aggregate
+class
+policy
+class ipclass1
+police aggregate transmit1
+exit
+interface gigabitethernet 2
+service
+show mls qos aggregate
+copy
+configure terminal
+mls qos map
+show mls qos maps cos
+copy
+configure terminal
+mls qos map
+show mls qos maps ip
+copy
+configure terminal
+mls qos map
+show mls qos maps
+configure terminal
+mls qos map dscp
+show mls qos maps
+copy
+configure terminal
+mls qos map dscp
+interface gigabitethernet1
+mls qos trust dscp
+mls qos dscp
+show mls qos maps dscp
+copy
+configure terminal
+mls qos srr
+mls qos queue
+mls qos queue
+interface gigabitethernet1
+queue
+show mls qos interface buffers
+copy
+configure terminal
+mls qos srr
+show mls qos maps
+copy
+configure terminal
+interface
+show mls qos interface
+copy running
+configure terminal
+interface
+show mls qos interface
+copy
+configure terminal
+mls qos
+interface
+priority
+show running
+copy running
+configure terminal
+interface
+show mls qos interface
+copy
+mls qos map dscp
+interface gigabitethernet1
+mls qos trust dscp
+mls qos dscp
+access
+access
+access
+access
+access
+access
+ipv6 access
+ipv6 access
+mac access
+permit 0001.0000.0001 0.0.0 0002.0000.0001 0.0.0
+permit 0001.0000.0002 0.0.0 0002.0000.0002 0.0.0 xns
+access
+class
+match access
+class
+match ip dscp 10 11 12
+class
+match ip precedence 5 6 7
+Class
+match ip dscp 10
+match protocol ipv6
+exit
+Class
+match ip dscp 20
+match protocol ip
+exit
+Policy
+class cm
+set dscp 4
+exit
+class cm
+set dscp 6
+exit
+exit
+interface G1
+service
+ip access
+ipv6 access
+Class
+match access
+exit
+class
+match access
+exit
+Policy
+class cm
+set dscp 4
+exit
+class cm
+set dscp 6
+exit
+exit
+interface G0
+switch mode access
+service
+access
+class
+match access
+exit
+policy
+class ipclass1
+trust dscp
+police 1000000 8000 exceed
+exit
+exit
+interface gigabitethernet2
+service
+mac access
+permit 0001.0000.0001 0.0.0 0002.0000.0001 0.0.0
+permit 0001.0000.0002 0.0.0 0002.0000.0002 0.0.0 xns
+exit
+mac access
+permit 0001.0000.0003 0.0.0 0002.0000.0003 0.0.0
+permit 0001.0000.0004 0.0.0 0002.0000.0004 0.0.0 aarp
+exit
+class
+match access
+exit
+policy
+class macclass1
+set dscp 63
+exit
+class macclass2 maclist2
+set dscp 45
+exit
+exit
+interface gigabitethernet1
+mls qos trust cos
+service
+ip access
+ipv6 access
+class
+match access
+exit
+class
+match access
+exit
+policy
+class cm
+set dscp 4
+exit
+class cm
+set dscp 6
+exit
+class class
+set dscp 10
+exit
+exit
+interface G0
+switch mode access
+service
+ configure terminal
+access
+class
+match access 101
+exit
+exit
+configure terminal
+class
+match input gigabitethernet3
+exit
+policy
+class cm
+police 900000 9000 exc policed
+exit
+exit
+policy
+class cm
+set dscp 7
+service
+exit
+class cm
+service
+set dscp 10
+exit
+class cm
+service
+set dscp 20
+exit
+class cm
+trust dscp
+exit
+interface vlan 10
+service
+exit
+exit
+policy
+class cm
+set dscp 7
+service
+class
+match ip dscp 10
+match protocol ipv6
+exit
+class
+match ip dscp 20
+match protocol ip
+exit
+policy
+class cm
+set dscp 4
+exit
+class cm
+set dscp 6
+exit
+exit
+interface G1
+service
+configure terminal
+class
+match ip dscp 30
+match protocol ipv6
+exit
+class
+match ip dscp 40
+match protocol ip
+exit
+policy
+class class
+set dscp 10
+exit
+class cm
+exit
+class cm
+trust cos
+exit
+exit
+show policy
+access
+access
+mls qos aggregate
+class
+match access
+exit
+class
+match access
+exit
+policy
+class ipclass1
+trust dscp
+police aggregate transmit1
+exit
+class ipclass2
+set dscp 56
+police aggregate transmit1
+exit
+class class
+set dscp 10
+exit
+exit
+interface gigabitethernet2
+service
+exit
+mls qos map cos
+show mls qos maps cos
+mls qos map ip
+show mls qos maps ip
+mls qos map policed
+show mls qos maps policed
+mls qos map dscp
+show mls qos maps dscp
+mls qos map dscp
+mls qos map dscp
+mls qos map dscp
+mls qos map dscp
+interface gigabitethernet1
+mls qos trust dscp
+mls qos dscp
+show mls qos maps dscp
+mls qos queue
+mls qos queue
+interface gigabitethernet1
+queue
+mls qos srr
+interface gigabitethernet2
+interface gigabitethernet2
+interface gigabitethernet1
+priority
+interface gigabitethernet2
+configure terminal
+interface gigabitethernet 3
+auto qos trust dscp
+exit
+interface gigabitethernet 2
+auto qos trust
+show auto qos interface gigabitethernet 2
+mls qos
+mls qos map cos
+mls qos
+mls qos map cos
+no mls qos srr
+mls qos srr
+mls qos srr
+mls qos srr
+mls qos srr
+mls qos srr
+no mls qos srr
+mls qos srr
+mls qos srr
+mls qos srr
+mls qos srr
+mls qos srr
+mls qos srr
+no mls qos srr
+mls qos srr
+mls qos srr
+mls qos srr
+mls qos srr
+mls qos srr
+mls qos srr
+mls qos srr
+mls qos srr
+mls qos srr
+no mls qos srr
+mls qos srr
+mls qos srr
+mls qos srr
+mls qos srr
+mls qos srr
+mls qos srr
+mls qos srr
+mls qos srr
+mls qos srr
+mls qos queue
+mls qos queue
+mls qos queue
+mls qos queue
+mls qos queue
+mls qos queue
+mls qos queue
+mls qos queue
+mls qos queue
+mls qos queue
+mls qos queue
+mls qos queue
+mls qos queue
+mls qos queue
+mls qos queue
+mls qos
+mls qos map cos
+no mls qos srr
+mls qos srr
+mls qos srr
+mls qos srr
+mls qos srr
+mls qos srr
+no mls qos srr
+mls qos srr
+mls qos srr
+mls qos srr
+mls qos srr
+mls qos srr
+mls qos srr
+mls qos srr
+mls qos srr
+mls qos srr
+mls qos queue
+mls qos queue
+mls qos queue
+mls qos queue
+mls qos queue
+mls qos queue
+mls qos queue
+mls qos queue
+mls qos queue
+mls qos queue
+priority
+mls qos trust device cisco
+mls qos map policed
+class
+match ip dscp ef
+class
+match ip dscp cs3 af31
+policy
+class AutoQoS
+set dscp ef
+police 320000 8000 exceed
+class AutoQoS
+set dscp cs3
+police 32000 8000 exceed
+service
+mls qos map cos
+mls qos map policed
+mls qos map cos
+class
+match access
+class
+match access
+class
+match access
+class
+match access
+class
+match access
+class
+match access
+policy
+class AUTOQOS_MULTIENHANCED_CONF_CLASS
+set dscp af41
+class AUTOQOS_BULK_DATA_CLASS
+set dscp af11
+class AUTOQOS_TRANSACTION_CLASS
+set dscp af21
+class AUTOQOS_SCAVANGER_CLASS
+set dscp cs1
+class AUTOQOS_SIGNALING_CLASS
+set dscp cs3
+class AUTOQOS_DEFAULT_CLASS
+set dscp default
+service
+mls qos map policed
+mls qos map cos
+class
+match access
+class
+match access
+class
+match access
+class
+match access
+class
+match access
+class
+match access
+policy
+class AUTOQOS_MULTIENHANCED_CONF_CLASS
+set dscp af41
+police 5000000 8000 exceed
+class AUTOQOS_BULK_DATA_CLASS
+set dscp af11
+police 10000000 8000 exceed
+class AUTOQOS_TRANSACTION_CLASS
+set dscp af21
+police 10000000 8000 exceed
+class AUTOQOS_SCAVANGER_CLASS
+set dscp cs1
+police 10000000 8000 exceed
+class AUTOQOS_SIGNALING_CLASS
+set dscp cs3
+police 32000 8000 exceed
+class AUTOQOS_DEFAULT_CLASS
+set dscp default
+police 10000000 8000 exceed
+service
+mls qos map policed
+mls qos map cos
+class
+match ip dscp ef
+class
+match access
+class
+match ip dscp cs3
+policy
+class AUTOQOS_VOIP_DATA_CLASS
+set dscp ef
+police 128000 8000 exceed
+class AUTOQOS_VOIP_SIGNAL_CLASS
+set dscp cs3
+police 32000 8000 exceed
+class AUTOQOS_DEFAULT_CLASS
+set dscp default
+police 10000000 8000 exceed
+service
+mls qos map policed
+mls qos map cos
+class
+match access
+class
+match ip dscp ef
+class
+match access
+class
+match access
+class
+match ip dscp cs3
+class
+match access
+class
+match access
+class
+match access
+policy
+class AUTOQOS_VOIP_DATA_CLASS
+set dscp ef
+police 128000 8000 exceed
+class AUTOQOS_VOIP_SIGNAL_CLASS
+set dscp cs3
+police 32000 8000 exceed
+police 5000000 8000 exceed
+class AUTOQOS_BULK_DATA_CLASS
+set dscp af11
+police 10000000 8000 exceed
+class AUTOQOS_TRANSACTION_CLASS
+set dscp af21
+police 10000000 8000 exceed
+class AUTOQOS_SCAVANGER_CLASS
+set dscp cs1
+police 10000000 8000 exceed
+class AUTOQOS_SIGNALING_CLASS
+set dscp cs3
+police 32000 8000 exceed
+class AUTOQOS_DEFAULT_CLASS
+set dscp default
+service
+in earlier releases. The new switch prompt for policy
+configure terminal
+class
+no class
+configure terminal
+class
+no class
+configure terminal
+class
+match access
+no match access
+configure terminal
+class
+match access
+no match access
+configure terminal
+class
+match access
+show class
+configure terminal
+class
+match cos cos
+no match cos cos
+configure terminal
+class
+match cos cos
+no match cos cos
+configure terminal
+class
+match cos 4
+show class
+configure terminal
+class
+match dscp dscp
+no match dscp dscp
+configure terminal
+class
+match dscp dscp
+no match dscp dscp
+configure terminal
+class
+match dscp af21
+show class
+configure terminal
+class
+match ip rtp port
+no match ip rtp port
+configure terminal
+class
+match ip rtp port
+no match ip rtp port
+configure terminal
+class
+match ip rtp 2000
+show class
+configure terminal
+class
+match precedence precedence
+no match precedence precedence
+configure terminal
+class
+match precedence precedence
+no match precedence precedence
+configure terminal
+class
+match precedence 1
+show class
+configure terminal
+class
+match protocol
+no match protocol
+configure terminal
+class
+match protocol
+no match protocol
+configure terminal
+class
+match protocol arp
+show class
+configure terminal
+class
+match qos
+no match qos
+configure terminal
+class
+match qos
+no match qos
+configure terminal
+class
+match qos
+show class
+configure terminal
+policy
+no policy
+class
+no class
+configure terminal
+policy
+no policy
+class
+no class
+configure terminal
+policy
+class type network
+mtu mtu
+no mtu
+multicast
+no multicast
+pause no
+no pause no
+queue
+no queue
+set cos cos
+no set cos cos
+configure terminal
+policy
+class type network
+mtu mtu
+no mtu
+multicast
+no multicast
+pause no
+no pause no
+queue
+no queue
+set cos cos
+no set cos cos
+configure terminal
+policy
+class type network
+mtu 5000
+pause no
+set cos 4
+configure terminal
+policy
+class type queuing class
+bandwidth percent percentage
+no bandwidth percent percentage
+priority
+no priority
+configure terminal
+policy
+class type queuing class
+bandwidth percent percentage
+no bandwidth percent percentage
+priority
+no priority
+configure terminal
+policy
+class type queuing class
+bandwidth 20
+configure terminal
+policy
+class type qos class
+set qos
+no set qos
+configure terminal
+policy
+class type qos class
+set qos
+no set qos
+configure terminal
+policy
+class type qos class
+set qos
+configure terminal
+system qos
+service
+configure terminal
+system qos
+service
+class
+match cos 4
+exit
+policy
+class type network
+pause no
+exit
+exit
+system qos
+service
+configure terminal
+system qos
+service
+service
+service
+service
+configure terminal
+system qos
+service
+service
+service
+service
+configure terminal
+system qos
+service
+service
+service
+service
+show policy
+policy
+class type network
+mtu 9216
+exit
+exit
+system qos
+service
+show interface ethernet 1
+show interface ethernet 1
+configure terminal
+interface
+untagged cos cos
+configure terminal
+interface
+untagged cos cos
+configure terminal
+interface
+service
+service
+configure terminal
+interface
+service
+service
+configure terminal
+interface ethernet 1
+service
+configure terminal
+interface type slot
+priority
+no priority
+configure terminal
+interface type slot
+priority
+no priority
+configure terminal
+interface ethernet 1
+priority
+configure terminal
+interface type slot
+flowcontrol
+no flowcontrol
+configure terminal
+interface type slot
+flowcontrol
+no flowcontrol
+configure terminal
+interface ethernet 1
+flowcontrol receive on transmit on
+show class
+show policy
+show policy
+show policy
+show policy
+show queuing interface
+clear qos statistics
+show class
+show policy
+show policy
+show policy
+show queuing interface ethernet 1
+class
+system qos
+class
+system qos
+class
+interface ethernet 1
+class
+policy
+interface ethernet 1
+class
+policy
+system qos
+interface Ethernet 1
+class
+match ip dscp 32
+match ip dscp 40
+exit
+class
+match cos 5
+exit
+class
+match ip precedence 4
+exit
+match ip dscp
+policy
+class in
+set qos
+exit
+exit
+class
+match qos
+exit
+class
+match ip dscp 1
+exit
+class
+match ip dscp 23
+exit
+class
+match ip dscp
+exit
+policy
+class class
+service
+policy
+class dscp
+police cir 10000000 bc 50000
+conform
+exceed
+exit
+class dscp
+set cos 0
+exit
+class dscp
+set cos 4
+set ip precedence 4
+exit
+interface gigabitethernet0
+service instance 100 ethernet
+encapsulation dot1q 100
+service
+rewrite ingress tag pop 1 symmetric
+bridge
+table
+map from 5 to 46
+map from 6 to 56
+map from 7 to 57
+exit
+class
+match cos 4
+exit
+policy
+class video
+police 10000000 10000
+exit
+exit
+exit
+interface gigabitethernet0
+service
+exit
+interface GigabitEthernet0
+service instance 22 ethernet
+encapsulation dot1q 22
+rewrite ingress tag pop 1 symmetric
+xconnect 1.1.1.1 100 encapsulation mpls
+service
+exit
+policy
+class class1
+police 100000 500000
+conform
+conform
+exceed
+exceed
+exit
+exit
+exit
+policy
+class out
+priority percent 20
+exit
+class out
+bandwidth percent 50
+exit
+class out
+bandwidth percent 20
+exit
+exit
+interface gigabitethernet0
+service
+exit
+policy
+class class
+set ip dscp 1
+exit
+class AF31
+set ip dscp 3
+exit
+exit
+interface gigabitethernet0
+service
+exit
+policy
+class classout1
+shape average 50000000
+exit
+class classout2
+shape average 20000000
+exit
+class classout3
+shape average 10000000
+exit
+exit
+interface gigabitethernet 0
+service
+exit
+policy
+class class
+shape average 90000000
+service
+exit
+exit
+interface gigabitethernet0
+service
+exit
+policy
+class class
+shape average 50000000
+exit
+policy
+class class1
+priority
+exit
+policy
+class class
+shape average 50000000
+service
+exit
+exit
+interface gigabitethernet0
+service
+exit
+policy
+class outclass1
+bandwidth percent 40
+exit
+class outclass2
+bandwidth percent 20
+exit
+class outclass3
+bandwidth percent 10
+exit
+class class
+bandwidth percent 10
+exit
+exit
+interface gigabitethernet 0
+service
+exit
+policy
+class outclass1
+priority
+exit
+class outclass2
+bandwidth remaining percent 20
+exit
+class outclass3
+bandwidth remaining percent 30
+exit
+exit
+interface gigabitethernet 0
+service
+exit
+policy
+class out
+priority
+exit
+class out
+bandwidth remaining percent 50
+exit
+class out
+bandwidth remaining percent 20
+exit
+exit
+interface gigabitethernet 0
+service
+exit
+policy
+class out
+priority percent 20
+exit
+class out
+bandwidth percent 50
+exit
+class out
+bandwidth percent 20
+exit
+exit
+interface gigabitethernet 0
+service
+exit
+policy
+class VOICE_GRP
+priority percent 50
+exit
+class CTRL_GRP
+priority percent 5
+exit
+class E1_GRP
+priority percent 55
+exit
+class class
+bandwidth percent 10
+exit
+exit
+configure terminal
+class
+match qos
+configure terminal
+policy
+class class1
+bandwidth percent 50
+configure terminal
+interface gigabitEthernet0
+service
+configure terminal
+interface
+service instance 22
+encapsulation dot1q 22
+rewrite ingress
+xconnect 1.1.1.1 100
+service
+configure terminal
+class
+match qos
+configure terminal
+policy
+class class1
+configure terminal
+interface gigabitEthernet0
+service
+interface gigabitethernet 0
+service instance 1 ethernet
+encapsulation dot1q 200
+xconnect 10.10.10.1 121
+service
+configure terminal
+policy
+class class1
+priority percent 10
+bandwidth percent 30
+end
+policy
+class class1
+priority percent 10
+bandwidth percent 50
+class
+match qos
+exit
+policy
+class class1
+bandwidth percent 10
+exit
+exit
+interface atm0
+service
+policy
+class class1
+bandwidth percent 50
+random
+policy
+class class1
+shape average mean
+service
+policy
+class class1
+bandwidth percent 50
+access
+class
+match ip dscp 10 11 12
+exit
+configure terminal
+ip access
+permit 10.10.10.10 255.255.255.0
+exit
+class
+match access
+show ip access
+show run int gig 0
+show platform tcam detailed
+show access
+show policy
+show running
+configure terminal
+ip access
+permit ipv6
+deny tcp host 2001
+configure terminal
+interface vlan 100
+ipv6 traffic
+configure terminal
+match mpls experimental topmost 5
+exit
+configure terminal
+match ip dscp af11
+exit
+configure terminal
+class
+match mpls experimental topmost 5
+match ip dscp af11
+exit
+configure terminal
+policy
+class matchdscp
+bandwidth percent 20
+class mplsexpvalues
+set mpls experimental topmost 4
+class matchdscpvalues
+set dscp af41
+class mplsexp_or_dscp
+bandwidth percent 20
+set mpls experimental topmost 1
+set dscp af11
+queue
+exit
+configure terminal
+interface multilink5
+ip address 84.1.2.3 255.255.255.0
+load
+mpls ip
+keepalive 1
+ppp multilink
+ppp multilink group 3
+ppp multilink endpoint string ML3
+service
+exit
+configure terminal
+exit
+configure terminal
+cpu traffic ppp set mpls experimental topmost 4
+exit
+configure terminal
+class
+match ip dscp cs5
+class
+match mpls experimental topmost 4
+policy
+class dscpcs5
+bandwidth percent 20
+set ip dscp cs6
+class exp4
+bandwidth percent 20
+set mpls experimental topmost 6
+class class
+bandwidth percent 20
+exit
+configure terminal
+class
+match qos
+configure terminal
+policy
+class QOS
+shape average 100000
+configure terminal
+interface Multilink 1
+no ip address
+service
+service instance 111 ethernet
+encapsulation dot1q 111
+rewrite ingress tag pop 1 symmetric
+bridge
+show policy
+show run class
+show run class
+show run policy
+show policy
+configure terminal
+class
+match protocol arp
+show class
+configure terminal
+policy
+class arp
+set qos
+show policy
+show policy
+configure terminal
+interface gigabitethernet 0
+service
+show running
+configure terminal
+access
+interface gigabitethernet 0
+ip access
+configure terminal
+interface vlan 715
+ip access
+exit
+interface gigabitethernet 0
+service instance 715 ethernet
+ encapsulation dot1q 715
+ bridge
+configure terminal
+class
+match access
+exit
+interface gigabitethernet 0
+service
+configure terminal
+ipv6 access
+permit icmp any any echo
+exit
+interface vlan 715
+ipv6 traffic
+show access
+show running interface gigabitethernet 0
+show running interface VLAN715
+show platform tcam summary
+show platform tcam detailed
+show platform tcam detailed
+service
+no service
+show platform tcam detailed
+service
+show platform tcam detailed
+test hardware internal bcm
+show queuing interface eth1
+show class
+policy
+class type network
+show class
+configure terminal
+class
+match access
+show class
+configure terminal
+class
+match cos 4
+show class
+configure terminal
+class
+match  dscp af21 af32
+show class
+configure terminal
+class
+match  ip rtp 2000
+show class
+class
+configure terminal
+class
+class
+match precedence 1
+show class
+configure terminal
+policy
+class type qos class
+set qos
+configure terminal
+policy
+class type network
+mtu 5000
+pause no
+congestion
+set cos 4
+configure terminal
+policy
+class type queuing class
+priority
+shape kbps 30000000 min 18000000
+bandwidth percent 20
+configure terminal
+policy
+class type queuing q3
+priority level 2
+shape kbps 30000000 min 18000000
+class type queuing q2
+priority level 3
+class type queuing q1
+bandwidth percent 30
+class type queuing q4
+bandwidth percent 10
+class type queuing q5
+bandwidth percent 10
+class type queuing q6
+priority level 1
+class type queuing q7
+bandwidth percent 10
+class type queuing class
+queue
+bandwidth percent 0
+configure terminal
+policy
+class type queuing q1
+bandwidth percent 10
+priority
+class type queuing q2
+bandwidth percent 20
+class type queuing q3
+bandwidth percent 30
+class type queuing q4
+bandwidth percent 40
+class type queuing class
+bandwidth percent 10
+configure terminal
+class
+match qos
+exit
+policy
+class type queuing cque_ecn
+random
+congestion
+configure terminal
+policy
+class type queuing c1
+pause buffer
+pause priority
+policy
+class
+set cos  cos
+show policy
+config terminal
+policy
+class
+set precedence  precedence
+policy
+class type qos my_class
+set precedence 5
+configure terminal
+interface ethernet 1
+no switchport
+service
+configure terminal
+interface ethernet 1
+no switchport
+service
+configure terminal
+interface ethernet 1
+wrr unicast
+int po 502.4
+mtu 9216
+conf t
+policy
+class type network
+end
+conf t
+policy
+class type network
+mtu 9216
+show policy
+show queuing interface ethernet1
+show queuing interface ethernet1
+Bandwidth
+Pause QLimit
+configure terminal
+interface ethernet 1
+untagged cos 4
+configure terminal
+interface ethernet 1
+service
+class
+match qos
+exit
+class
+match qos
+exit
+policy
+class type network
+mtu 2200
+pause no
+set cos 4
+exit
+class type network
+mtu 2200
+pause no
+set cos 5
+congestion
+exit
+class type network
+mtu 9216
+exit
+system qos
+service
+class
+match qos
+exit
+class
+match qos
+exit
+policy
+class type queuing class
+bandwidth percent 70
+exit
+class type queuing cqu1
+bandwidth percent 10
+exit
+class type queuing cqu6
+bandwidth percent 20
+exit
+exit
+system qos
+service
+class
+match qos
+exit
+class
+match qos
+exit
+policy
+class type queuing cqu1
+pause buffer
+pause priority
+exit
+class type queuing cqu6
+pause priority
+exit
+class type queuing class
+queue
+exit
+exit
+system qos
+service
+class
+match cos 1
+exit
+class
+match cos 6
+exit
+policy
+class type qos cqos1
+set qos
+exit
+class type qos cqos6
+set qos
+exit
+exit
+system qos
+service
+show interface untagged
+show running
+show wrr
+show class
+show policy
+show policy
+show policy
+show queuing
+Bandwidth
+Bandwidth
+show running | grep hardware
+clear counters buffers
+hardware profile buffer info port
+configure terminal
+interface
+auto qos trust dscp
+show auto qos interface
+show auto qos
+show running
+no policy
+no class
+no ip access
+no table
+no table
+show running
+show auto qos
+write memory
+configure terminal
+auto qos global compact
+interface gigabitEthernet1
+auto qos trust cos
+show policy
+interface GigabitEthernet1
+auto qos trust dscp
+interface gigabitEthernet1
+auto qos video cts
+show policy
+interface GigabitEthernet1
+auto qos video ip
+show policy
+interface GigabitEthernet1
+auto qos video media
+show policy
+interface gigabitEthernet1
+auto qos voip trust
+show policy
+interface gigabitEthernet1
+auto qos voip cisco
+show policy
+interface gigabitEthernet1
+auto qos voip cisco
+show policy
+configure terminal
+auto qos global compact
+interface GigabitEthernet1
+auto qos voip cisco
+show auto qos
+show running

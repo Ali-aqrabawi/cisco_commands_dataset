@@ -1,0 +1,777 @@
+router eigrp name1
+ address network 10.1.1.0 0.0.0.255
+ metric weights 0 2 0 1 0 0 1
+ hostname Device interface serial 0
+ ip address 10.1.1.2 255.255.255.0
+ exit
+ router eigrp name1
+ address network 10.1.1.0 0.0.0.255
+ metric weights 0 1 0 1 0 0 0
+ router eigrp 1
+ network 172.16.0.0
+ end
+ configure terminal
+ router eigrp virtual address address network 172.16.0.0
+ end
+ configure terminal
+ router eigrp 1
+ network 172.16.0.0
+ passive offset metric weights 0 2 0 2 0 0
+ no auto end
+ configure terminal
+ router eigrp virtual address address network 172.16.0.0
+ metric weights 0 2 0 2 0 0 0
+ passive bandwidth exit topology base
+ offset no auto end
+ configure terminal
+ router eigrp 1
+ network 172.16.0.0
+ redistribute rip
+ distance eigrp 80 130
+ default end
+ configure terminal
+ router eigrp 101
+ no auto exit
+ interface Gigabitethernet 1 no switchport
+ ip summary ip bandwidth end
+ configure terminal
+ router eigrp virtual address address summary exit topology base
+ summary end
+ configure terminal
+ router eigrp 101
+ eigrp event eigrp log eigrp log end
+ configure terminal
+ router eigrp virtual address address eigrp log eigrp log topology base
+ eigrp event end
+ configure terminal
+ router eigrp 101
+ traffic maximum variance 1
+ end
+ configure terminal
+ router eigrp virtual address address topology base
+ traffic maximum variance 1
+ end
+ configure terminal
+ router eigrp 101
+ exit
+ interface Gigabitethernet 1 no switchport
+ ip hello ip hold end
+ configure terminal
+ router eigrp virtual address address hello hold end
+ configure terminal
+ interface gigabitethernet 0 no ip split end
+ configure terminal
+ router eigrp virtual address address no split no next end
+ enable
+ show ip eigrp vrf VRF1 accounting
+ show ip eigrp events
+ show ip eigrp interfaces
+ show ip eigrp neighbors
+ show ip eigrp topology
+ show ip eigrp traffic
+ enable
+ show eigrp protocols
+ configure terminal
+ router eigrp 1
+ network 172.16.0.0
+ configure terminal
+ router eigrp virtual address network 172.16.0.0
+ configure terminal
+ router eigrp 1
+ network 172.16.0.0
+ passive offset metric weights 0 2 0 2 0 0
+ no auto exit
+ configure terminal
+ router eigrp virtual address network 172.16.0.0
+ metric weights 0 2 0 2 0 0 0
+ metric rib passive bandwidth exit topology base
+ offset no auto exit configure terminal
+ router eigrp 1
+ network 172.16.0.0
+ redistribute rip
+ distance eigrp 80 130
+ default configure terminal
+ router eigrp 101
+ no auto exit
+ interface Gigabitethernet 1 no switchport
+ ip summary ip bandwidth configure terminal
+ router eigrp virtual address summary exit topology base
+ summary configure terminal
+ router eigrp 1
+ eigrp event eigrp log eigrp log configure terminal
+ router eigrp virtual address eigrp log eigrp log topology base
+ eigrp event configure terminal
+ router eigrp 1
+ traffic maximum variance 1
+ configure terminal
+ router eigrp virtual address topology base
+ traffic maximum variance 1
+ configure terminal
+ router eigrp 1
+ exit
+ interface Gibabitethernet 1 no switchport
+ ip hello ip hold configure terminal
+ router eigrp virtual address hello hold
+ configure terminal
+ router eigrp 1
+ exit
+ interface Ethernet 0
+ no ip split
+ configure terminal
+ router eigrp virtual address
+ no split
+ no next
+ show derived
+ interface gigabitethernet 0
+ vnet name vrf1
+ no ip authentication mode eigrp 1 md5
+ ip authentication key ip band eigrp 1 99
+ no ip dampening ip hello eigrp 1 7
+ ip hold eigrp 1 21
+ ip next ip split
+ do show running
+ do show derived
+ interface gigabitethernet 0
+ ip address 192.0.2.1 255.255.255.0
+ vnet trunk
+ ip hello eigrp 1 7
+ do show run interface gigabitethernet 0 do show derived interface gigabitethernet 0 vnet name vrf1
+ ip hello do show run interface gigabitethernet 0 do show derived interface gigabitethernet 0 default ip authentication mode eigrp 1 md5
+ no ip bandwidth no ip hello eigrp 1
+ do show running show ip eigrp vrf VRF1 accounting
+ show ip eigrp events
+ show ip eigrp interfaces
+ show ip eigrp neighbors
+ show ip eigrp topology
+ show ip eigrp traffic
+ show eigrp address
+ show eigrp address
+ show eigrp plugins
+ show eigrp protocols
+ router eigrp autonomous
+ network network
+ eigrp log
+ ip bandwidth
+ metric weights tos k1 k2 k3 k4 k5
+ offset
+ no auto
+ ip summary
+ interface Serial 0
+ ip summary
+ ip summary
+ interface type number
+ ip authentication mode eigrp autonomous
+ ip authentication key
+ exit
+ key chain name
+ key number
+ key
+ accept
+ send
+ ip hello
+ ip hold
+ no ip split
+ router eigrp 1
+ network network
+ eigrp stub
+ show ip eigrp neighbor detail
+ clear ip eigrp neighbors
+ show ip eigrp interfaces
+ show ip eigrp neighbors
+ show ip eigrp topology
+ show ip eigrp traffic
+ debug eigrp packet stub
+  router eigrp 2
+ router eigrp 2
+ network 10.0.0.0
+ router eigrp 2
+ router eigrp 2
+ network 10.0.0.0
+ router eigrp 2
+ network 10.0.0.0
+ eigrp stub
+ clear eigrp pid
+ router eigrp 2
+ network ip
+ router eigrp 2
+ network 10.0.0.0
+ router eigrp 2
+ network 10.0.0.0
+ passive
+ router eigrp 2
+ network 10.0.0.0
+ interface phy_if
+ summary
+ interface phy_if
+ delay 200
+ router eigrp 2
+ router eigrp 2
+ network 10.0.0.0
+ interface phy_if
+ authentication mode
+ authentication key eigrp
+ router eigrp 2
+ router eigrp 2
+ neighbor 10.0.0.0
+ router eigrp 2
+ router eigrp 2
+ default
+ router eigrp 2
+ network ip
+ router eigrp 2
+ network 10.0.0.0
+ router eigrp 2
+ network 10.0.0.0
+ router eigrp 2
+ network 10.0.0.0
+ interface phy_if
+ hello
+ hold
+ router eigrp 2
+ no auto
+ interface phy_if
+ no split
+ router eigrp 2
+ network 10.0.0.0 255.0.0.0
+ passive
+ neighbor 10.0.0.0 interface interface1
+ network 10.0.0.0 255.0.0.0
+ exit
+ interface phy_if
+ delay 200
+ hostname Device
+ interface serial 0
+ ip address 10.1.1.1 255.255.255.0
+ exit
+ router eigrp name1
+ address
+ network 10.1.1.0 0.0.0.255
+ metric weights 0 2 0 1 0 0 1
+ hostname Device
+ interface serial 0
+ ip address 10.1.1.2 255.255.255.0
+ exit
+ router eigrp name1
+ address
+ network 10.1.1.0 0.0.0.255
+ metric weights 0 1 0 1 0 0 0
+ interface Serial 0
+ ip summary
+ Router eigrp virtual
+ address
+ interface serial 0
+ summary
+ ip summary
+ router eigrp virtual
+ address
+ summary
+ configure terminal
+ router eigrp 1
+ network 172.16.0.0
+ end
+ configure terminal
+ router eigrp virtual
+ address
+ address
+ network 172.16.0.0
+ end
+ configure terminal
+ router eigrp 1
+ network 172.16.0.0
+ passive
+ offset
+ metric weights 0 2 0 2 0 0
+ no auto
+ end
+ configure terminal
+ router eigrp virtual
+ address
+ address
+ network 172.16.0.0
+ metric weights 0 2 0 2 0 0 0
+ passive
+ bandwidth
+ exit
+ topology base
+ offset
+ no auto
+ end
+ configure terminal
+ router eigrp 1
+ network 172.16.0.0
+ redistribute rip
+ distance eigrp 80 130
+ default
+ end
+ configure terminal
+ router eigrp 101
+ no auto
+ exit
+ interface Gigabitethernet 1
+ no switchport
+ ip summary
+ ip bandwidth
+ end
+ configure terminal
+ router eigrp virtual
+ address
+ address
+ summary
+ exit
+ topology base
+ summary
+ end
+ configure terminal
+ router eigrp 101
+ eigrp event
+ eigrp log
+ eigrp log
+ end
+ configure terminal
+ router eigrp virtual
+ address
+ address
+ eigrp log
+ eigrp log
+ topology base
+ eigrp event
+ end
+ configure terminal
+ router eigrp 101
+ traffic
+ maximum
+ variance 1
+ end
+ configure terminal
+ router eigrp virtual
+ address
+ address
+ topology base
+ traffic
+ maximum
+ variance 1
+ end
+ configure terminal
+ router eigrp 101
+ exit
+ interface Gigabitethernet 1
+ no switchport
+ ip hello
+ ip hold
+ end
+ configure terminal
+ router eigrp virtual
+ address
+ address
+ hello
+ hold
+ end
+ configure terminal
+ interface gigabitethernet 0
+ no ip split
+ end
+ configure terminal
+ router eigrp virtual
+ address
+ address
+ no split
+ no next
+ end
+ enable
+ show ip eigrp vrf VRF1 accounting
+ show ip eigrp events
+ show ip eigrp interfaces
+ show ip eigrp neighbors
+ show ip eigrp topology
+ show ip eigrp traffic
+ enable
+ show eigrp address
+ show eigrp address
+ show eigrp address
+ show eigrp address
+ show eigrp address
+ show eigrp address
+ show eigrp address
+ show eigrp plugins
+ show eigrp protocols
+ configure terminal
+ router eigrp 1
+ network 172.16.0.0
+ configure terminal
+ router eigrp virtual
+ address
+ network 172.16.0.0
+ configure terminal
+ router eigrp 1
+ network 172.16.0.0
+ passive
+ offset
+ metric weights 0 2 0 2 0 0
+ no auto
+ exit
+ configure terminal
+ router eigrp virtual
+ address
+ network 172.16.0.0
+ metric weights 0 2 0 2 0 0 0
+ metric rib
+ passive
+ bandwidth
+ exit
+ topology base
+ offset
+ no auto
+ exit
+ configure terminal
+ router eigrp 1
+ network 172.16.0.0
+ redistribute rip
+ distance eigrp 80 130
+ default
+ configure terminal
+ router eigrp 101
+ no auto
+ exit
+ interface Gigabitethernet 1
+ no switchport
+ ip summary
+ ip bandwidth
+ configure terminal
+ router eigrp virtual
+ address
+ summary
+ exit
+ topology base
+ summary
+ configure terminal
+ router eigrp 1
+ eigrp event
+ eigrp log
+ eigrp log
+ configure terminal
+ router eigrp virtual
+ address
+ eigrp log
+ eigrp log
+ topology base
+ eigrp event
+ configure terminal
+ router eigrp 1
+ traffic
+ maximum
+ variance 1
+ configure terminal
+ router eigrp virtual
+ address
+ topology base
+ traffic
+ maximum
+ variance 1
+ configure terminal
+ router eigrp 1
+ exit
+ interface Gibabitethernet 1
+ no switchport
+ ip hello
+ ip hold
+ configure terminal
+ router eigrp virtual
+ address
+ hello
+ hold
+ configure terminal
+ router eigrp 1
+ exit
+ interface Ethernet 0
+ no ip split
+ configure terminal
+ router eigrp virtual
+ address
+ no split
+ no next
+ show derived
+ interface gigabitethernet 0
+ vnet name vrf1
+ no ip authentication mode eigrp 1 md5
+ ip authentication key
+ ip band eigrp 1 99
+ no ip dampening
+ ip hello eigrp 1 7
+ ip hold eigrp 1 21
+ ip next
+ ip split
+ do show running
+ do show derived
+ interface gigabitethernet 0
+ ip address 192.0.2.1 255.255.255.0
+ vnet trunk
+ ip hello eigrp 1 7
+ do show run interface gigabitethernet 0
+ do show derived interface gigabitethernet 0
+ vnet name vrf1
+ ip hello
+ do show run interface gigabitethernet 0
+ do show derived interface gigabitethernet 0
+ default ip authentication mode eigrp 1 md5
+ no ip bandwidth
+ no ip hello eigrp 1
+ do show running
+ show ip eigrp vrf VRF1 accounting
+ show ip eigrp events
+ show ip eigrp interfaces
+ show ip eigrp neighbors
+ show ip eigrp topology
+ show ip eigrp traffic
+ show eigrp address
+ show eigrp plugins
+ show eigrp protocols
+copy running
+configure terminal
+interface serial 0
+ip address 172.16.20.1 255.255.255.0
+no shutdown
+interface fastethernet 0
+ip address 172.16.10.1 255.255.255.0
+no shutdown
+router eigrp 100
+no auto
+eigrp log
+network 172.16.0.0
+passive interface fastethernet 0
+key chain susannah
+key 1
+accept
+send
+exit
+exit
+copy running
+configure terminal
+interface serial 0
+ip address 172.16.20.2 255.255.255.0
+clock rate 56000
+no shutdown
+interface fastethernet 0
+ip address 172.16.30.1 255.255.255.0
+no shutdown
+router eigrp 100
+no auto
+eigrp log
+network 172.16.0.0
+passive interface fastethernet 0
+key chain eddie
+key 1
+accept
+send
+exit
+exit
+copy running
+copy running
+configure terminal
+interface serial 0
+ip address 172.16.20.1 255.255.255.0
+no shutdown
+interface fastethernet 0
+ip address 172.16.10.1 255.255.255.0
+no shutdown
+router eigrp 100
+no auto
+eigrp log
+network 172.16.0.0
+passive interface fastethernet 0
+key chain susannah
+key 1
+accept
+send
+exit
+exit
+copy running
+configure terminal
+interface serial 0
+ip address 172.16.20.2 255.255.255.0
+clock rate 56000
+no shutdown
+interface fastethernet 0
+ip address 172.16.30.1 255.255.255.0
+no shutdown
+router eigrp 100
+no auto
+eigrp log
+network 172.16.0.0
+passive interface fastethernet 0
+key chain eddie
+key 1
+accept
+send
+exit
+exit
+copy running
+router eigrp 100
+network 10.0.0.0
+network 192.168.1.0
+router eigrp 100
+network 172.16.1.0 0.0.0.255
+network 192.168.1.0 0.0.0.255
+router eigrp 100
+passive
+conf t
+router eigrp 10
+no auto-summarization
+network 10.10.1.0 0.0.0.255
+network 10.10.2.0 0.0.0.255
+network 10.10.3.0 0.0.0.255
+show ip eigrp neighbors
+show ip eigrp neighbor
+show ip eigrp neighbor
+show ip eigrp topology 10.1.2.0 255.255.255.0
+show ip eigrp topology 10.1.2.0 255.255.255.0
+show ip eigrp topology 10.1.1.0 255.255.255.0
+show ip eigrp topology 10.1.2.0 255.255.255.0
+show ip eigrp topology 10.1.1.0 255.255.255.0
+show ip route 10.1.4.0
+show ip route 10.1.4.0
+show ip route
+show ip eigrp topology 10.0.0.0
+show ip route 10.0.0.0
+show ip eigrp topology 10.0.0.0
+show ip eigrp topology
+show run
+show ip eigrp topology
+show ip eigrp topology
+show ip route
+show ip route
+show ip route
+show ip eigrp interface
+show ip route 10.1.4.0
+show run
+show ip eigrp topo
+show run
+show ip eigrp topo
+show run
+show ip route
+router eigrp 1
+address
+qQFJ1
+show ip eigrp interfaces brief
+show ip eigrp interfaces ethernet 2
+router eigrp 1
+maximum
+hostname Device
+interface serial 0
+ip address 10.1.1.1 255.255.255.0
+exit
+router eigrp name1
+address
+network 10.1.1.0 0.0.0.255
+metric weights 0 2 0 1 0 0 1
+hostname Device
+interface serial 0
+ip address 10.1.1.2 255.255.255.0
+exit
+router eigrp name1
+address
+network 10.1.1.0 0.0.0.255
+metric weights 0 1 0 1 0 0 0
+show ip eigrp neighbors
+show ip eigrp neighbor
+show ip eigrp neighbor
+show ip eigrp topology 10.1.2.0 255.255.255.0
+show ip eigrp topology 10.1.2.0 255.255.255.0
+show ip eigrp topology 10.1.1.0 255.255.255.0
+show ip eigrp topology 10.1.2.0 255.255.255.0
+show ip eigrp topology 10.1.1.0 255.255.255.0
+show ip route 10.1.4.0
+show ip route 10.1.4.0
+show ip route
+show ip eigrp topology 10.0.0.0
+show ip route 10.0.0.0
+show ip eigrp topology 10.0.0.0
+show ip eigrp topology
+show run
+show ip eigrp topology
+show ip eigrp topology
+show ip route
+show ip route
+show ip route
+show ip eigrp interface
+show ip route 10.1.4.0
+show run
+show ip eigrp topo
+show run
+show ip eigrp topo
+show run
+show ip route
+router eigrp 1
+address
+qQFJ1
+show ip eigrp interfaces brief
+show ip eigrp interfaces ethernet 2
+router eigrp 1
+maximum
+hostname Device
+interface serial 0
+ip address 10.1.1.1 255.255.255.0
+exit
+router eigrp name1
+address
+network 10.1.1.0 0.0.0.255
+metric weights 0 2 0 1 0 0 1
+hostname Device
+interface serial 0
+ip address 10.1.1.2 255.255.255.0
+exit
+router eigrp name1
+address
+network 10.1.1.0 0.0.0.255
+metric weights 0 1 0 1 0 0 0
+show ip eigrp neighbors
+show ip eigrp neighbor
+show ip eigrp neighbor
+show ip eigrp topology 10.1.2.0 255.255.255.0
+show ip eigrp topology 10.1.2.0 255.255.255.0
+show ip eigrp topology 10.1.1.0 255.255.255.0
+show ip eigrp topology 10.1.2.0 255.255.255.0
+show ip eigrp topology 10.1.1.0 255.255.255.0
+show ip route 10.1.4.0
+show ip route 10.1.4.0
+show ip route
+show ip eigrp topology 10.0.0.0
+show ip route 10.0.0.0
+show ip eigrp topology 10.0.0.0
+show ip eigrp topology
+show run
+show ip eigrp topology
+show ip eigrp topology
+show ip route
+show ip route
+show ip route
+show ip eigrp interface
+show ip route 10.1.4.0
+show run
+show ip eigrp topo
+show run
+show ip eigrp topo
+show run
+show ip route
+router eigrp 1
+address
+qQFJ1
+show ip eigrp interfaces brief
+show ip eigrp interfaces ethernet 2
+router eigrp 1
+maximum
+hostname Device
+interface serial 0
+ip address 10.1.1.1 255.255.255.0
+exit
+router eigrp name1
+address
+network 10.1.1.0 0.0.0.255
+metric weights 0 2 0 1 0 0 1
+hostname Device
+interface serial 0
+ip address 10.1.1.2 255.255.255.0
+exit
+router eigrp name1
+address
+network 10.1.1.0 0.0.0.255
+metric weights 0 1 0 1 0 0 0

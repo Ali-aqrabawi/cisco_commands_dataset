@@ -1,0 +1,637 @@
+configure terminal
+router ospf 10
+fast
+exit
+configure terminal
+route
+match tag 886
+exit
+router ospf 10
+prefix
+exit
+configure terminal
+router ospf 10
+fast
+exit
+configure terminal
+router ospf 10
+fast
+exit
+configure terminal
+interface GigabitEthernet 0
+ip ospf fast
+exit
+router ospf 10
+router ospf 10
+interface GigabitEthernet 0
+configure terminal
+router ospf 10
+fast
+exit
+configure terminal
+route
+match tag 886
+exit
+router ospf 10
+prefix
+exit
+configure terminal
+router ospf 10
+fast
+exit
+configure terminal
+router ospf 10
+fast
+exit
+configure terminal
+interface GigabitEthernet 0
+ip ospf fast
+exit
+router ospf 10
+router ospf 10
+interface GigabitEthernet 0
+qQFJ1
+clear ip ospf 201 neighbor 192.0.2.1
+clear ip ospf neighbor
+clear ip ospf 202 neighbor ethernet 1
+configure terminal
+interface ethernet 0
+ip ospf resync
+configure terminal
+router ospf 1
+no capability lls
+configure terminal
+router ospf 109
+nsr
+end
+show ip ospf 109 nsr
+show processes
+show processes memory 276
+configure terminal
+router ospf 1
+show ip ospf 1 nsr
+configure terminal
+router ospf 10
+fast
+exit
+configure terminal
+route
+match tag 886
+exit
+router ospf 10
+prefix
+exit
+configure terminal
+router ospf 10
+fast
+exit
+configure terminal
+router ospf 10
+fast
+exit
+configure terminal
+interface GigabitEthernet 0
+ip ospf fast
+exit
+router ospf 10
+router ospf 10
+interface GigabitEthernet 0
+configure terminal
+router ospf 10
+fast
+exit
+configure terminal
+route
+match tag 886
+exit
+router ospf 10
+prefix
+exit
+configure terminal
+router ospf 10
+fast
+exit
+configure terminal
+router ospf 10
+fast
+exit
+configure terminal
+interface GigabitEthernet 0
+ip ospf fast
+exit
+router ospf 10
+router ospf 10
+interface GigabitEthernet 0
+qQFJ1
+clear ip ospf 201 neighbor 192.0.2.1
+clear ip ospf neighbor
+clear ip ospf 202 neighbor ethernet 1
+configure terminal
+interface ethernet 0
+ip ospf resync
+configure terminal
+router ospf 1
+no capability lls
+qQFJ1
+configure terminal
+router ospf 109
+nsr
+end
+show ip ospf 109 nsr
+show processes
+show processes memory 276
+configure terminal
+router ospf 1
+show ip ospf 1 nsr
+interface ethernet 1
+no switchport
+ip ospf retransmit
+configure terminal
+router ospf 109
+ttl security all
+end
+configure terminal
+interface GigabitEthernet 0
+ip ospf ttl
+end
+show ip ospf interface gigabitethernet 0
+show ip ospf neighbor 10.199.199.137
+show ip ospf traffic
+debug ip ospf adj
+configure terminal
+interface GigabitEthernet 0
+ip ospf shutdown
+end
+show ip ospf interface GigabitEthernet 0
+show ip ospf
+qQFJ1
+router ospf 209
+interface ethernet 1
+no switchport
+ip ospf mtu
+qQFJ1
+qQFJ1
+qQFJ1
+qQFJ1
+qQFJ1
+qQFJ1
+configure terminal
+ip vrf crf
+exit
+router ospf 1 vrf crf
+show ip ospf 1
+configure terminal
+ip vrf first
+exit
+ip vrf second
+exit
+ip vrf third
+exit
+router ospf 12 vrf first
+exit
+router ospf 13 vrf second
+exit
+router ospf 14 vrf third
+show ip ospf 12
+router ospf 201
+area 33 stub
+interface ethernet 1
+ip address 192.0.2.201 255.255.255.0
+ip ospf area 201
+exit
+router ospf 12
+area 0 range 192.0.2.0 255.255.0.0
+interface ethernet 1
+no switchport
+ip ospf authentication
+qQFJ1
+configure terminal
+router ospf 1
+maximum
+router ospf 109
+redistribute eigrp 108 route
+default
+configure terminal
+qQFJ1
+show ip ospf neighbors 10.199.199.137
+show ip ospf neighbors ethernet 2
+show ip ospf neighbors detail
+qQFJ1
+interface ethernet 2
+no switchport
+ip ospf authentication message
+ip ospf message
+multi
+router ospf 1
+router ospfv3 1
+router
+area 0
+interface GigabitEthernet 0
+log adjacency changes detail
+router ospf 1
+router ospfv3 1
+router
+area 1
+stub no summary
+nssa no
+stub
+nssa
+router ospf 1
+router ospfv3 1
+router
+area 0
+network non
+dead
+hello
+interface GigabitEthernet 0
+neighbor 10.20.20.1 priority 3 poll
+neighbor fe80
+exit
+interface GigabitEthernet 0
+neighbor 10.34.16.6
+neighbor fe80
+router ospf 1
+router
+area 0
+interface GigabitEthernet 0
+exit
+area 1
+authentication
+interface GigabitEthernet 0
+interface GigabitEthernet 0
+authentication null
+router ospf 1
+router ospfv3 1
+router
+timers lsa refresh 1800
+timers lsa min
+timers lsa group
+show ospf
+show ospfv3
+router ospf 1
+router ospfv3 1
+router
+area 1
+virtual
+show ospf 1 2 virtual
+show ospfv3 1 virtual
+router ospf 1
+router ospfv3 1
+router
+area
+range 192.168.0.0 255.255.0.0 advertise
+range 4004
+interface GigabitEthernet 0
+router ospf 1
+router ospfv3 1
+router
+redistribute bgp 100
+summary
+summary
+router ospf 1
+router ospfv3 1
+router
+timers throttle spf 10 4800 90000
+ area 0
+interface GigabitEthernet 0
+show ospf 1
+router ospf 1
+router
+nsf cisco enforce global
+nsf interval 120
+router ospf 1
+router
+mpls traffic
+area 0
+mpls traffic
+interface interface loopback0
+show ospf 1 0 mpls traffic
+router ospfv3 test
+graceful
+graceful
+graceful
+show ospfv3 1 database grace
+show ospfv3 1 database grace
+show ospfv3 1 database grace
+interface loopback 3
+vrf vrf1
+ipv4 address 172.18.189.38 255.255.255.225
+router ospf isp
+vrf vrf1
+router
+redistribute bgp 1
+area 0
+sham
+cost 76
+router ospf isp
+router ospfv3 isp
+router ospf 1
+router ospfv3 1
+router ospf isp
+mpls traffic
+router ospf 1
+vrf vrf1
+area 0
+interface GigabitEthernet 0
+router ospf 1
+vrf vrf1
+router
+redistribute bgp 1 level
+area 0
+interface GigabitEthernet 0
+exit
+domain
+domain
+disable
+router ospf 1
+ area 0
+interface GigabitEthernet 0
+exit
+vrf vrf1
+area 0
+interface GigabitEthernet 0
+router ospf 1
+ area 0
+interface Serial 0
+ area 1
+multi
+router ospf 1
+ mpls ldp auto
+router ospf 100
+mpls ldp sync
+router ospf 1
+router id 192.168.4.3
+area 1
+interface GigabitEthernet0
+authentication message
+router ospf 1
+router id 10.10.10.100
+log adjacency changes detail
+nsf ietf
+timers throttle spf 500 500 10000
+area 1
+interface GigabitEternet0
+security ttl hopes 2
+show ospf 1 interface GigabitEthernet0
+show ospf group1
+show ospf group1 border
+show ospf group2 database
+show ospf 100 flood
+show ospf 100 interface GigabitEthernet 0
+show ospf 100 neighbor
+clear ospf 100 process
+clear ospf 100 statistics
+router ospf ospf1
+queue dispatch incoming 30
+queue dispatch rate
+queue dispatch spf
+queue limit high 1000
+router ospf
+ interface GigabitEternet0
+router ospf
+fast
+router ospf isp
+segment
+segment
+segment
+segment
+qQFJ1
+configure terminal
+router ospf 109
+show ip ospf 109 nsr
+show processes|include OSPF
+show processes memory 276
+configure terminal
+router ospf 1
+show ip ospf 1 nsr
+qQFJ1
+configure terminal
+router ospf 109
+configure terminal
+interface GigabitEthernet 0
+ip ospf ttl
+show ip ospf interface gigabitethernet 0
+show ip ospf neighbor 10.199.199.137
+show ip ospf traffic
+debug ip ospf adj
+configure terminal
+interface GigabitEthernet 0
+ip ospf shutdown
+show ip ospf interface GigabitEthernet 0
+show ip ospf
+configure terminal
+router ospf 4
+bfd all
+exit
+interface fastethernet 6
+ip ospf bfd disable
+show bfd neighbors detail
+show ip ospf
+configure terminal
+router ospf 4
+bfd all
+exit
+interface fastethernet 6
+ip ospf bfd disable
+show bfd neighbors detail
+show ip ospf
+show bfd neighbors details
+attach 6
+show ip ospf
+show ip ospf
+show ip ospf interface Fast Ethernet 0
+show ip ospf interface Fast Ethernet 6
+interface ethernet 1
+no switchport
+ip ospf transmit
+router ospf 2
+router ospf 2
+network 10.0.0.0 255.0.0.0 area 0
+router
+no router
+interface port
+ospf dead
+router ospf 2
+redistribute connected 5 type
+redistribute static 5 type
+route
+match metric 1
+set metric 5
+set metric
+router ospf 2
+redistribute ospf 1 route
+redistribute rip 5
+match metric 1
+set metric 5
+set metric
+redistribute ospf 1 route
+redistribute eigrp 2
+match metric 1
+set metric 5
+set metric
+redistribute ospf 1 route
+router ospf 1
+router ospf 1
+summary
+router ospf 1
+area 17 range 12.1.0.0 255.255.0.0
+router ospf 2
+router ospf 2
+network 10.0.0.0 255.0.0.0 area 0
+interface my_interface
+ospf authentication message
+ospf authentication
+ospf cost 20
+ospf dead
+ospf hello
+ospf message
+ospf priority 20
+ospf retransmit
+ospf transmit
+ospf dead
+ospf network point
+router ospf 2
+area 0 authentication
+area 0 authentication message
+router ospf 2
+distribute
+router ospf 2
+area 0 nssa
+summary
+ip local pool rpool 1.1.1.1
+router ospf 1
+router
+network 17.5.0.0 255.255.0.0 area 1
+router ospf 2
+neighbor 255.255.0.0
+router ospf 2
+timers throttle spf 500 500 600
+router ospf 2
+ipv6 router ospf 10
+interface Gigabitethernet0
+ipv6 ospf 200 area 100
+ipv6 router ospf 10
+interface GigabitEthernet3
+ipv6 router ospf 10
+area 10
+default originate
+distance 200
+ignore lsa
+passive
+redistribute ospf
+router
+ipv6 router ospf 1
+router
+summary
+redistribute static
+ipv6 router ospf 10
+timers throttle spf 6000 12000 14000
+ipv6 router ospf 1
+area 1 default
+area 1 range FE01
+area 1 nssa
+area 1 stub
+area 1 virtual
+ipv6 router ospf 1
+passive
+ipv6 router ospf 1
+distance ospf external 200
+ipv6 router ospf 1
+timers lsa arrival 2000
+timers lsa flood 20
+timers pacing lsa
+timers pacing retransmission 100
+timers throttle lsa 500 6000 8000
+timers throttle spf 5000 12000 16000
+ipv6 router ospf 1
+interface ethernet0
+ipv6 router ospf 1
+default metric 5
+ipv6 router ospf 1
+router ospf 1
+ignore lsa mospf
+compatible rfc1583
+ipv6 router ospf 1
+default
+ipv6 router ospf 1
+ipv6 router ospf 1
+router
+summary
+redistribute static
+ipv6 router ospf 1
+redistribute connected 5 type
+router ospf 2
+nsf cisco
+capability lls
+nsf ietf restart interval 80
+nsf ietf helper
+interface ethernet 0
+ipv6 enable
+graceful
+graceful
+clear configure router ospf 1000
+clear configure ipv6 router ospf 1000
+router ospf 2
+network 10.0.0.0 255.0.0.0 area 0
+route
+match metric 1
+set metric 5
+set metric
+router ospf 2
+redistribute ospf 1 route
+router ospf 2
+network 10.0.0.0 255.0.0.0 area 0
+interface inside
+ospf cost 20
+ospf retransmit
+ospf transmit
+ospf priority 20
+ospf hello
+ospf dead
+ospf authentication
+ospf message
+ospf authentication message
+router ospf 2
+area 0 authentication
+area 0 authentication message
+area 17 stub
+area 17 default
+timers spf 10 120
+show ospf
+clear configure router ospf pid
+interface GigabitEthernet3
+ipv6 enable
+ipv6 ospf 1 area 1
+show running
+show running
+interface GigabitEthernet3
+nameif fda
+security
+ip address 10.1.11.1 255.255.255.0 standby 10.1.11.2
+ipv6 address 9098
+ipv6 enable
+ipv6 ospf cost 900
+ipv6 ospf hello
+ipv6 ospf network broadcast
+ipv6 ospf database
+ipv6 ospf flood
+ipv6 ospf mtu
+ipv6 ospf 1 area 1 instance 100
+ipv6 ospf encryption ipsec spi 890 esp null md5 12345678901234567890123456789012
+ipv6 router ospf 1
+area 1 nssa
+distance ospf intra
+timers lsa arrival 900
+timers pacing flood 100
+timers throttle lsa 900 900 900
+passive
+redistribute connected metric 100 metric
+qQFJ1
+router ospf 100
+router ospf 100
+router ospf 1
+router
+area 1 virtual
+router ospf 209
+router
+area 1 virtual

@@ -1,0 +1,756 @@
+configure terminal
+vlan 20
+private
+exit
+vlan 501
+private
+exit
+vlan 502
+private
+exit
+vlan 503
+private
+exit
+vlan 20
+private
+show vlan private vlan
+configure terminal
+interface gigatibethernet0
+switchport mode private
+switchport private
+end
+show interfaces gigabitethernet0
+configure terminal
+interface gigatibethernet0
+switchport mode private
+switchport private
+end
+configure terminal
+interface vlan 10
+private
+end
+show interfaces private
+show vlan private
+configure terminal
+vlan 20
+name test20
+vlan database
+vlan 20 name test20
+exit
+configure terminal
+interface fastethernet0
+switchport mode access
+switchport access vlan 2
+end
+vtp mode transparent
+vlan 2000
+copy running
+configure terminal
+interface fastethernet0
+switchport mode dynamic desirable
+end
+interface fastethernet0
+switchport trunk allowed vlan remove 2
+show vmps
+ configure terminal
+ feature private
+configure terminal
+feature private
+ no feature private
+ configure terminal
+ vlan
+ private
+configure terminal
+vlan 5
+private
+exit
+vlan 100
+private
+exit
+vlan 109
+private
+ no private
+ configure terminal
+ vlan  primary
+ private
+configure terminal
+vlan 5
+private
+ no private
+ configure terminal
+ interface  type  slot
+ switchport mode private
+ switchport private
+configure terminal
+interface ethernet 1
+switchport mode private
+switchport private
+ no switchport private
+ configure terminal
+ interface  type  slot
+ switchport mode private
+ switchport private
+configure terminal
+interface ethernet 1
+switchport mode private
+switchport private
+ no switchport private
+ show system internal clis feature
+ show vlan private
+ show interface switchport
+show vlan private
+show vlan private
+show system internal clis feature
+configure terminal
+vlan vlan_ID
+end
+show vlan
+configure terminal
+vlan 3
+end
+show vlan id 3
+vlan database
+vlan vlan_ID
+exit
+show vlan
+vlan database
+vlan 3
+exit
+show vlan name VLAN0003
+ configure terminal
+ vlan
+configure terminal
+vlan 15
+ no vlan
+ configure terminal
+ vlan
+ name  vlan
+ no shutdown
+configure terminal
+vlan 5
+name accounting
+state active
+no shutdown
+ configure terminal
+interface
+ switchport  access vlan  vlan
+configure terminal
+interface ethernet 1
+switchport access vlan 5
+ show running
+ show vlan
+show running
+show vlan
+show vlan id 13
+show vlan summary
+configure terminal
+vlan 20
+name test20
+mtu 256
+remote
+show vlan name test20 id 20
+copy running
+configure terminal
+no vlan 4
+show vlan brief
+copy running
+configure terminal
+interface gigabitethernet2
+switchport mode access
+switchport access vlan 2
+show running
+show interfaces gigabitethernet2
+configure terminal
+vtp mode transparent
+vlan 2000
+mtu 1024
+remote
+show vlan id 2000
+copy running
+configure terminal
+vlan 20
+name test20
+configure terminal
+interface gigabitethernet2
+switchport mode access
+switchport access vlan 2
+vtp mode transparent
+vlan 2000
+copy running
+configure terminal
+vlan 20
+name test20
+configure terminal
+interface gigabitethernet0
+switchport mode access
+switchport access vlan 2
+end
+vtp mode transparent
+vlan 2000
+copy running
+configure terminal
+interface gigabitethernet0
+switchport mode dynamic desirable
+switchport trunk encapsulation dot1q
+end
+interface gigabitethernet0
+switchport trunk allowed vlan remove 2
+show vmps
+config t
+feature private
+exit
+copy running
+config t
+vlan 5
+private
+exit
+show vlan private
+copy running
+config t
+vlan 5
+private
+exit
+config t
+vlan 5
+private
+exit
+show vlan private
+copy running
+vlan 5
+private
+exit
+config t
+interface vlan 5
+private
+exit
+show interface vlan 101 private
+copy running
+interface vlan 5
+private
+exit
+config t
+interface ethernet 2
+switchport mode private
+switchport private
+exit
+show interface switchport
+copy running
+config t
+interface ethernet 2
+switchport mode private
+switchport private
+exit
+config t
+interface ethernet 2
+switchport
+switchport mode private
+switchport private
+switchport private
+switchport private
+exit
+show interface switchport
+copy running
+config t
+interface ethernet 2
+switchport mode private
+switchport private
+switchport private
+switchport private
+switchport private
+exit
+config t
+interface ethernet 2
+switchport mode private
+switchport private
+exit
+show interface switchport
+copy running
+config t
+interface ethernet 2
+switchport mode private
+switchport private
+exit
+config t
+interface ethernet 2
+switchport
+switchport mode private
+switchport private
+switchport private
+switchport private
+exit
+show interface switchport
+copy running
+config t
+interface ethernet 2
+switchport
+switchport mode private
+switchport private
+switchport private
+switchport private
+switchport private
+exit
+configure terminal
+vlan 2
+private
+exit
+vlan 3
+private
+exit
+vlan 4
+private
+exit
+vlan 2
+private
+exit
+interface ethernet 1
+switchport
+switchport mode private
+exit
+interface ethernet 1
+switchport
+switchport mode private
+exit
+interface ethernet 1
+switchport private
+exit
+interface ethernet 1
+switchport private
+exit
+interface vlan 2
+private
+exit
+vlan port provisioning
+show vlan port provisioning
+configure terminal  or  Router
+vlan vlan_ID
+end  or  Router
+show vlan
+configure terminal
+vlan 3
+end
+show vlan id 3
+vlan database
+vlan 3
+exit
+show vlan name VLAN0003
+vlan internal allocation policy
+end
+reload
+configure terminal
+vlan internal allocation policy descending
+interface type1
+switchport vlan mapping enable
+switchport vlan mapping original_vlan_ID translated_vlan_ID
+end
+show interface type1
+configure terminal
+interface gigabitethernet 5
+switchport vlan mapping 1649 755
+end
+show interface gigabitethernet 5
+interface type1
+switchport vlan mapping enable
+end
+show interface type1
+configure terminal
+interface gigabitethernet 5
+switchport vlan mapping enable
+end
+vlan mapping dot1q dot1q_vlan_ID isl isl_vlan_ID
+end
+show vlan
+configure terminal
+vlan mapping dot1q 1003 isl 200
+end
+show vlan
+configure terminal
+vlan 20
+name test20
+media ethernet
+remote
+show vlan name test20 id 20
+configure terminal
+no vlan 4
+show vlan brief
+configure terminal
+interface gigabitethernet2
+switchport mode access
+switchport access vlan 2
+show running
+show interfaces gigabitethernet2
+configure terminal
+vlan 2000
+remote
+exit
+interface vlan 200
+ip mtu 1024
+show vlan id 2000
+copy running
+configure terminal
+interface gigabitethernet1
+switchport mode dynamic desirable
+switchport access vlan 200
+switchport trunk native vlan 200
+show interfaces gigabitethernet1
+show interfaces gigabitethernet1
+copy running
+configure terminal
+interface gigabitethernet1
+switchport mode trunk
+switchport trunk allowed vlan remove 2
+show interfaces gigabitethernet1
+copy running
+configure terminal
+interface gigabitethernet2
+show interfaces gigabitethernet2
+copy running
+configure terminal
+interface gigabitethernet1
+switchport trunk native vlan 12
+show interfaces gigabitethernet1
+copy running
+configure terminal
+vtp domain workdomain
+vtp mode server
+show vtp status
+show vlan
+configure terminal
+interface gigabitethernet1
+switchport mode trunk
+show interfaces gigabitethernet1
+show vlan
+configure terminal
+interface gigabitethernet1
+spanning
+exit
+interface gigabitethernet1
+spanning
+show running
+copy running
+configure terminal
+interface gigabitethernet1
+switchport mode trunk
+exit
+show running
+show vlan
+configure terminal
+interface gigabitethernet1
+spanning
+exit
+show running
+copy running
+configure terminal
+interface gigabitethernet1
+trust
+switchport voice vlan dot1p
+show interfaces gigabitethernet1
+show running
+copy running
+configure terminal
+interface gigabitethernet1
+switchport priority extend trust
+show interfaces gigabitethernet1
+copy running
+configure terminal
+interface gigabitethernet1
+mls qos trust cos
+switchport voice vlan dot1p
+end
+configure terminal
+interface gigabitethernet 1
+switchport voice
+switchport voice detect
+switchport voice detect cisco
+switchport voice detect cisco
+end
+configure terminal
+interface gigabitethernet 1
+no switchport voice detect cisco
+no switchport voice detect cisco
+configure terminal
+interface gigabitethernet1
+switchport priority extend trust
+end
+system vlan 2000 reserve
+config t
+vlan 5
+exit
+show vlan
+copy running
+config t
+vlan 15
+config t
+vlan 5
+exit
+show vlan
+copy running
+config t
+vlan 15
+exit
+config t
+vlan 5
+name accounting
+state active
+no shutdown
+exit
+show vlan
+show vtp status
+copy running
+config t
+vlan 5
+name accounting
+state active
+no shutdown
+exit
+config t
+system vlan 2000 reserve
+copy running
+reload
+show system vlan reserved
+config t
+system vlan 2000 reserve
+copy running
+reload
+show system vlan reserved
+config t
+vlan configuration 20
+config t
+vlan configuration 20
+configure terminal
+vlan 10
+name test
+state active
+no shutdown
+exit
+configure terminal
+vmps server
+vmps server
+show vmps
+configure terminal
+vmps server 172.20.128.179 primary
+vmps server 172.20.128.178
+show vmps
+configure terminal
+interface interface
+switchport mode
+switchport access
+show interface interface
+configure terminal
+interface fa1
+switchport mode access
+switchport access vlan dynamic
+show interface fa1
+vmps reconfirm
+show vmps
+configure terminal
+vmps reconfirm minutes
+show vmps
+configure terminal
+vmps reconfirm 60
+show vmps
+configure terminal
+vmps retry count
+show vmps
+configure terminal
+vmps retry 5
+show vmps
+show vmps
+show vmps statistics
+system vlan 400 reserve
+show system vlan reserved
+copy running
+reload
+show system vlan reserved
+config t
+vlan 5
+exit
+show vlan
+copy running
+config t
+vlan 15
+exit
+config t
+vlan 5
+exit
+show vlan
+copy running
+config t
+vlan 15
+exit
+config t
+vlan 5
+name accounting
+state active
+no shutdown
+exit
+show vlan
+show vtp status
+copy running
+config t
+vlan 5
+name accounting
+state active
+no shutdown
+exit
+config t
+vlan configuration 20
+config t
+vlan configuration 20
+configure terminal
+system vlan long
+copy running
+show running
+configure terminal
+system vlan long
+copy running config startup config
+show running
+configure terminal
+vlan 10
+name test
+state active
+no shutdown
+exit
+show ip dhcp import
+vlan databaseRouter
+system vlan 2000 reserve
+configure terminal
+vlan
+no vlan
+configure terminal
+vlan 15
+configure terminal
+vlan 5
+name accounting
+state active
+no shutdown
+configure terminal
+interface
+switchport
+configure terminal
+interface ethernet 1
+switchport access vlan 5
+configure terminal
+feature interface
+interface vlan 5
+copy running
+configure terminal
+no interface vlan 5
+copy running
+configure terminal
+feature interface
+interface vlan 5
+management
+copy running
+configure terminal
+interface vlan 5
+no management
+copy running
+configure terminal 
+configure terminal
+feature vtp
+vtp domain accounting
+vtp version 2
+exit
+show vtp status
+show running
+show vlan
+switchport private
+configure terminal
+vlan vlan_ID
+private
+end
+show vlan private
+configure terminal
+vlan 202
+private
+end
+show vlan private
+configure terminal
+vlan 303
+private
+end
+show vlan private
+configure terminal
+vlan 440
+private
+end
+show vlan private
+configure terminal
+vlan primary_vlan_ID
+private
+end
+show vlan private
+configure terminal
+vlan 202
+private
+end
+show vlan private
+configure terminal
+interface
+switchport mode private
+end
+show interfaces
+configure terminal
+interface fastethernet 5
+switchport mode private
+switchport private
+end
+show interfaces fastethernet 5
+configure terminal
+interface
+switchport mode private
+end
+show interfaces
+configure terminal
+interface fastethernet 5
+switchport mode private
+switchport private
+end
+show interfaces fastethernet 5
+configure terminal
+interface
+switchport mode private
+switchport private
+end
+show interfaces
+configure terminal
+interface fastethernet 5
+switchport mode private
+switchport private
+switchport private
+switchport private
+end
+show interfaces fastethernet 5
+configure terminal
+interface
+switchport mode private
+end
+show interfaces
+switchport private
+no switchport private
+no switchport private
+configure terminal
+interface fastethernet 5
+switchport mode private
+switchport private
+switchport private
+switchport private
+end
+show interfaces fastethernet 5
+configure terminal
+interface vlan primary_vlan_ID
+end
+show interface private
+configure terminal
+interface vlan 202
+private
+end
+show interfaces private
+show vlan private
+vlan 10
+private
+show vlan private
+show interface f3
+show interface f3
+show interface f3
+debug pm pvlan

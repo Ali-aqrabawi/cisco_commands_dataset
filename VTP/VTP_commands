@@ -1,0 +1,323 @@
+vtp file bootflash
+vtp domain eng_group
+vtp mode server
+vtp password mypassword
+vtp password mypassword hidden
+show vtp password
+vtp primary vlan
+interface gigabitethernet 0
+config t
+feature vtp
+vtp domain accounting
+vtp version 2
+vtp mode transparent
+vtp file vtp.dat
+vtp password cisco
+exit
+show vtp status
+show vtp counters
+show vtp interface
+show vtp password
+copy running
+config t
+feature vtp
+vtp domain accounting
+vtp version 2
+vtp mode transparent
+exit
+config t
+vtp pruning
+no vtp pruning
+show interface Ethernet 1
+switchport trunk pruning vlan add 20
+show vtp counters
+clear vtp counters
+switchport trunk pruning vlan 9
+show vtp status
+vtp pruning
+show vtp status | include Pruning
+show vtp status
+vtp version 2
+show vtp status | include V2
+configuration terminal
+vtp mode server
+vtp domain domain_name
+end
+show vtp status
+configuration terminal
+vtp mode server
+vtp domain Lab_Network
+show vtp status
+configuration terminal
+end
+show vtp status
+configuration terminal
+vtp mode client
+exit
+show vtp status
+configuration terminal
+end
+show vtp status
+configuration terminal
+vtp transparent
+show vtp status
+show vtp counters
+show vtp counters
+padding bytes in VLAN Name
+config terminal
+vtp mode server
+vtp domain eng_group
+vtp password mypassword
+vlan database
+vtp server
+vtp domain eng_group
+vtp password mypassword
+exit
+show vtp status
+show vtp counters
+config t
+feature vtp
+vtp domain accounting
+vtp version 2
+vtp file vtp.dat
+vtp password cisco
+exit
+show vtp status
+show vtp counters
+show vtp interface
+show vtp password
+copy running
+configure terminal
+vtp domain eng_group
+vtp mode server
+vtp password mypassword
+show vtp status
+copy running
+configure terminal
+vtp password mypassword hidden
+show vtp password
+copy running
+vtp primary vlan force
+configure terminal
+vtp version 2
+show vtp status
+copy running
+configure terminal
+vtp pruning
+show vtp status
+configure terminal
+interface gigabitethernet1
+show running
+show vtp status
+show vtp status
+configure terminal
+vtp domain domain123
+show vtp status
+configure terminal
+vtp domain domain012
+show vtp status
+vtp primary vlan
+show vtp status
+show vtp status
+show vtp status
+vtp password helping hidden
+exit
+show vtp password
+vtp password 89914640C8D90868B6A0D8103847A733 secret
+exit
+show vtp password
+vtp primary vlan
+show vtp devices
+configure terminal
+feature vtp
+vtp domain accounting
+vtp version 2
+vtp mode transparent
+exit
+interface port
+switchport trunk pruning vlan 9
+vtp mode transparent
+vlan 2
+vtp mode off
+vtp mode server
+vlan 2
+vtp mode client
+configure terminal
+vlan
+no vlan
+configure terminal
+vlan
+no vlan
+configure terminal
+vlan 15
+configure terminal
+vlan
+name vlan
+state
+no shutdown
+configure terminal
+vlan
+name vlan
+state
+no shutdown
+configure terminal
+vlan 5
+name accounting
+state active
+no shutdown
+configure terminal
+interface
+switchport access vlan vlan
+configure terminal
+interface
+switchport access vlan vlan
+configure terminal
+interface ethernet 1
+switchport access vlan 5
+show running
+show vlan
+show running
+show vlan
+show vlan id 13
+show vlan summary
+vtp domain
+spanning
+vtp version
+vtp mode
+no vtp
+vtp primary
+vtp password
+show vtp status
+show vtp devices
+show vtp devices
+show vtp counters
+show vtp interface
+show vtp interface ethernet 1
+show vtp interface port
+system vlan 2000 reserve
+configure terminal
+vlan
+no vlan
+configure terminal
+vlan 15
+configure terminal
+vlan 5
+name accounting
+state active
+no shutdown
+configure terminal
+interface
+switchport
+configure terminal
+interface ethernet 1
+switchport access vlan 5
+configure terminal
+feature interface
+interface vlan 5
+copy running
+configure terminal
+no interface vlan 5
+copy running
+configure terminal
+feature interface
+interface vlan 5
+management
+copy running
+configure terminal
+interface vlan 5
+no management
+copy running
+configure terminal 
+configure terminal
+feature vtp
+vtp domain accounting
+vtp version 2
+exit
+show vtp status
+show running
+show vlan
+configure terminal
+vlan vlan_ID
+end
+show vlan
+configure terminal
+vlan 3
+end
+show vlan id 3
+vtp password WATER
+show vtp status
+vtp pruning
+show vtp status | include Pruning
+show vtp status
+vtp version 2
+show vtp status | include V2
+configuration terminal
+vtp mode server
+vtp domain domain_name
+end
+show vtp status
+configuration terminal
+vtp mode server
+vtp domain Lab_Network
+show vtp status
+configuration terminal
+end
+show vtp status
+configuration terminal
+vtp mode client
+exit
+show vtp status
+configuration terminal
+end
+show vtp status
+configuration terminal
+vtp transparent
+show vtp status
+show vtp counters
+show vtp counters
+configure terminal
+vmps server
+vmps server
+show vmps
+configure terminal
+vmps server 172.20.128.179 primary
+vmps server 172.20.128.178
+show vmps
+configure terminal
+interface interface
+switchport mode
+switchport access
+show interface interface
+configure terminal
+interface fa1
+switchport mode access
+switchport access vlan dynamic
+show interface fa1
+vmps reconfirm
+show vmps
+configure terminal
+vmps reconfirm minutes
+show vmps
+configure terminal
+vmps reconfirm 60
+show vmps
+configure terminal
+vmps retry count
+show vmps
+configure terminal
+vmps retry 5
+show vmps
+show vmps
+show vmps statistics
+configuration terminal
+vmps server 172.20.26.150 primary
+vmps server 172.20.26.152
+show vmps
+configure terminal
+interface fa2
+switchport mode access
+switchport access vlan dynamic
+exit
+config terminal
+vmps reconfirm 60
+show vmps

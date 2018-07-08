@@ -1,0 +1,837 @@
+configure terminal
+router bgp 45000
+bgp log
+neighbor group192 peer
+bgp listen limit 200
+bgp listen range 192.168.0.0
+neighbor group192 ebgp
+neighbor group192 remote
+address
+neighbor group192 activate
+end
+configure terminal
+router bgp 50000
+neighbor 192.168.3.1 remote
+show ip bgp summary
+show ip bgp peer
+show ip bgp neighbors 192.168.3.2
+show ip bgp summary
+show ip bgp peer
+show ip bgp neighbors 192.168.3.2
+configure
+router bgp 100
+address
+additional
+configure
+router bgp 100
+address
+additional
+configure
+router bgp 100
+address
+additional
+remote
+configure
+router bgp 100
+neighbor 10.1.1.1
+remote
+address
+advertise permanent
+neighbor 192.168.70.24
+remote
+address
+configure
+router bgp 65000
+bfd minimum
+bfd multiplier 7
+neighbor 5.5.5.2
+bfd minimum
+bfd multiplier 4
+vrf one
+neighbor 3.12.1.2
+bfd minimum
+bfd multiplier 10
+commit
+show bfd session
+show bfd session detail
+show bgp nei 3.3.3.2
+show bgp nei 5.5.5.2
+show bgp vrf one nei 3.12.1.2
+show route bgp
+show route bgp
+router bgp 210
+bgp bestpath med missing
+router bgp 65534
+address
+bgp client
+exit
+neighbor
+remote
+address
+route
+exit
+exit
+neighbor 192.168.253.21 use neighbor
+neighbor 192.168.253.22 use neighbor
+router bgp 65534
+bgp cluster
+neighbor 192.168.70.24
+remote
+address
+route
+router bgp 4001
+bgp confederation identifier 5
+bgp confederation peers 4002
+bgp confederation peers 4003
+bgp confederation peers 4004
+bgp confederation peers 4005
+bgp confederation peers 4006
+bgp confederation peers 4007
+neighbor 10.2.3.4
+remote
+exit
+exit
+neighbor 172.20.16.6
+remote
+router bgp 1090
+bgp confederation peers 1093
+router bgp 1095
+bgp confederation peers
+1096
+1097
+1098
+router bgp 50
+address
+bgp dampening 30 1500 10000 120
+router bgp 200
+bgp default local
+router bgp 100
+bgp enforce
+router bgp 109
+bgp fast
+bgp graceful
+router bgp 3
+bgp graceful
+bgp graceful
+router bgp 3
+bgp graceful
+router bgp 65530
+bgp log neighbor changes disable
+bgp maximum neighbor 1200
+configure
+router bgp 100
+bgp multipath as
+bgp redistribute
+exit
+router ospf area1
+redistribute bgp 1
+clear route
+router bgp 100
+router bgp 64500
+address
+bgp scan
+router bgp 64500
+bgp scan
+bgp update
+router bgp 65000
+configure
+router bgp 100
+neighbor 1.1.1.1
+configure
+bmp server 4 initial
+configure
+bmp server 8 host 192.168.10.1 port 56
+configure
+bmp server 5 update
+router bgp 100
+neighbor 10.2.3.4
+capability additional
+configure
+route
+if orf prefix in
+pass
+endif
+if orf prefix in
+pass
+endif
+router bgp 65530
+neighbor 10.0.101.1
+remote
+address
+route
+capability orf prefix both
+orf route
+show bgp nei 10.3.3.3 conf
+show bgp nei 10.3.3.3
+neighbor 10.0.101.1
+capability suppress 4
+show bgp neighbor 10.0.101.1 config
+show bgp neighbor 10.0.101.1
+clear bgp 10.0.0.1
+clear bgp ipv4 unicast dampening 172.20.0.0
+clear bgp external
+clear bgp ipv4 unicast flap
+clear bgp vrf vrf_A nexthop performance statistics
+clear bgp nexthop registration 10.1.1.1
+clear bgp peer
+clear bgp performance
+clear bgp ipv4 unicast self
+clear bgp shutdown
+clear bgp ipv4 unicast 10.0.0.1 soft in
+default
+configure
+router bgp 100
+address
+default
+configure
+router bgp 100
+address
+default
+router bgp 109
+default
+router bgp 109
+neighbor 172.20.2.3
+remote
+address
+default
+router bgp 109
+neighbor 172.20.2.3
+remote
+address
+default
+configure
+router bgp 109
+address
+configure
+router isis foo
+distribute bgp
+configure
+router ospf 100
+distribute bgp
+configure
+router bgp 100
+address
+domain
+router bgp 1
+router bgp 5
+dscp af32
+router bgp 109
+neighbor 172.20.16.6
+ebgp
+vrf vrf
+export route
+vrf vrf
+address
+export route
+vrf vrf
+address
+import route
+address
+import route
+router bgp 140
+neighbor 172.20.1.1
+remote
+keychain keychain_A
+router bgp 140
+session
+keychain keychain_A
+exit
+remote
+keychain
+session
+keychain keychain_A
+exit
+neighbor 172.20.1.1
+remote
+use session
+keychain inheritance
+router bgp 109
+vrf vrf
+label
+configure
+router bgp 100
+address
+vrf all
+label mode route
+configure
+router bgp 109
+vrf vrf
+rd 1
+address
+label mode route
+router bgp 140
+neighbor 172.20.1.1
+remote
+local
+router bgp 109
+address
+maximum
+router bgp 109
+neighbor 192.168.40.24
+remote
+maximum
+router bgp 1
+neighbor 172.168.40.24
+remote
+router bgp 100
+address
+exit
+neighbor 3000
+remote
+address
+router bgp 65530
+neighbor
+remote
+advertisement
+address
+send
+exit
+address
+next
+exit
+exit
+use neighbor
+exit
+neighbor 10.0.0.2
+use neighbor
+exit
+configure
+router bgp 100
+vrf blue neighbor 10.10.10.1
+internal
+address
+network 172.20.0.0
+router bgp 109
+address
+network 192.168.40.0
+router bgp 140
+neighbor 172.20.1.1
+remote
+address
+next
+router bgp 140
+next
+exit
+neighbor 172.20.1.1
+remote
+address
+use af
+next
+router bgp 140
+next
+exit
+router bgp 100
+next
+exit
+router bgp 109
+address
+nexthop route
+router bgp 109
+address
+nexthop trigger
+neighbor 172.20.1.1
+remote
+address
+router bgp 140
+transport ssh port 22
+router bgp 140
+session
+password clear password1
+exit
+neighbor 172.20.1.1
+remote
+use session
+password
+configure
+router bgp 100
+address
+permanent
+router bgp 5
+neighbor 10.1.1.1
+remote
+precedence 2
+transport ssh port 22
+transport ssh port 22
+router bgp 1
+vrf vrf
+rd auto
+router bgp 1
+neighbor 172.20.1.1
+remote
+receive
+router bgp 109
+address
+redistribute ospf 110
+transport ssh port 22
+transport ssh port 22
+router bgp 1
+session
+remote
+neighbor 10.0.0.1
+session
+remote
+exit
+neighbor 10.0.0.1
+use session
+router bgp 140
+neighbor 172.20.1.1
+remote
+address
+remove
+router bgp 140
+remove
+exit
+neighbor 172.20.1.1
+remote
+address
+use af
+remove
+router bgp 140
+address
+retain route
+router bgp 1
+neighbor 172.20.1.1
+remote
+address
+route
+router bgp 120
+router bgp 1
+neighbor 172.20.1.1
+remote
+send
+neighbor 172.20.1.1
+remote
+address
+send
+send
+exit
+neighbor 172.20.1.1
+remote
+address
+use af
+send
+router bgp 140
+neighbor 172.20.1.1
+remote
+address
+send
+router bgp 140
+send
+exit
+neighbor 172.20.1.1
+remote
+address
+use af
+send
+router bgp 1
+session
+remote
+advertisement
+exit
+neighbor 10.0.0.1
+use session
+exit
+neighbor 10.0.0.2
+use session
+router bgp 1
+session
+remote
+advertisement
+password password1
+exit
+neighbor 10.0.0.1
+use session
+exit
+neighbor 10.0.0.2
+use session
+password
+router bgp 1
+neighbor 45.67.89.01
+session
+route
+set flow
+show bgp vpnv4 uni rd 2
+show bgp 11.0.0.0
+show bgp 51.0.0.0
+show bgp ipv4 unicast 1.0.0.0
+show bgp bmp summary
+show bgp bmp server 4
+show bgp advertised neighbor 10.0.101.4 summary
+show bgp advertised neighbor 172.72.77.1
+show bgp af
+show bgp af
+show bgp af
+show bgp all all attribute
+show bgp cidr
+show bgp community 1820
+show bgp convergence
+show bgp convergence
+show bgp dampened
+show bgp flap
+show bgp flap
+show bgp inconsistent
+show bgp vrf BAR ipv4 unicast labels
+show bgp l2vpn evpn rd 100
+show bgp neighbor
+show bgp neighbor
+show bgp neighbor
+show bgp neighbors 3.3.3.3
+show bgp neighbors 10.0.101.1
+show bgp neighbors 172.20.16.178 routes
+show bgp neighbors 10.0.101.1 dampened
+show bgp neighbors 10.0.101.1 flap
+show bgp neighbors 10.0.101.2 performance
+show bgp neighbors 10.0.101.2 performance
+show bgp neighbors 10.0.101.1 configuration
+show bgp neighbors 10.1.1.2
+show bgp neighbors 3.3.3.3
+show bgp vrf all nexthops
+show bgp paths detail
+show bgp policy summary
+show bgp policy
+show bgp process
+show bgp all all process detail
+show bgp process performance
+show bgp process performance
+show bgp vpnv4 unicast process performance
+show bgp regexp
+show bgp route
+show bgp session
+show bgp session
+show bgp session
+show bgp sessions
+show bgp sessions not
+show bgp sessions not
+show bgp truncated
+show bgp update
+show bgp ipv4 unicast update
+show bgp ipv4 unicast update
+show bgp vrf vrf
+ show bgp vrf foo ipv4 unicast 100.1.1.1
+show protocols bgp
+router bgp 1
+neighbor 192.168.40.24
+shutdown
+exit
+router bgp 1
+session
+shutdown
+exit
+neighbor 192.168.40.24
+remote
+use session
+shutdown inheritance
+exit
+transport ssh port 22
+router bgp 6
+vrf vrf_A
+neighbor 192.168.70.24
+remote
+address
+site
+router bgp 1
+socket receive
+router bgp 1
+socket send
+router bgp 100
+neighbor 10.108.1.1
+remote
+address
+soft
+exit
+router bgp 109
+neighbor 192.168.40.24
+speaker
+router bgp 1
+address
+table
+router bgp 109
+neighbor 192.168.40.24
+remote
+timers 70 210
+router bgp 1
+timers bgp 30 90
+transport ssh port 22
+router bgp 65534
+neighbor 192.168.223.7
+remote
+router bgp 65534
+session
+exit
+neighbor 192.168.223.1
+remote
+use session
+exit
+neighbor 192.168.223.2
+remote
+use session
+exit
+neighbor 192.168.223.3
+remote
+use session
+exit
+router bgp 65000
+router bgp 110
+neighbor 172.20.16.6
+remote
+update
+router bgp 1
+session
+advertisement
+timers 30 90
+exit
+neighbor 172.168.40.24
+remote
+use session
+exit
+router bgp 1
+session
+advertisement
+timers 30 90
+exit
+neighbor 172.168.40.24
+remote
+use session
+timers 60 180
+exit
+router bgp 1
+route
+exit
+neighbor
+remote
+address
+route
+route
+exit
+address
+route
+route
+exit
+neighbor 172.168.40.24
+use neighbor
+address
+use af
+exit
+router bgp 1
+session
+advertisement
+exit
+session
+use session
+update
+exit
+neighbor 172.168.40.24
+remote
+use session
+exit
+transport ssh port 22
+router bgp 1
+vrf vrf
+router bgp 1
+neighbor 172.20.16.6
+remote
+address
+weight 50
+exit
+configure
+interface TenGigE0
+l2vpn
+xconnect group evpn
+p2p evpn1
+interface TenGigE0
+neighbor evpn evi 100 target 80 source 60
+show evpn evi ac
+show evpn evi ac
+show l2vpn xconnect
+router bgp 50000
+address
+router bgp 50000
+address
+router bgp 50000
+address
+router bgp 50000
+address
+router bgp 100
+address
+router bgp 45000
+address
+router bgp 50000
+scope global
+address
+router bgp 50000
+address
+show ip interface brief
+show ip bgp
+bgp additional
+bgp advertise
+router bgp 50
+bgp aggregate
+router bgp 50
+aggregate
+bgp aggregate
+show ip bgp summary
+show ip bgp summary
+show ip bgp regexp
+show ip bgp regexp
+router bgp 40000
+bgp bestpath as
+bgp consistency
+router bgp 45000
+neighbor 10.10.10.1 remote
+neighbor 10.10.10.1 update
+neighbor 10.10.10.3 remote
+neighbor 10.10.10.3 update
+neighbor 172.16.1.1 remote
+neighbor 172.16.1.1 ebgp
+neighbor 172.16.2.2 remote
+neighbor 172.16.2.2 ebgp
+address
+bgp dmzlink
+neighbor 10.10.10.1 activate
+neighbor 10.10.10.1 next
+neighbor 10.10.10.1 send
+neighbor 10.10.10.3 activate
+neighbor 10.10.10.3 next
+neighbor 10.10.10.3 send
+neighbor 172.16.1.1 activate
+neighbor 172.16.1.1 dmzlink
+neighbor 172.16.2.2 activate
+neighbor 172.16.2.2 dmzlink
+maximum
+maximum
+configure terminal
+router bgp 65000
+bgp graceful
+configure terminal
+router bgp 65000
+bgp graceful
+configure terminal
+router bgp 65000
+bgp graceful
+show ip bgp summary
+router bgp 100
+bgp nopeerup
+configure terminal
+router ospf 10
+redistribute connected subnets
+network 192.168.0.0 0.0.255.255 area 0
+router bgp 64500
+no synchronization
+bgp log
+neighbor 10.5.5.5 remote
+neighbor 10.5.5.5 update
+neighbor 10.6.6.6 remote
+neighbor 10.6.6.6 update
+no auto
+address
+neighbor 10.5.5.5 activate
+neighbor 10.5.5.5 send
+neighbor 10.6.6.6 activate
+neighbor 10.6.6.6 send
+exit
+address
+no synchronization
+bgp advertise
+bgp recursion host
+neighbor 192.168.9.2 remote
+neighbor 192.168.9.2 fall
+neighbor 192.168.9.2 activate
+neighbor 192.168.9.2 as
+neighbor 192.168.9.2 route
+exit
+configure terminal
+router ospf 10
+redistribute connected subnets
+network 192.168.0.0 0.0.255.255 area 0
+router bgp 64500
+no synchronization
+bgp log
+neighbor 10.5.5.5 remote
+neighbor 10.5.5.5 update
+neighbor 10.6.6.6 remote
+neighbor 10.6.6.6 update
+no auto
+address
+neighbor 10.5.5.5 activate
+neighbor 10.5.5.5 send
+neighbor 10.6.6.6 activate
+neighbor 10.6.6.6 send
+exit
+address
+no synchronization
+bgp additional
+bgp recursion host
+neighbor 192.168.9.2 remote
+neighbor 192.168.9.2 fall
+neighbor 192.168.9.2 activate
+neighbor 192.168.9.2 as
+neighbor 192.168.9.2 route
+exit
+show ip bgp vpnv4 vrf test1 192.168.13.1
+show ip bgp vpnv4 vrf test1 192.168.13.1
+bgp slow
+bgp slow
+bgp slow
+router bgp 1
+address
+neighbor 192.168.11.2 as
+neighbor 192.168.14.3 as
+exit
+address
+bgp update
+exit
+router bgp 5
+bgp upgrade
+show ip bgp community 201
+show ip bgp community no
+configure terminal
+router bgp 500
+bgp consistency
+show ip bgp all inconsistency nexthop
+router bgp 100
+address
+exit
+address
+class
+match protocol ipv4 1 60
+policy
+class class1
+class type traffic classc1
+set dscp 5
+exit
+flowspec
+local
+address
+local
+service
+exit
+address
+local
+service
+vrf vrf1
+address
+local
+service
+exit
+address
+local
+service
+exit
+show processes flowspec_mgr location all
+show flowspec summary
+show flowspec vrf default ipv4 summary
+show flowspec vrf default ipv6 summary
+show flowspec vrf all afi
+show flowspec vrf default ipv4 Dest
+show bgp ipv4 flowspec Dest
+router bgp 100
+router bgp 100 neighbor 1.1.1.1
+router bgp 100 neighbor 1.1.1.1 address
+router bgp 100 neighbor 1.1.1.1 address
+interface GigabitEthernet 0
+ipv4 flowspec disable
+router bgp 100
+router bgp 100 neighbor 1.1.1.1
+router bgp 100 neighbor 1.1.1.1 address
+router bgp 100 neighbor 1.1.1.1 address
+asn 100

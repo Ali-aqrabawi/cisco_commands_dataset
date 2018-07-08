@@ -1,0 +1,284 @@
+vrf context Enterprise
+ip pim pre
+ip pim bsr listen forward
+no ip pim bsr listen forward
+configure terminal
+interface fastethernet 1
+bfd interval 500 min_rx 500 multiplier 5
+ip pim bfd
+ipv6 pim bfd
+interface ethernet 2
+ip pim jp
+interface ethernet 2
+no ip pim jp
+interface ethernet 2
+ip pim hello
+interface ethernet 2
+no ip pim hello
+show ip rpf 10.0.0.2
+ip pim log
+no ip pim log
+ip pim auto
+no ip pim auto
+router pim
+accept
+exit
+ipv4 access
+deny ipv4 any 232.0.0.0 0.255.255.255
+permit any
+ipv4 access
+permit ipv4 any 224.0.0.0 15.255.255.255
+exit
+router pim
+auto
+ipv4 access
+permit ipv4 any 239.254.0.0 0.0.255.255
+exit
+router pim
+auto
+router pim
+auto
+router pim
+auto
+router pim
+interface pos 0
+router pim
+bsr candidate
+router pim
+bsr candidate
+exit
+ipv4 access
+permit ipv4 any 239.0.0.0 0.255.255.255
+show pim group
+clear pim autorp 232.0.0.0
+show pim group
+show pim group
+clear pim bsr
+show pim group
+show pim traffic
+clear pim counters
+show pim traffic
+clear pim topology
+router pim
+interface pos 0
+router pim address
+embedded
+ipv6 access
+permit ipv6 any ff73
+permit ipv6 any ff74
+permit ipv6 any ff75
+permit ipv6 any ff76
+permit ipv6 any ff77
+permit ipv6 any ff78
+show pim ipv6 group
+router pim
+global maximum route
+router pim
+hello
+interface pos 0
+hello
+router pim
+interface pos 0
+router pim
+interface all disable
+router pim
+interface pos 0
+join
+router pim
+maximum autorp mapping
+router pim
+maximum group
+router pim
+maximum register
+router pim
+maximum route
+router pim
+maximum routes 200000
+router pim
+mofrr rib acl
+router pim
+address
+mofrr acl
+router pim
+neighbor
+router pim
+neighbor
+neighbor
+exit
+ipv4 access
+deny ipv4 any 10.0.0.1
+router pim
+nsf lifetime 30
+router pim
+router pim
+router
+router pim
+ipv4 access
+permit ipv4 any 225.2.2.0 0.0.0.255
+exit
+router pim
+router pim
+router pim
+rpf topology route
+router pim address
+rpf topology route
+router pim
+router pim
+show auto
+show auto
+show pim bgp
+show pim bsr candidate
+show pim bsr election
+show pim  vrf 101 context
+show pim ipv6 context detail
+show pim ipv4 context table
+show pim group
+show pim interface
+show pim join
+show pim vrf svpn20 mdt cache
+show pim vrf all mdt interface
+show pim mstatic
+show pim neighbor
+show pim neighbor count
+show pim nsf
+show pim range
+show pim rpf
+show pim rpf hash 10.0.0.1 239.0.0.1
+show pim rpf hash 11.11.0.4 226.1.1.2 mofrr
+show pim mt4
+show pim ipv4 rpf route
+show pim ipv4 unicast topology all rpf summary
+show pim rpf summary
+show pim summary
+show pim table
+show pim topology
+show pim topology 239.1.1.1
+show pim ipv4 topology detail
+show pim topology 239.1.1.1 detail
+show pim topology entry
+show pim topology interface
+show pim vrf svpn12 topology summary
+show pim traffic
+show pim tunnel info all
+router pim
+ipv4 access
+permit ipv4 any 224.2.151.141
+multicast
+ssm range 4
+ip pim ssm range 239.128.1.0
+no ip pim ssm range none
+ip pim ssm range none
+ip pim send
+no ip pim send
+configure terminal
+ip msdp peer 192.168.1.2 connect
+ip msdp description 192.168.1.2 router at customer a
+configure terminal
+ip msdp shutdown 192.168.1.3
+configure terminal
+ip msdp password peer 10.32.43.144 0 test
+exit
+show ip msdp peer
+configure terminal
+ip msdp sa
+exit
+show ip msdp count
+show ip msdp peer
+show ip msdp summary
+configure terminal
+ip msdp keepalive 10.1.1.3 40 55
+exit
+configure terminal
+ip msdp timer 45
+exit
+configure terminal
+ip msdp rpf rfc3618
+show ip msdp rpf
+configure terminal
+ip msdp default
+exit
+configure terminal
+ip msdp mesh
+exit
+configure terminal
+ip msdp redistribute route
+exit
+configure terminal
+ip msdp sa
+exit
+configure terminal
+ip msdp sa
+exit
+configure terminal
+ip msdp ttl
+exit
+configure terminal
+ip msdp sa
+exit
+configure terminal
+ip msdp filter sa
+exit
+configure terminal
+ip msdp border sa
+exit
+configure terminal
+ip msdp originator
+exit
+enable
+debug ip msdp
+debug ip msdp resets
+show ip msdp count
+SA learned
+sources
+show ip msdp peer 192.168.4.4
+show ip msdp sa
+show ip msdp summary
+clear ip msdp peer
+clear ip msdp statistics
+clear ip msdp sa
+snmp
+snmp
+exit
+ip pim snooping
+no ip pim snooping
+end
+show ip pim snooping
+ip pim snooping
+end
+show ip pim snooping
+interface vlan vlan_ID
+ip pim snooping
+no ip pim snooping
+end
+show ip pim snooping
+interface vlan 10
+ip pim snooping
+end
+show ip pim snooping vlan 10
+no ip pim snooping dr
+end
+show running
+no ip pim snooping dr
+end
+interface type number
+ip pim state
+show ip pim interface fastethernet 0
+show ip pim neighbor
+debug ip pim 239.0.0.1
+show ip mroute 239.0.0.1
+show ip mroute 239.0.0.1
+configure terminal
+interface ethernet 0
+ip address 10.0.0.2 255.255.255.0
+standby 1 ip 192.0.2.99
+standby 1 timers 5 15
+standby 1 priority 120
+standby 1 name HSRP1
+show standby
+configure terminal
+interface ethernet 0
+ip address 10.0.0.2 255.255.255.0
+ip pim redundancy HSRP1 dr
+ip pim rp
+ip pim rp
+no ip pim rp

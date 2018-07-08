@@ -1,0 +1,948 @@
+configure terminal
+webvpn gateway GW_1
+hostname VPN_1
+ip address 10.1.1.1
+http
+ssl encryption aes
+ssl trustpoint CA_CERT
+inservice
+webvpn enable gateway
+configure terminal
+webvpn context context1
+aaa authentication domain SERVER_GROUP
+policy group ONE
+exit
+default
+exit
+gateway GW_1 domain cisco.com
+inservice
+login
+logo file flash
+secondary
+ secondary
+title
+title
+svc platform lin seq 1
+configure terminal
+webvpn context context1
+policy group ONE
+banner
+hide
+nbns
+port
+timeout idle 1800
+configure terminal
+aaa new
+username USER1 secret 0 PsW2143
+aaa authentication login default local
+configure terminal
+aaa new
+aaa group server radius myServer
+server 10.1.1.20 auth
+exit
+aaa authentication login default local group myServer
+radius
+webvpn context context1
+aaa authentication domain myServer
+configure terminal
+aaa new
+aaa authorization network maxaaa group tacacs
+crypto pki trustpoint msca
+enrollment url http
+enrollment url http
+revocation
+exit
+authorization username subjectname serialnumber
+authorization list maxaaa
+tacacs
+radius
+configure terminal
+aaa new
+webvpn context context1
+aaa accounting list list1
+debug webvpn aaa
+debug aaa accounting
+configure terminal
+webvpn context context1
+heading
+exit
+policy group ONE
+configure terminal
+webvpn context context1
+nbns
+nbns
+exit
+policy group ONE
+nbns
+functions file
+configure terminal
+access
+webvpn context context1
+policy group ONE
+citrix enabled
+filter citrix 100
+configure terminal
+webvpn context context1
+port
+local
+exit
+policy group ONE
+port
+exit
+configure terminal
+crypto vpn anyconnect filea sequence 5
+configure terminal
+crypto vpn csd bgl12
+csd enable
+configure terminal
+webvpn context context1
+policy group ONE
+filter tunnel 101
+functions svc
+svc address
+svc default
+svc dns
+svc dpd
+svc keepalive 300
+svc homepage www.cisco.com
+svc keep
+svc rekey method new
+end
+access
+webvpn context context1
+policy group ONE
+filter tunnel 101
+ip local pool ADDRESSES 192.168.1.1 192.168.1.254
+webvpn context context1
+policy group ONE
+svc address
+end
+interface loopback 0
+ip address 172.16.1.126 255.255.255.0
+no shutdown
+exit
+ip local pool ADDRESSES 172.16.1.1 172.16.1.254
+webvpn context context1
+policy group ONE
+svc address
+end
+webvpn context context1
+policy group ONE
+functions svc
+functions svc
+svc default
+svc dns
+svc dns
+svc dpd
+svc dpd
+svc homepage www.cisco.com
+svc keep
+svc rekey method new
+svc rekey time 3600
+end
+configure terminal
+webvpn context context1
+policy group ONE
+svc split exclude 192.168.1.1 0.0.0.255
+svc split dns www.examplecompany.com
+svc msie
+svc msie
+svc wins
+end
+webvpn context context1
+policy group ONE
+svc split dns www.example.com
+svc split dns myexample.com
+svc split exclude 192.168.1.0 255.255.255.0
+svc split include 172.16.1.0 255.255.255.0
+svc msie
+svc msie
+svc msie
+svc msie
+svc wins
+svc wins
+svc wins
+configure terminal
+webvpn context context1
+end
+configure terminal
+webvpn context context1
+acl acl1
+permit url any
+add 3 permit url any
+error
+error
+list
+end
+configure terminal
+webvpn context context1
+policy group group1
+exit
+acl acl1
+end
+debug webvpn acl
+configure terminal
+webvpn context context1
+secret
+request
+end
+configure terminal
+webvpn context context1
+policy group ONE
+configure terminal
+webvpn context context1
+policy group ONE
+mask
+cifs
+heading
+policy group ONE
+cifs
+configure terminal
+webvpn context context1
+user
+configure terminal
+ip vrf vrf_1
+exit
+webvpn gateway mygateway
+vrfname vrf_1
+exit
+configure terminal
+no webvpn cef
+exit
+configure terminal
+webvpn context context1
+aaa authentication auto
+aaa authorization list 11
+exit
+configure terminal
+webvpn import svc profile profile1 flash
+webvpn context context1
+authentication certificate aaa
+username
+ca trustpoint trustpoint1
+match
+policy group policy3
+svc profile profile1
+exit
+configure terminal
+webvpn context context1
+url rewrite
+host www.examplecompany.com
+ip 10.1.1.0 255.255.0.0
+unmatched
+exit
+configure terminal
+webvpn context context1
+policy group g1
+http proxy
+exit
+configure terminal
+interface gateway 0
+standby 0 ip 10.1.1.1
+standby 0 name SSLVPN
+exit
+webvpn gateway Gateway1
+ip address 10.1.1.1 port 443 standby SSLVPN
+exit
+webvpn create template browser
+configure terminal
+webvpn context context1
+browser
+exit
+show running
+webvpn create template language flash
+webvpn create template language japanese
+configure terminal
+webvpn context context1
+language Japanese
+exit
+show running
+exit
+webvpn create template url
+exit
+configure terminal
+webvpn context context1
+import flash
+exit
+policy group policygroup1
+show running
+exit
+configure terminal
+interface virtual
+ip unnumbered GigabitEthernet 0
+exit
+webvpn context context1
+virtual
+exit
+show webvpn context context1
+configure terminal
+webvpn context context1
+virtual
+inservice
+exit
+configure terminal
+webvpn context context1
+virtual
+inservice
+exit
+configure terminal
+webvpn import svc profile profile1 flash
+webvpn context context1
+policy group group1
+svc profile profile1
+svc module vpngina
+show running
+configure terminal
+ip access
+permit 10.0.0.1
+deny 10.0.0.2
+exit
+webvpn context context1
+policy group default
+svc split include acl 1
+show running
+configure terminal
+webvpn context context1
+policy group default
+svc address
+show running
+configure terminal
+webvpn gateway gateway1
+dtls port 1045
+show webvpn session context all
+clear webvpn nbns context all
+clear webvpn session context all
+clear webvpn stats
+show webvpn context
+show webvpn gateway
+show webvpn nbns context all
+show webvpn policy group ONE context all
+show webvpn session context all
+show webvpn stats tunnel detail context all
+show webvpn context brief
+show interface virtual
+show webvpn session user user1 context all
+show running
+debug webvpn
+webvpn context context1
+nbns
+nbns
+nbns
+nbns
+exit
+policy group ONE
+nbns
+functions file
+ functions file
+functions file
+end
+access
+webvpn context context1
+policy group ONE
+citrix enabled
+filter citrix 100
+webvpn context context1
+port
+local
+local
+local
+exit
+policy group ONE
+port
+ip vrf vrf1
+rd 10.100.100.1
+exit
+webvpn context context1
+policy group group1
+exit
+default
+show webvpn stats
+webvpn install svc vpn1_i386
+webvpn install svc vpn2_powerpc
+webvpn install svc svc_1.pkg sequence 4
+show webvpn install status svc
+show running
+interface gateway 0
+standby 0 ip 10.1.1.1
+standby 0 name SSLVPN
+exit
+webvpn gateway Webvpn
+ip address 10.1.1.1 port 443 standby SSLVPN
+interface gateway 0
+standby 0 ip 10.1.1.1
+standby 0 name SSLVPN2
+exit
+webvpn gateway Webvpn
+ip address 10.1.1.1 port 443 standby SSLVPNigh2
+copy flash
+copy tftp
+show running
+copy flash
+copy tftp
+show running
+copy flash
+copy tftp
+show running
+interface virtual
+ip unnumbered GigabitEthernet 0
+ip vrf forwarding vrf1
+ip nat inside
+exit
+webvpn context context1
+virtual
+exit
+interface virtual
+ip unnumbered GigabitEthernet 0
+zone
+exit
+webvpn context context2
+virtual
+exit
+debug webvpn sso
+show webvpn context
+show webvpn context context1
+show webvpn gateway
+show webvpn gateway GW_1
+show webvpn nbns context all
+show webvpn policy group ONE context all
+show webvpn policy group ntlm context ntlm
+show webvpn session context SSL VPN
+show webvpn session user user1 context all
+show webvpn stats detail context SSL VPN
+show webvpn stats sso
+show webvpn context test_sso
+show webvpn policy group sso context test_sso
+show webvpn gateway mygateway
+interface ethernet0
+no crypto ipsec client ezvpn hw
+configure terminal
+crypto ipsec client ezvpn easy client remote
+group easy
+peer 192.185.0.5
+mode client
+exit
+interface Ethernet1
+crypto ipsec client ezvpn easy_vpn_remote1 outside
+exit
+exit
+show crypto ipsec client ezvpn
+show ip nat statistics
+configure terminal
+password encryption aes
+crypto ipsec client ezvpn ezvpn1
+username server_1 password 0 blue
+exit
+show running
+configure terminal
+crypto ipsec client ezvpn easy vpn remote1
+connect manual
+exit
+exit
+crypto ipsec client ezvpn connect easy vpn remote1
+configure terminal
+crypto ipsec client ezvpn easy vpn remote1
+connect auto
+exit
+exit
+crypto ipsec client ezvpn connect easy vpn remote1
+configure terminal
+interface Ethernet0
+exit
+crypto ipsec client ezvpn easy vpn remote 1 inside
+interface Ethernet1
+exit
+crypto ipsec client ezvpn easy vpn remote2 inside
+configure terminal
+interface Ethernet0
+exit
+crypto ipsec client ezvpn easy vpn remote1 outside
+interface Ethernet1
+exit
+crypto ipsec client ezvpn easy vpn remote2 outside
+configure terminal
+interface Ethernet1
+exit
+crypto ipsec client ezvpn ez1
+acl acl
+configure terminal
+ip dns server
+clear crypto ipsec client ezvpn
+clear crypto sa
+clear crypto isakmp
+debug crypto ipsec client ezvpn
+debug crypto ipsec
+debug crypto isakmp
+configure terminal
+interface virtual
+tunnel mode ipsec ipv4
+exit
+crypto ipsec client ezvpn EasyVPN1
+virtual
+debug crypto ipsec client ezvpn
+debug ip policy
+show crypto ipsec client ezvpn
+show ip interface
+configure terminal
+crypto ipsec client ezvpn ez1
+peer 10.2.2.2 default
+idle
+configure terminal
+crypto ipsec client ezvpn easyclient
+mode network
+nat allow
+exit
+interface Ethernet1
+crypto ipsec client ezvpn easyclient outside
+exit
+interface Loopback0
+ip address 10.1.1.1 255.255.255.252
+crypto ipsec client ezvpn easyclient inside
+exit
+ip nat inside source static 10.10.10.10 5.5.5.5
+ip nat inside source list 100 interface Loopback0 overload
+crypto ipsec client ezvpn easyclient
+nat acl 100
+exit
+exit
+configure terminal
+crypto ctcp keepalive 15
+crypto ipsec client ezvpn ezvpn1
+ctcp port 200
+configure terminal
+crypto ipsec client ezvpn ezvpn1
+flow allow acl 102
+configure terminal
+crypto ipsec client ezvpn easy vpn remote1
+xauth userid mode http
+debug crypto ipsec client ezvpn
+debug ip auth
+show crypto ipsec client ezvpn
+show ip auth
+debug ip auth
+show crypto ipsec client ezvpn tunnel22
+show ip auth
+show crypto ipsec client ezvpn tunnel22
+show ip auth
+show ip interface brief
+show ip interface brief
+show crypto ipsec client ezvpn
+show running
+show runn
+show crypto ipsec client ezvpn
+configure terminal
+crypto ipsec client ezvpn telecommuter
+local
+show running
+show crypto ipsec client ezvpn
+show running
+show running
+show running
+show crypto ipsec client ezvpn
+show ip route
+show running
+show crypto ipsec client ezvpn
+show ip route
+show ip route
+show crypto ipsec client ezvpn
+show ip route
+show crypto ipsec client ezvpn
+show ip route
+crypto ipsec client ezvpn connect ezvpn1
+show crypto ipsec cli ent ezvpn
+show ip route
+show crypto ipsec client ezvpn
+show ip route
+show crypto ipsec client ezvpn
+interface virtual
+ip unnumbered
+ppp authentication ms
+ip local pool default
+peer default ip address
+ip mroute
+ppp encrypt mppe
+vpdn
+vpdn
+accept dialin
+protocol pptp
+exit
+local name localname
+show vpdn tunnel | show vpdn session
+vpdn
+vpdn
+accept dialin
+protocol l2tp
+exit
+local name localname
+show vpdn tunnel
+aaa new
+aaa authentication login
+aaa authorization
+tacacs
+tacacs
+access
+ip http server
+ip http
+ip http access
+ip auth
+ip auth
+ip auth
+interface type
+ip auth
+show ip auth
+show ip auth
+show running
+show running
+vpnclient enable
+no vpnclient enable
+vpnclient server 10.10.10.15 10.10.10.30 192.168.10.10
+vpnclient username testuser password ppurkm1
+no vpnclient username
+crypto ipsec df
+vpnclient ipsec
+crypto ipsec df
+vpnclient ipsec
+crypto ipsec df
+no vpnclient ipsec
+vpnclient vpngroup TestGroup1 password my_key123
+no vpnclient vpngroup
+crypto ca trustpoint central
+vpnclient trustpoint central chain
+no vpnclient trustpoint
+vpnclient nem
+vpnclient mac
+vpnclient mac
+vpnclient management tunnel 192.198.10.10 255.255.255.0
+no vpnclient management
+crypto isakmp policy 1
+encryption 3des
+hash md5
+authentication pre
+lifetime 480
+exit
+crypto isakmp client configuration group rtr
+key secret
+dns 10.50.10.1
+domain company.com
+exit
+ip local pool dynpool 30.30.30.20 30.30.30.30
+crypto map dynmap isakmp authorization list rtr
+crypto map dynmap client configuration address respond
+aaa new
+aaa authentication login rtr
+aaa authorization network rtr
+username Cisco password 0 Cisco
+crypto ipsec transform
+crypto ipsec security
+crypto dynamic
+set transform
+reverse
+exit
+crypto map static
+interface fastethernet 4
+crypto map static
+exit
+crypto ipsec client ezvpn ezvpnclient
+group ezvpnclient key secret
+peer 192.168.100.1
+mode client
+exit
+interface fastethernet 4
+crypto ipsec client ezvpn ezvpnclient outside
+exit
+show crypto ipsec client ezvpn
+configure terminal
+crypto key generate rsa general
+configure terminal
+crypto gdoi group gdoigroupname
+identity number 3333
+identity address ipv4 209.165.200.225
+server local
+sa receive
+configure terminal
+crypto gdoi group gdoigroupname
+identity number 3333
+identity address ipv4 209.165.200.225
+server local
+rekey transport unicast
+rekey lifetime seconds 300
+rekey retransmit 10 number 3
+rekey authentication mypubkey rsa mykeys
+address ipv4 209.165.200.225
+configure terminal
+crypto gdoi group gdoigroupname
+identity number 3333
+identity address ipv4 209.165.200.225
+server local
+rekey address ipv4 121
+rekey lifetime seconds 300
+rekey retransmit 10 number 3
+rekey authentication mypubkey rsa mykeys
+exit
+exit
+access
+interface gigabitethernet 0
+ip igmp join
+configure terminal
+access
+access
+configure terminal
+crypto ipsec profile profile1
+set security
+configure terminal
+crypto isakmp policy 1
+lifetime 86400
+configure terminal
+crypto ipsec transform
+crypto ipsec profile profile1
+set transform
+exit
+crypto gdoi group gdoigroupname
+identity number 3333
+identity address ipv4 209.165.200.225
+server local
+sa ipsec 1
+profile gdoi
+match address ipv4 102
+configure terminal
+crypto gdoi group gdoigroup1
+identity number 1234
+server local
+address 209.165.200.225
+sa ipsec 1
+profile test1
+match address ipv4 101
+replay counter window
+replay time window
+configure terminal
+crypto gdoi group group1
+identity 2345
+passive
+server address ipv4 209.165.200.225
+clear crypto gdoi ks coop role
+configure terminal
+crypto gdoi group gdoigroupone
+identity number 3333
+identity address ipv4 209.165.200.225
+server address ipv4 209.165.200.225
+configure terminal
+crypto map mymap 10 gdoi
+set group group1
+configure terminal
+interface gigabitethernet 0
+crypto map map1
+configure terminal
+crypto map map1 gdoi fail
+match address 133
+activate
+configure terminal
+crypto gdoi group gdoigroupone
+identity number 3333
+identity address ipv4 10.2.2.2
+server address ipv4 10.0.5.2
+client rekey encryption aes 128 aes 192 aes 256
+client rekey hash sha
+configure terminal
+crypto ipsec transform
+exit
+crypto gdoi group gdoigroupone
+client transform
+configure terminal
+crypto gdoi group gdoigroupone
+client status active
+exit
+configure terminal
+crypto gdoi group getvpn
+server local
+authorization address ipv4 50
+exit
+exit
+access
+exit
+configure terminal
+crypto isakmp identity dn
+crypto pki trustpoint GETVPN
+subject
+exit
+crypto gdoi group getvpn
+server local
+authorization identity GETVPN_FILTER
+exit
+exit
+crypto identity GETVPN_FILTER
+dn ou
+exit
+crypto isakmp identity dn
+crypto pki trustpoint GETVPN
+subject
+exit
+show crypto gdoi ks members
+show crypto gdoi ks rekey
+of teks
+show crypto gdoi
+show crypto gdoi group diffint ipsec sa
+show crypto ipsec sa
+show crypto gdoi
+debug crypto gdoi ks coop
+show crypto gdoi group diffint ks coop version
+clear crypto gdoi group diffint replay
+debug crypto gdoi replay
+show crypto gdoi group diffint
+show crypto gdoi group diffint ks replay
+show crypto map gdoi fail
+show crypto gdoi
+show crypto ruleset
+show crypto ruleset detail
+show crypto map gdoi fail
+show running
+show running
+show running
+show crypto ipsec sa
+debug crypto ipsec client ezvpn
+interface ethernet0
+ip address 10.10.4.100 255.255.0.0
+nameif outside
+no shutdown
+crypto ikev1 policy 1
+authentication pre
+encryption 3des
+hash sha
+group 2
+lifetime 43200
+crypto ikev1 enable outside
+crypto ikev2 policy 1
+encryption 3des
+group 2
+prf sha
+lifetime 43200
+crypto ikev2 enable outside
+crypto ipsec ikev1 transform
+crypto ipsec ikev2 ipsec
+protocol esp encryption 3des aes des
+protocol esp integrity sha
+access
+tunnel
+tunnel
+ikev1 pre
+crypto map abcmap 1 match address l2l_list
+crypto map abcmap 1 set peer 10.10.4.108
+crypto map abcmap 1 set ikev1 transform
+crypto map abcmap 1 set ikev2 ipsec
+crypto map abcmap interface outside
+write memory
+interface ethernet0
+ip address 10.10.4.100 255.255.0.0
+nameif outside
+no shutdown
+write memory
+crypto ikev1 policy 1
+authentication pre
+encryption 3des
+hash sha
+group 2
+lifetime 43200
+crypto ikev1 enable outside
+write memory
+crypto ikev2 policy 1
+encryption 3des
+group 2
+prf sha
+lifetime seconds 43200
+crypto ikev2 enable outside
+write memory
+crypto ipsec transform
+write memory
+crypto ipsec ikev2 ipsec
+protocol esp encryption 3des aes des
+protocol esp integrity sha
+access
+access
+tunnel
+tunnel
+ikev1
+write memory
+crypto map abcmap 1 match address l2l_list
+crypto map abcmap 1 set peer 10.10.4.108
+crypto map abcmap 1 set transform
+crypto map abcmap 1 set ikev2 ipsec
+crypto map abcmap interface outside
+write memory
+crypto ikev1 policy 1
+encryption des
+hash md5
+authentication rsa
+group 5
+lifetime 14400
+crypto ikev1 enable outside
+crypto ikev1 am
+ no crypto ikev1 am
+crypto isakmp identity hostname
+crypto isakmp nat
+crypto ipsec fragmentation before
+crypto ikev1 ipsec
+tunnel
+tunnel
+tunnel
+tunnel
+crypto ipsec inner
+show run crypto ipsec
+access
+crypto ipsec ikev1 transform
+crypto ipsec ikev1 transform
+crypto ipsec ikev1 transform
+crypto ipsec ikev2 ipsec
+protocol esp encryption 3des aes des
+crypto isakmp reload
+interface tunnel 0
+no shutdown
+ip route 10.1.4.0
+ping 172.24.3.6
+interface fastethernet 0
+ip nat inside
+interface serial 2
+ip nat outside
+show ip nat translations verbose
+show running
+show crypto isakmp policy
+show access
+show crypto ipsec transform
+show crypto map
+show crypto map interface serial 2
+class
+match protocol protocol
+match class
+policy
+class class
+bandwidth kbps
+police bps conform
+set ip
+set qos
+random
+queue
+show policy
+show policy
+show policy
+show policy
+show policy
+show policy
+show policy
+interface serial 1
+show interfaces serial 1
+show interfaces serial 1
+class
+match access
+match input
+match protocol protocol
+policy
+class class
+bandwidth
+queue
+class class
+bandwidth
+queue
+service
+show policy policy
+show policy policy
+show policy interface
+show access
+show ip interface serial 1
+show running

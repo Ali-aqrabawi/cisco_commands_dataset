@@ -1,0 +1,1096 @@
+interface interface_id
+switchport mode access
+switchport port
+switchport port
+switchport port
+switchport port
+switchport port
+switchport port
+end
+show port
+show port
+configure terminal
+interface fastethernet 3
+switchport mode access
+switchport port
+switchport port
+switchport port
+show port
+configure terminal
+interface fastethernet 5
+switchport mode access
+switchport port
+switchport port
+switchport port
+switchport port
+switchport port
+interface interface_id
+switchport port
+end
+show port security
+interface fastethernet 5
+switchport port
+switchport port
+show port
+show port
+show port
+show port
+interface type1
+switchport
+switchport trunk encapsulation
+switchport mode trunk
+switchport nonegotiate
+switchport port
+do show port
+configure terminal
+interface fastethernet 5
+switchport
+switchport mode trunk
+switchport nonegotiate
+switchport port
+do show port
+interface type1
+switchport
+switchport mode access
+switchport port
+do show port
+configure terminal
+interface fastethernet 5
+switchport
+switchport mode access
+switchport port
+do show port
+interface type1
+switchport port
+do show port
+configure terminal
+interface fastethernet 3
+switchport port
+do show port
+configure terminal
+interface fastethernet 3
+switchport port
+do show port
+mls rate
+do show mls rate
+configure terminal
+mls rate
+end
+show mls rate
+interface type1
+switchport port
+do show port
+configure terminal
+interface fastethernet 3
+switchport port
+do show port
+interface type1
+switchport port
+configure terminal
+interface fastethernet 5
+switchport port
+interface type1
+switchport port
+end
+show port
+configure terminal
+interface fastethernet 5
+switchport port
+end
+show port
+interface type1
+switchport port
+do show port
+configure terminal
+interface fastethernet 5
+switchport port
+do show port
+interface type1
+switchport port
+do show port
+configure terminal
+interface fastethernet 5
+switchport port
+do show port
+show port
+show port
+show port
+show port
+ interface
+ switchport
+ switchport trunk encapsulation
+ switchport mode trunk
+ switchport nonegotiate
+ switchport port
+ do show port
+configure terminal
+interface gigabitethernet 5
+switchport
+switchport mode trunk
+switchport nonegotiate
+switchport port
+do show port
+ interface
+ switchport
+ switchport mode access
+ switchport port
+ do show port
+configure terminal
+interface gigabitethernet 5
+switchport
+switchport mode access
+switchport port
+do show port
+ interface
+ switchport port
+ do show port
+configure terminal
+interface gigabitethernet 5
+switchport port
+do show port
+configure terminal
+interface gigabitethernet 5
+switchport port
+do show port
+ interface
+ switchport port
+configure terminal
+interface gigabitethernet 5
+switchport port
+do show port
+ interface
+ switchport port
+configure terminal
+interface gigabitethernet 5
+switchport port
+ interface
+ switchport port
+ end
+configure terminal
+interface gigabitethernet 5
+switchport port
+end
+show port
+ interface
+ switchport port
+configure terminal
+interface gigabitethernet 5
+switchport port
+do show port
+ interface
+ switchport port
+configure terminal
+interface gigabitethernet 5
+switchport port
+do show port
+ show port
+show port
+show port
+show port
+config t
+port
+no port
+config t
+port
+port
+no port
+config t
+port
+config t
+no port
+exit
+port
+config t
+port
+config t
+port
+config t
+no port
+config t
+port
+no port
+swwn
+pwwn
+no pwwn
+nwwn
+pwwn
+pwwn
+pwwn
+no any
+config t
+port
+no port
+config t
+port
+config t
+port
+port
+port
+port
+no port
+clear port
+clear port
+clear port
+clear port
+show port
+show port
+show port
+show port
+show port
+show port
+show port
+show port
+show port
+show port
+show port
+show running
+clear port
+configure terminal
+feature port
+show port
+copy running
+configure terminal
+interface ethernet 2
+switchport
+switchport port
+show running
+copy running
+configure terminal
+interface ethernet 2
+switchport
+switchport port
+show running
+copy running
+configure terminal
+interface ethernet 2
+switchport port
+show running
+copy running
+configure terminal
+interface ethernet 2
+no switchport port
+show running
+copy running
+configure terminal
+interface ethernet 2
+no switchport port
+clear port
+show port
+switchport port
+configure terminal
+clear port
+show port
+copy running
+configure terminal
+interface ethernet 2
+switchport port
+show running
+copy running
+configure terminal
+interface ethernet 2
+switchport port
+switchport port
+show running
+copy running
+configure terminal
+interface ethernet 2
+switchport port
+show running
+copy running
+feature port
+int e1
+switchport port
+switchport port
+switchport port
+switchport port
+switchport port
+switchport port
+switchport port
+switchport port
+copy running
+feature port
+int e3
+switchport port
+switchport port
+switchport port
+switchport port
+switchport port
+switchport port
+switchport port
+switchport port
+copy running
+feature port
+int po10
+switchport port
+switchport port
+switchport port
+switchport port
+switchport port
+switchport port
+switchport port
+switchport port
+vpc 10
+copy running
+feature port
+int po10
+switchport port
+switchport port
+switchport port
+switchport port
+switchport port
+switchport port
+switchport port
+switchport port
+vpc 10
+copy running
+configure terminal
+interface gigabitethernet1
+switchport mode access
+switchport voice vlan 22
+switchport port
+switchport port
+switchport port
+switchport port
+switchport port
+switchport port
+show port
+copy running
+configure terminal
+interface gigabitethernet1
+switchport port
+show port
+copy running
+interface gigabitethernet1
+switchport mode access
+switchport port
+switchport port
+switchport port
+interface gigabitethernet1
+switchport mode trunk
+switchport port
+switchport port
+interface tengigabitethernet1
+switchport access vlan 21
+switchport mode access
+switchport voice vlan 22
+switchport port
+switchport port
+switchport port
+switchport port
+switchport port
+switchport port
+switchport port
+switchport port
+switchport port
+switchport port
+port
+swwn 20
+pwwn 20
+port
+port
+port
+no port
+clear port
+clear port
+clear port
+clear port
+show port
+show port
+show port
+show port
+show port
+show port
+show port
+configure terminal
+interface ethernet 1
+switchport port
+configure terminal
+interface ethernet 1
+switchport port
+configure terminal
+interface ethernet 1
+no switchport port
+interface type1
+switchport
+switchport trunk encapsulation
+switchport mode trunk
+switchport nonegotiate
+switchport port
+no switchport port
+do show port
+configure terminal
+interface fastethernet 5
+switchport
+switchport mode trunk
+switchport nonegotiate
+switchport port
+do show port
+interface type1
+switchport
+switchport mode access
+switchport port
+no switchport port
+do show port
+configure terminal
+interface fastethernet 5
+switchport
+switchport mode access
+switchport port
+do show port
+interface type1
+switchport port
+no switchport port
+do show port
+configure terminal
+interface fastethernet 3
+switchport port
+do show port
+configure terminal
+interface fastethernet 3
+switchport port
+do show port
+mls rate
+no mls rate
+do show mls rate
+configure terminal
+mls rate
+end
+show mls rate
+interface type1
+switchport port
+no switchport port
+do show port
+configure terminal
+interface fastethernet 3
+switchport port
+do show port
+interface type1
+switchport port
+no switchport port
+configure terminal
+interface fastethernet 5
+switchport port
+interface type1
+switchport port
+no switchport port
+end
+show port
+configure terminal
+interface fastethernet 5
+switchport port
+end
+show port
+interface type1
+switchport port
+no switchport port
+do show port
+configure terminal
+interface fastethernet 5
+switchport port
+do show port
+interface type1
+switchport port
+no switchport port
+do show port
+configure terminal
+interface fastethernet 5
+switchport port
+do show port
+show port
+show port
+show port
+show port
+errdisable recovery cause psecure
+copy running
+config t n1000v
+interface vethernet 36 n1000v
+switchport port
+show running
+copy running
+config t n1000v
+interface vethernet 36 n1000v
+switchport port
+show running
+copy running
+config t n1000v
+interface vethernet 36 n1000v
+switchport port
+show running
+copy running
+config t n1000v
+interface vethernet 36 n1000v
+no switchport port
+show running
+copy running
+config t n1000v
+clear port
+show port
+config t n1000v
+interface vethernet 36 n1000v
+switchport port
+show running
+copy running
+config t n1000v
+interface vethernet 36 n1000v
+switchport port
+switchport port
+show running
+copy running
+config t n1000v
+interface vethernet 36 n1000v
+switchport port
+show running
+copy running
+config t n1000v
+interface vethernet 36 n1000v
+errdisable recovery cause psecure
+errdisable recovery interval 30
+show running
+configure terminal
+interface ethernet 1
+switchport port
+configure terminal
+interface ethernet 1
+no switchport port
+interface interface_id
+switchport mode access
+switchport port
+switchport port
+end
+show port
+show port
+configure terminal
+interface fastethernet 3
+switchport mode access
+switchport port
+switchport port
+switchport port
+show port
+configure terminal
+interface fastethernet 3
+switchport port
+configure terminal
+snmp
+configure terminal
+interface fastethernet 5
+switchport port
+switchport port
+configure terminal
+interface fastethernet 3
+switch port
+show port
+configure terminal
+interface fastethernet 5
+switchport mode access
+switchport port
+switchport port
+switchport port
+configure terminal
+interface fa5
+switchport mode access
+switchport port
+switchport port
+switchport port
+show port
+show running
+configure terminal
+interface fastethernet 5
+switchport port
+configure terminal
+interface fastethernet 5
+switchport port
+clear port
+clear port
+clear port
+configure terminal
+vlan sec_vlan_id
+private
+exit
+vlan pri_vlan_id
+private
+private
+exit
+interface interface_id
+switchport mode private
+switchport private
+end
+show port
+show port
+configure terminal
+vlan 6
+private
+exit
+vlan 3
+private
+private
+exit
+interface fastethernet 3
+switchport mode private
+switchport private
+switchport port
+configure terminal
+vlan sec_vlan_id
+private
+exit
+vlan pri_vlan_id
+private
+private
+exit
+interface interface_id
+switchport mode private
+switchport private
+switchport port
+end
+show port
+show port
+configure terminal
+vlan 6
+private
+exit
+vlan 3
+private
+private
+exit
+interface fastethernet 3
+switchport mode private
+switchport mode private
+switchport port
+interface interface_id
+switchport trunk encapsulation
+switchport mode trunk
+switchport port
+vlan
+end
+configure terminal
+interface g1
+switchport trunk encapsulation dot1q
+sw mode trunk
+switchport port
+switchport port
+show port
+show running interface gi1
+configure terminal
+interface g1
+switchport trunk encapsulation dot1q
+sw mode trunk
+switchport port
+vlan
+port
+exit
+show port
+configure terminal
+interface g1
+switchport trunk encapsulation dot1q
+sw mode trunk
+switchport port
+switchport port
+vlan
+port
+port
+port
+exit
+show port
+interface interface_id
+switchport mode access
+switchport port
+end
+show port
+show port
+configure terminal
+interface fa5
+switchport mode access
+switchport port
+switchport port
+switchport port
+switchport port
+show port
+show running
+configure terminal
+interface fa5
+switchport mode access
+switchport port
+switchport port
+switchport port
+show port
+show running
+show interface status err
+show port
+show port
+show port
+show port
+show port
+show port
+show port
+show port
+show port
+show port
+show port
+show running
+show vlan private
+show port
+show mac
+configure terminal
+vlan 2
+private
+show mac
+debug port
+configure terminal
+interface ethernet 1
+switchport port
+configure terminal
+interface ethernet 1
+switchport port
+configure
+leaf 101
+interface eth 1
+switchport port
+switchport port
+switchport port
+configure
+leaf 101
+interface eth 1
+switchport port
+switchport port
+switchport port
+configure
+leaf 101
+interface port
+switchport port
+switchport port
+switchport port
+configure
+vpc domain explicit 1 leaf 101 102
+exit
+template port
+exit
+leaf 101
+interface eth 1
+channel
+exit
+exit
+vpc context leaf 101 102
+interface vpc po4
+switchport port
+switchport port
+switchport port
+configure terminal
+interface gigabitethernet0
+storm
+configure terminal
+interface gigabitethernet0
+storm
+configure terminal
+errdisable detect cause small
+errdisable recovery cause small
+interface gigabitethernet0
+small
+configure terminal
+interface gigabitethernet0
+switchport protected
+configure terminal
+interface gigabitethernet0
+switchport block multicast
+switchport block unicast
+interface gigabitethernet0
+switchport mode access
+switchport port
+switchport port
+switchport port
+interface gigabitethernet0
+switchport mode trunk
+switchport port
+switchport port
+interface gigabitethernet0
+switchport access vlan 21
+switchport mode access
+switchport voice vlan 22
+switchport port
+switchport port
+switchport port
+switchport port
+switchport port
+switchport port
+switchport port
+switchport port
+switchport port
+switchport port
+interface gigabitethernet0
+switchport port
+switchport port
+switchport port
+switchport port
+interface gigabitethernet0
+switchport private
+switchport mode private
+switchport port
+switchport port
+switchport port
+configure terminal
+feature port
+show port
+copy running
+configure terminal
+interface ethernet 2
+switchport
+switchport port
+show running
+copy running
+configure terminal
+interface ethernet 2
+switchport
+switchport port
+show running
+copy running
+configure terminal
+interface ethernet 2
+switchport port
+show running
+copy running
+configure terminal
+interface ethernet 2
+no switchport port
+show running
+copy running
+configure terminal
+interface ethernet 2
+no switchport port
+clear port
+show port
+switchport port
+configure terminal
+clear port
+show port
+copy running
+configure terminal
+interface ethernet 2
+switchport port
+show running
+copy running
+configure terminal
+interface ethernet 2
+switchport port
+switchport port
+show running
+copy running
+configure terminal
+interface ethernet 2
+switchport port
+show running
+copy running
+configure terminal
+feature port
+show port
+copy running
+configure terminal
+interface ethernet 2
+switchport
+switchport port
+show running
+copy running
+configure terminal
+interface ethernet 2
+switchport
+switchport port
+show running
+copy running
+configure terminal
+interface ethernet 2
+switchport port
+show running
+copy running
+configure terminal
+interface ethernet 2
+no switchport port
+show running
+copy running
+configure terminal
+interface ethernet 2
+no switchport port
+clear port
+show port
+switchport port
+configure terminal
+clear port
+show port
+copy running
+configure terminal
+interface ethernet 2
+switchport port
+show running
+copy running
+configure terminal
+interface ethernet 2
+switchport port
+switchport port
+show running
+copy running
+configure terminal
+interface ethernet 2
+switchport port
+show running
+copy running
+feature port
+int e1
+switchport port
+switchport port
+switchport port
+switchport port
+switchport port
+switchport port
+switchport port
+switchport port
+copy running
+int e103
+switchport port
+copy running
+configuration terminal
+port
+configuration terminal
+port
+port
+configuration terminal
+port
+configuration terminal
+no port
+exit
+port
+configuration terminal
+port
+configuration terminal
+port
+configuration terminal
+no port
+configuration terminal
+port
+no port
+swwn
+port
+swwn 20
+pwwn 20
+configuration terminal
+port
+configuration terminal
+port
+configuration terminal
+port
+port
+port
+port
+no port
+clear port
+clear port
+clear port
+clear port
+show port
+show port
+show port
+show port
+show port
+show port
+show port
+configure terminal
+feature port
+show port
+copy running
+configure terminal
+interface ethernet 2
+switchport
+switchport port
+show running
+copy running
+configure terminal
+interface ethernet 2
+switchport
+switchport port
+show running
+copy running
+configure terminal
+interface ethernet 2
+switchport port
+show running
+copy running
+configure terminal
+interface ethernet 2
+no switchport port
+show running
+copy running
+configure terminal
+clear port
+show port
+copy running
+configure terminal
+interface ethernet 2
+switchport port
+show running
+copy running
+configure terminal
+interface ethernet 2
+switchport port
+switchport port
+show running
+copy running
+configure terminal
+interface ethernet 2
+switchport port
+show running
+copy running
+feature port
+int e1
+switchport port
+switchport port
+switchport port
+switchport port
+switchport port
+switchport port
+switchport port
+switchport port
+copy running
+int e103
+switchport port
+copy running
+show fcsp
+fcsp timeout 60
+show fcsp dhchap
+fcsp dhchap hash MD5
+fcsp dhchap group 2 3 4
+show fcsp dhchap database
+show wwn switch
+show flogi database interface fc1
+fcsp dhchap devicename 20
+show port
+port
+port
+pwwn 20
+port
+port
+show port
+port
+port
+pwwn 20
+port
+port
+no port
+port
+port
+port
+port
+port
+port
+no port
+port
+port
+port
+show fabric
+fabric
+fabric
+swwn 20
+fabric
+fabric
+fabric
+no swwn 20
+fabric
+fabric
+fabric
+swwn 20
+fabric
+fabric

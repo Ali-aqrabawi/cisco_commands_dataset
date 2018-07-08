@@ -1,0 +1,400 @@
+show running
+configure terminal
+exit
+show service
+show service
+policy
+class inspection_default
+no inspect dns preset_dns_map
+configure terminal
+ip dns source
+configuration terminal
+vrf context management
+ip host cisco
+ip domain
+ip domain
+ip name
+ip domain
+show hosts
+exit
+copy running
+config t
+vrf context management
+ip domain
+ip name
+ip domain
+dns domain
+dns domain
+dns domain
+dns server
+name
+name
+dns expire
+tunnel
+tunnel
+policy
+parameters
+dns name
+show running
+dns domain
+dns name
+dns poll
+group
+dns server
+domain
+name
+retries 5
+timeout 7
+crypto ca reference
+dns update
+dns server
+domain
+domain
+router isis
+domain
+downgrade
+policy
+class http
+drop log
+match req
+reset log
+policy
+class http
+drop
+match req
+reset log
+webvpn
+dtls port 444
+interface gigabitethernet0
+speed 1000
+duplex full
+nameif inside
+security
+ip address 10.1.1.1 255.255.255.0
+no shutdown
+dynamic
+dynamic
+interim
+dynamic
+exit
+key sharedsecret
+exit
+tunnel
+address
+authentication
+accounting
+exit
+authorize
+interim
+dynamic
+exit
+key sharedsecret
+exit
+tunnel
+address
+authentication certificate
+authorization
+accounting
+exit
+access
+dynamic
+dynamic
+dynamic
+dynamic
+name bad1.example.com
+name bad2.example.com
+address 10.1.1.1 255.255.255.0
+dynamic
+name good.example.com
+name great.example.com
+name awesome.example.com
+address 10.1.1.2 255.255.255.255
+dynamic
+dynamic
+dynamic
+no dynamic
+dynamic
+access
+dynamic
+dynamic
+access
+dynamic
+dynamic
+dynamic
+changeto context context1
+dynamic
+changeto context context2
+dynamic
+dynamic
+dynamic
+dynamic
+changeto context context1
+dynamic
+changeto context context2
+dynamic
+dynamic
+dynamic
+dynamic
+name bad1.example.com
+name bad2.example.com
+address 10.1.1.1 255.255.255.0
+dynamic
+name good.example.com
+name great.example.com
+name awesome.example.com
+address 10.1.1.2 255.255.255.255
+configure terminal
+ip vrf vpn1
+rd 100
+exit
+ip name
+ip domain lookup vrf
+configure terminal
+ip domain name vrf vpn1 cisco.com
+ip domain list vrf vpn1 cisco.com
+configure terminal
+ip host vrf vpn3 company1.com 172.16.2.1
+ip host test mx 1 mx_record
+ip host test ns ns_record
+ip host test srv 0 0 0 srv_record
+show hosts vrf vpn2
+clear host vrf vpn2
+sh running
+capture DNSINSIDE access
+
+configure terminal
+interface GigabitEthernet0
+arp arpa
+end
+configure terminal
+arp 10.0.0.0 aabb.cc03.8200 arpa
+end
+configure terminal
+interface GigabitEthernet0
+arp timeout 30
+end
+configure terminal
+ip arp proxy disable
+end
+configure terminal
+interface GigabitEthernet0
+no ip proxy
+end
+clear arp interface Gigabitethernet0
+clear arp
+exit
+show interfaces
+show arp
+show ip arp
+show processes cpu | include
+clear arp interface gigabitethernet0
+clear arp
+qQFJ1
+configure terminal
+ip arp inspection validate src
+no ip arp inspection validate src
+configure terminal
+ip arp inspection vlan
+do show ip arp inspection vlan
+configure terminal
+ip arp inspection vlan 10
+configure terminal
+ip arp inspection vlan 10
+configure terminal
+ip arp inspection vlan 10
+do show ip arp inspection vlan 10
+configure terminal
+interface
+ip arp inspection trust
+do show ip arp inspection interfaces
+configure terminal
+interface fastethernet 5
+ip arp inspection trust
+do show ip arp inspection interfaces | include Int|
+configure terminal
+ip arp inspection filter arp_acl_name vlan
+do show ip arp inspection vlan
+configure terminal
+ip arp inspection filter example_arp_acl vlan 10
+do show ip arp inspection vlan 10
+configure terminal
+interface
+ip arp inspection limit
+do show ip arp inspection interfaces
+configure terminal
+interface fastethernet 5
+ip arp inspection limit rate 20 burst interval 2
+do show ip arp inspection interfaces | include Int|
+configure terminal
+errdisable recovery cause arp
+do show errdisable recovery | include Reason|
+configure terminal
+errdisable recovery cause arp
+do show errdisable recovery | include Reason|
+configure terminal
+ip arp inspection validate
+do show ip arp inspection | include abled
+configure terminal
+ip arp inspection validate src
+do show ip arp inspection | include abled
+configure terminal
+ip arp inspection validate dst
+do show ip arp inspection | include abled
+configure terminal
+ip arp inspection validate ip
+do show ip arp inspection | include abled
+configure terminal
+ip arp inspection validate src
+do show ip arp inspection | include abled
+configure terminal
+ip arp inspection validate src
+do show ip arp inspection | include abled
+configure terminal
+ip arp inspection log
+do show ip arp inspection log | include Size
+configure terminal
+ip arp inspection log
+do show ip arp inspection log | include Size
+configure terminal
+ip arp inspection log
+do show ip arp inspection log
+configure terminal
+ip arp inspection log
+do show ip arp inspection log | include Syslog
+configure terminal
+ip arp inspection log
+do show ip arp inspection log | include Syslog
+configure terminal
+ip arp inspection vlan vlan_range logging
+do show running
+configure terminal
+ip arp inspection vlan 100 logging acl
+do show running
+show cdp neighbors
+configure terminal
+ip arp inspection vlan 1
+show ip arp inspection vlan 1
+configure terminal
+interface fastethernet 6
+ip arp inspection trust
+show ip arp inspection interfaces fastethernet 6
+show ip dhcp snooping binding
+show ip arp inspection statistics vlan 1
+show ip arp inspection statistics vlan 1
+show ip arp inspection statistics vlan 1
+show cdp neighbors
+configure terminal
+ip arp inspection vlan 1
+show ip arp inspection vlan 1
+configure terminal
+interface fastethernet 3
+ip arp inspection trust
+show ip arp inspection interfaces
+show ip dhcp snooping binding
+show ip arp inspection statistics vlan 1
+show ip arp inspection statistics vlan 1
+show ip arp inspection statistics vlan 1
+configure terminal
+arp access
+permit ip host 1.1.1.1 mac host 1.1.1
+show arp access
+configure terminal
+ip arp inspection filter H2 vlan 1
+show ip arp inspection vlan 1
+configure terminal
+interface fastethernet 6
+no ip arp inspection trust
+show ip arp inspection interfaces fastethernet 6
+show ip arp inspection statistics vlan 1
+show ip arp
+configure terminal
+vpc domain 1
+ip arp synchronize
+configure terminal
+vpc domain 1
+no ip arp synchronize
+qQFJ1
+configure terminal
+interface GigabitEthernet0
+arp arpa
+exit
+configure terminal
+arp 10.0.0.0 aabb.cc03.8200 arpa
+exit
+configure terminal
+interface GigabitEthernet0
+arp timeout 30
+exit
+configure terminal
+ip arp proxy disable
+exit
+configure terminal
+interface GigabitEthernet0
+ip proxy
+exit
+configure terminal
+interface GigabitEthernet0
+ip sticky
+ip sticky
+clear arp interface GigabitEthernet0
+clear arp
+exit
+show interfaces GigabitEthernet0
+show arp
+show ip arp
+show processes cpu | include
+clear arp interface GigabitEthernet0
+clear arp
+clear arp interface Gigabitethernet0
+clear arp
+exit
+clear arp interface gigabitethernet0
+clear arp
+arp 10.1.1.1 00.02.9a.3b.94.d9
+no arp 10.1.1.1 00.02.9a.3b.94.d9
+arp inspection enable no
+no arp inspection enable
+arp retries 6
+no arp retries
+arp rate 15
+no arp rate
+arp interval 15
+no arp interval
+arp learned
+no arp learned
+arp learned
+no arp learned
+arp sync disable
+no arp sync disable
+arp sync
+no arp sync
+show arp
+show arp statistics
+clear arp
+clear arp statistics
+show arp summary
+show interfaces summary
+show arp vrf vrf1 dynamic 209.165.200.225 e3
+show arp application detail
+show arp ha
+show arp ha
+show arp ha
+show interfaces summary
+clear arp
+configure terminal
+ip arp entry learn 256
+clear arp
+debug list 1102 serial
+debug arp static
+show debugging
+no debug arp static
+configure terminal
+interface ethernet 0
+arp log threshold entries 1000
+show running
+configure terminal
+ip arp entry learn 512000
+show arp summary
+ip arp timeout 120
+no ip arp timeout
+

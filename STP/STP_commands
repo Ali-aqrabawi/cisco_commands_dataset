@@ -1,0 +1,395 @@
+ configure terminal
+interface fastethernet 3
+spanning
+configure terminal
+interface fastethernet 0
+spanning
+ spanning
+ default spanning
+ no  spanning
+ end
+configure terminal
+spanning
+end
+show spanning
+ spanning
+ end
+configure terminal
+spanning
+end
+show spanning
+ spanning
+ no  spanning
+ end
+configure terminal
+spanning
+end
+ no  spanning
+ end
+configure terminal
+spanning
+end
+ interface
+ spanning
+ spanning
+ end
+configure terminal
+interface gigabitethernet 1
+spanning
+end
+show spanning
+configure terminal
+interface gigabitethernet 1
+spanning
+end
+show spanning
+show spanning
+ interface
+ spanning
+ no  spanning
+ spanning
+ no  spanning
+ end
+configure terminal
+interface gigabitethernet 1
+spanning
+end
+show spanning
+configure terminal
+interface gigabitethernet 1
+spanning
+end
+show spanning
+show spanning
+ spanning
+ end
+configure terminal
+spanning
+end
+show spanning
+ spanning
+ end
+configure terminal
+spanning
+end
+show spanning
+ spanning
+ no  spanning
+ end
+configure terminal
+spanning
+end
+show spanning
+ spanning
+ end
+configure terminal
+spanning
+end
+show spanning
+ configure terminal
+ spanning
+ instance   instance_id  vlan   vlan_range
+ name   instance_name
+ revision   version
+ show pending
+ exit
+ spanning
+ end
+spanning
+instance 1 vlan 10
+name region1
+revision 1
+show pending
+exit
+ configure terminal
+ spanning
+ end
+ configure terminal
+ spanning
+ end
+ configure terminal
+ interface
+ spanning
+ end
+ configure terminal
+ interface
+ spanning
+ end
+ configure terminal
+ spanning
+ end
+ configure terminal
+ spanning
+ end
+ configure terminal
+ spanning
+ end
+ configure terminal
+ spanning
+ end
+ configure terminal
+ spanning
+ end
+ configure terminal
+ spanning
+ end
+ configure terminal
+ interface
+ spanning
+ end
+ configure terminal
+ interface
+ spanning
+ end
+configure terminal
+spanning
+interface GigabitEthernet1
+spanning
+clear spanning
+configure terminal
+no spanning
+configure terminal
+spanning
+configure terminal
+spanning
+configure terminal
+interface gigabitethernet1
+spanning
+spanning
+configure terminal
+interface gigabitethernet1
+spanning
+spanning
+configure terminal
+spanning
+spanning
+configure terminal
+spanning
+configure terminal
+spanning
+configure terminal
+spanning
+configure terminal
+configure terminal
+spanning
+end
+show spanning
+configure terminal
+spanning
+end
+show spanning
+configure terminal
+spanning
+end
+show spanning
+configure terminal
+spanning
+spanning
+end
+show spanning
+configure terminal
+spanning
+end
+configure terminal
+interface fastethernet 5
+spanning
+end
+show spanning
+show spanning
+configure terminal
+interface fastethernet 5
+spanning
+end
+show spanning
+configure terminal
+interface fastethernet 5
+spanning
+end
+show spanning
+configure terminal
+interface fastethernet 5
+spanning
+end
+show spanning
+configure terminal
+spanning
+end
+show spanning
+configure terminal
+spanning
+end
+show spanning
+configure terminal
+spanning
+end
+show spanning
+configure terminal
+spanning
+end
+show spanning
+show spanning
+configure terminal
+no spanning
+end
+show spanning
+interface interface
+exit
+exit
+clear spantree detected
+show spanning
+config t
+spanning
+int fa 6
+spanning
+end
+end
+clear spanning
+show spanning
+show spanning
+ spanning
+ spanning
+ show current
+ name  name
+ revision  revision_number
+ instance  instance_number  vlan  vlan_range
+show pending
+ end
+ show spanning
+configure terminal
+spanning
+spanning
+show current
+name cisco
+revision 2
+instance 1 vlan 1
+instance 2 vlan 1
+show pending
+no instance 2
+show pending
+instance 1 vlan 2000
+no instance 1 vlan 1500
+show pending
+end
+no spanning
+end
+show spanning
+ spanning
+ spanning
+Ctrl
+ show spanning
+spanning
+spanning
+spanning
+spanning
+show spanning
+MST00 vlans mapped
+MST01 vlans mapped
+ spanning
+spanning
+Ctrl
+ show spanning
+interface fastethernet 4
+spanning
+spanning
+spanning
+show spanning
+clear spanning
+ show spanning
+ show spanning
+ show spanning
+ show spanning
+ show spanning
+ show spanning
+spanning
+instance 1 vlan 1
+name cisco
+revision 1
+Ctrl
+show spanning
+show spanning
+MST00 vlans mapped
+MST01 vlans mapped
+show spanning
+MST01 vlans mapped
+show spanning
+show spanning
+show spanning
+MST01 vlans mapped
+show spanning
+show spanning
+spanning
+errdisable recovery cause bpduguard
+errdisable recovery interval 400
+show spanning
+configure terminal
+spanning
+instance 1 vlan 10
+name region1
+revision 1
+show pending
+exit
+spanning
+configure terminal
+spanning
+configure terminal
+spanning
+configure terminal
+interface GigabitEthernet1
+spanning
+configure terminal
+interface gigabitethernet1
+spanning
+configure terminal
+spanning
+configure terminal
+spanning
+configure terminal
+spanning
+configure terminal
+spanning
+configure terminal
+spanning
+configure terminal
+interface GigabitEthernet1
+spanning
+configure terminal
+interface GigabitEthernet1
+spanning
+clear spanning
+clear spanning
+configure terminal
+spanning
+instance 1 vlan 10
+name region1
+revision 1
+show pending
+exit
+spanning
+configure terminal
+spanning
+configure terminal
+spanning
+configure terminal
+interface GigabitEthernet1
+spanning
+configure terminal
+interface gigabitethernet1
+spanning
+configure terminal
+spanning
+configure terminal
+spanning
+configure terminal
+spanning
+configure terminal
+spanning
+configure terminal
+spanning
+configure terminal
+interface GigabitEthernet1
+spanning
+configure terminal
+interface GigabitEthernet1
+spanning
+clear spanning
+clear spanning

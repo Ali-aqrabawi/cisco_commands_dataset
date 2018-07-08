@@ -1,0 +1,1119 @@
+interface portinterface port
+hardware multicast hw
+interface port
+hardware multicast hw
+no hardware multicast hw
+show ip mroute
+configure terminal
+interface
+ip pim
+show running
+copy running
+configure terminal
+ip mfib
+exit
+show running
+copy running
+configure terminal
+ip mroute 10.1.1.1 255.255.255.255 10.2.2.2
+exit
+show running
+copy running
+configure terminal
+interface gigabitethernet 1
+ip multicast boundary 12
+show running
+copy running
+configure terminal
+interface
+ip sap listen
+show running
+copy running
+configure terminal
+ip sap cache
+show running
+show ip sap
+copy running
+access
+access
+interface gigabitethernet1
+ip multicast boundary 1
+mrinfo
+configure terminal
+flow record FLOW
+description Used for IPv4 multicast traffic analysis
+match routing is
+collect counter packets replicated
+collect routing multicast replication
+exit
+flow monitor FLOW
+description Used for IPv4 multicast traffic analysis
+record FLOW
+exit
+interface ethernet 0
+ip flow monitor FLOW
+end
+show flow monitor FLOW
+show flow monitor FLOW
+show ip bgp neighbors J.2.0.254
+show ip mbgp summary
+show ip msdp peer
+show ip bgp neighbors J.4.0.33
+show ip bgp ipv4 multicast summary
+show ip msdp peer J.4.0.203
+show ip msdp peer
+show ip bgp neighbors J.3.0.246
+show ip bgp ipv4 multicast summary
+show ip msdp peer J.3.0.250
+show ip bgp neighbors J.3.0.249
+show ip mbgp summary
+show ip msdp peer
+no ip mfib
+ip mrm manager test1
+ip msdp cache
+configure terminal
+ip msdp peer 192.168.1.3 connect
+ip msdp sa
+configure terminal
+ip msdp peer 192.168.1.5 connect
+ip msdp sa
+access
+configure terminal
+int GigabitEthernet0
+ip multicast boundary block source
+enable
+configure terminal
+ip multicast hardware
+enable
+configure terminal
+enable
+configure terminal
+enable
+configure terminal
+ip multicast oif
+ip multicast
+configure terminal
+ip rsvp policy preempt
+ip multicast rsvp mcast
+ip access
+permit 192.0.2.0 0.0.0.255
+configure terminal
+ip msdp peer 192.168.1.2 connect
+ip msdp description 192.168.1.2 router at customer a
+end
+configure terminal
+ip msdp shutdown 192.168.1.3
+end
+configure terminal
+ip msdp password peer 10.32.43.144 0 test
+end
+show ip msdp peer
+configure terminal
+ip msdp sa
+end
+show ip msdp count
+show ip msdp peer
+show ip msdp summary
+configure terminal
+ip msdp keepalive 10.1.1.3 40 55
+end
+configure terminal
+ip msdp timer 45
+end
+configure terminal
+ip msdp rpf rfc3618
+end
+show ip msdp rpf
+configure terminal
+ip msdp default
+end
+configure terminal
+ip msdp mesh
+end
+configure terminal
+ip msdp redistribute route
+end
+configure terminal
+ip msdp sa
+end
+configure terminal
+ip msdp sa
+end
+configure terminal
+ip msdp ttl
+end
+configure terminal
+ip msdp sa
+end
+configure terminal
+ip msdp filter sa
+end
+configure terminal
+ip msdp border sa
+end
+configure terminal
+ip msdp originator
+end
+enable
+debug ip msdp
+debug ip msdp resets
+show ip msdp count
+SA learned
+sources
+show ip msdp peer 192.168.4.4
+show ip msdp sa
+show ip msdp summary
+clear ip msdp peer
+clear ip msdp statistics
+clear ip msdp sa
+snmp
+snmp
+end
+config t
+feature msdp
+show running
+copy running
+config t
+ip msdp peer 192.168.1.10 connect
+show ip msdp summary
+copy running
+config t
+ip msdp description 192.168.1.10 peer in Engineering network
+ip msdp shutdown 192.168.1.10
+ip msdp password 192.168.1.10 my_md5_password
+ip msdp sa
+ip msdp sa
+ip msdp sa
+show ip msdp peer 1.1.1.1
+copy running
+config t
+ip msdp originator
+ip msdp group
+ip msdp sa
+show ip msdp summary
+copy running
+config t
+ip msdp mesh
+show ip msdp summary
+copy running
+restart msdp
+config t
+ip msdp flush
+show running
+copy running
+config tswitch
+config tswitch
+config tswitch
+config tswitch
+configure terminal
+ip msdp default
+prefix
+ip msdp description peer
+show running
+copy running
+configure terminal
+ip msdp cache
+access
+show running
+copy running
+configure terminal
+ip msdp sa
+show running
+copy running
+configure terminal
+ip msdp redistribute list 21
+access list 21 permit 194.1.22.0
+access list 21 permit ip 194.1.22.0 1.1.1.1 194.3.44.0 1.1.1.1
+show running
+copy running
+configure terminal
+ip msdp filter sa
+access
+show running
+copy running
+configure terminal
+ip msdp sa
+ip msdp sa
+ip msdp sa
+access list 100 permit ip 194.1.22.0 1.1.1.1 194.3.44.0 1.1.1.1
+show running
+copy running
+configure terminal
+ip msdp ttl
+show running
+copy running
+configure terminal
+ip msdp sa
+ip msdp sa
+ip msdp sa
+access list 100 permit ip 194.1.22.0 1.1.1.1 194.3.44.0 1.1.1.1
+show running
+copy running
+configure terminal
+ip msdp mesh
+exit
+show running
+copy running
+configure terminal
+ip msdp shutdown 192.168.1.3
+end
+show running
+copy running
+configure terminal
+ip msdp border sa
+ip msdp redistribute list 100
+show running
+copy running
+configure terminal
+ip msdp originator
+exit
+show running
+copy running
+enable
+debug ip msdp
+debug ip msdp resets
+show ip msdp count
+SA learned
+sources
+show ip msdp peer 192.168.4.4
+show ip msdp sa
+show ip msdp summary
+clear  ip  msdp  peer
+clear ip msdp statistics
+clear ip msdp sa
+ip msdp default
+ip msdp default
+ip prefix
+ip msdp default
+ip prefix
+ip msdp cache
+access
+ip msdp sa
+ip msdp filter sa
+access
+ip msdp peer switch.cisco.com connect
+ip msdp sa
+access
+ip msdp peer switch.cisco.com connect
+ip msdp sa
+ip msdp sa
+ip msdp description 192.168.1.10 engineering peer
+no ip msdp description 192.168.1.10
+ip msdp event
+show running
+ip msdp flush
+no ip msdp flush
+ip msdp group
+no ip msdp group
+ip msdp keepalive 192.168.1.10 60 80
+no ip msdp keepalive 192.168.1.10
+ip msdp mesh
+no ip msdp mesh
+ip msdp originator
+no ip msdp originator
+ip msdp password 192.168.1.10 my_password
+no ip msdp password 192.168.1.10
+ip msdp peer 192.168.1.10 connect
+no ip msdp peer 192.168.1.10
+ip msdp reconnect
+no ip msdp reconnect
+show running
+ip msdp sa
+no ip msdp sa
+ip msdp sa
+no ip msdp sa
+ip msdp sa
+no ip msdp sa
+ip msdp sa
+no ip msdp sa
+ip msdp shutdown 192.168.1.10
+no ip msdp shutdown 192.168.1.10
+ip msdp peer 192.168.1.10 connect
+no ip msdp peer 192.168.1.10
+show ip msdp count
+show ip msdp event
+show ip msdp mesh
+show ip msdp peer
+show ip msdp policy statistics sa
+show ip msdp route
+show ip msdp rpf 192.168.1.10
+show ip msdp sa
+show ip msdp sa
+show ip msdp sources
+show ip msdp summary
+show running
+show startup
+configure terminal
+ip msdp peer 192.168.1.5 connect
+ip msdp sa
+access
+ip multicast
+configure terminal
+ip pim spt
+clear ip msdp peer 10.3.32.154
+clear ip msdp sa
+clear ip msdp statistics sanjose
+show ip msdp count
+SA learned
+sources
+show ip msdp peer 192.135.250.116
+show ip msdp sa
+show ip msdp sa
+show ip msdp summary
+ip msdp default
+ip msdp default
+ip prefix
+ip msdp default
+ip prefix
+ip msdp cache
+access
+ip msdp sa
+ip msdp filter sa
+access
+ip msdp peer switch.cisco.com connect
+ip msdp sa
+access
+ip msdp peer switch.cisco.com connect
+ip msdp sa
+show forwarding distribution ip igmp snooping
+show forwarding distribution ipv6 multicast route
+show forwarding distribution multicast
+show forwarding distribution multicast client
+show forwarding distribution multicast outgoing
+show forwarding distribution multicast route
+show forwarding ipv6 multicast route
+show forwarding multicast outgoing
+show forwarding multicast route
+show ip igmp event
+show ip igmp groups
+show ip igmp interface vlan 5
+show ip igmp interface brief
+show ip igmp local
+show ip igmp route
+show ip igmp snooping vlan 1
+show ip igmp snooping event
+show ip igmp snooping explicit
+show ip igmp snooping groups
+show ip igmp snooping mrouter
+show ip igmp snooping querier
+show ip igmp snooping statistics vlan 1
+show ip mroute
+show ip mroute summary
+show ip msdp count
+show ip msdp event
+show ip msdp mesh
+show ip msdp peer
+show ip msdp policy statistics sa
+show ip msdp route
+show ip msdp rpf 192.168.1.10
+show ip msdp sa
+show ip msdp sources
+show ip msdp summary
+show ip netstack mroute
+show ip pim df
+show ip pim event
+show ip pim group
+show ip pim interface ethernet 2
+show ip pim neighbor
+show ip pim oif
+show ip pim policy statistics auto
+show ip pim policy statistics bsr bsr
+show ip pim policy statistics jp
+show ip pim policy statistics neighbor
+show ip pim policy statistics register
+show ip pim route 224.1.1.1
+show ip pim rp
+show ip pim rp
+show ip pim statistics
+show ip pim vrf
+show ipv6 mld groups
+show ipv6 mld local
+show ipv6 mroute
+show ipv6 mroute summary
+show ipv6 pim df
+show ipv6 pim event
+show ipv6 pim group
+show ipv6 pim interface
+show ipv6 pim neighbor
+show ipv6 pim oif
+show ipv6 pim policy statistics jp
+show ipv6 pim policy statistics neighbor
+show ipv6 pim route
+show ipv6 pim rp
+show ipv6 pim rp
+show ip igmp snooping explicit
+show ipv6 pim statistics
+show ipv6 pim vrf
+show routing ip multicast event
+show routing ipv6 multicast
+show routing ipv6 multicast clients icmpv6
+show routing ipv6 multicast event
+show routing multicast
+show routing multicast clients pim
+show running
+show running
+show running
+show running
+show startup
+show startup
+show startup
+show startup
+clear ip msdp peer 192.168.1.10
+ip msdp password 192.168.1.10 my_password
+no ip msdp password 192.168.1.10
+ip msdp description 192.168.1.10 engineering peer
+no ip msdp description 192.168.1.10
+show running
+ip msdp flush
+no ip msdp flush
+ip multicast
+ip pim sparse
+ip vrf vrf
+mdt default group
+ip vrf vrf
+mdt data group
+ip pim
+ip multicast
+ip msdp
+ip multicast route
+show ip msdp peer 224.135.250.116
+show ip msdp summary
+show ip pim mdt bgp
+show ip pim vrf vpn8 mdt receive detail
+show ip pim mdt send
+clear ip igmp group
+clear ip mroute
+clear ip msdp peer
+clear ip msdp sa
+clear ip msdp statistics
+clear ip pim auto
+show ip igmp groups
+show ip igmp interface
+show ip mcache
+show ip mds interface
+show ip mpacket
+show ip mroute
+show ip msdp count
+show ip msdp peer
+show ip msdp sa
+show ip msdp summary
+show ip pim bsr
+show ip pim interface
+show ip pim mdt bgp
+show ip pim mdt receive
+show ip pim mdt send
+show ip pim neighbor
+show ip pim rp
+show ip pim rp
+show ip rpf
+ip vrf blue
+rd 55
+route
+mdt default 239.1.1.1
+mdt data 239.1.2.0 0.0.0.3
+ip pim register
+ip multicast vrf vrf1 cache
+ip multicast vrf vrf2 cache
+show running
+debug ip igmp
+debug ip mcache
+clear ip mroute
+debug ip mpacket 224.2.0.1
+debug ip mrouting 224.2.0.1
+debug ip msdp
+debug ip pim 224.2.0.1
+debug ip pim auto
+debug ip pim auto
+show ip igmp groups
+show ip igmp groups 232.1.1.1 detail
+show ip igmp interface
+show ip mds interface
+show ip mpacket smallgroup
+show ip mroute cbone
+show ip mroute
+show ip mroute 224.1.1.1
+show ip mroute summary
+show ip mroute active
+show ip mroute count
+show ip mroute 232.6.6.6
+show ip msdp count
+SA learned
+sources
+show ip msdp peer 224.135.250.116
+show ip msdp sa
+show ip msdp summary
+show ip pim bsr
+show ip pim interface
+show ip pim interface count
+show ip pim interface count
+show ip pim interface fastethernet 0
+show ip pim mdt bgp
+show ip pim vrf blue mdt history interval 20
+show ip pim vrf vpn8 mdt receive detail
+show ip pim mdt send
+show ip pim neighbor
+show ip pim rp
+show ip pim rp mapping
+show ip pim rp metric
+show ip pim rp
+show ip rpf 172.16.10.13
+show ip rpf 172.16.10.13 metric
+hardware multicast hw
+interface port
+hardware multicast hw
+no hardware multicast hw
+show ip mroute
+configure terminal
+interface
+ip pim
+show running
+copy running
+configure terminal
+ip mfib
+exit
+show running
+copy running
+configure terminal
+ip mroute 10.1.1.1 255.255.255.255 10.2.2.2
+exit
+show running
+copy running
+configure terminal
+interface gigabitethernet 1
+ip multicast boundary 12
+show running
+copy running
+configure terminal
+interface
+ip sap listen
+show running
+copy running
+configure terminal
+ip sap cache
+show running
+show ip sap
+copy running
+access
+access
+interface gigabitethernet1
+ip multicast boundary 1
+mrinfo
+configure terminal
+flow record FLOW
+description Used for IPv4 multicast traffic analysis
+match routing is
+collect counter packets replicated
+collect routing multicast replication
+exit
+flow monitor FLOW
+description Used for IPv4 multicast traffic analysis
+record FLOW
+exit
+interface ethernet 0
+ip flow monitor FLOW
+end
+show flow monitor FLOW
+show flow monitor FLOW
+show ip bgp neighbors J.2.0.254
+show ip mbgp summary
+show ip msdp peer
+show ip bgp neighbors J.4.0.33
+show ip bgp ipv4 multicast summary
+show ip msdp peer J.4.0.203
+show ip msdp peer
+show ip bgp neighbors J.3.0.246
+show ip bgp ipv4 multicast summary
+show ip msdp peer J.3.0.250
+show ip bgp neighbors J.3.0.249
+show ip mbgp summary
+show ip msdp peer
+no ip mfib
+ip mrm manager test1
+ip msdp cache
+configure terminal
+ip msdp peer 192.168.1.3 connect
+ip msdp sa
+configure terminal
+ip msdp peer 192.168.1.5 connect
+ip msdp sa
+access
+configure terminal
+int GigabitEthernet0
+ip multicast boundary block source
+enable
+configure terminal
+ip multicast hardware
+enable
+configure terminal
+enable
+configure terminal
+enable
+configure terminal
+ip multicast oif
+ip multicast
+configure terminal
+ip rsvp policy preempt
+ip multicast rsvp mcast
+ip access
+permit 192.0.2.0 0.0.0.255
+configure terminal
+ip msdp peer 192.168.1.2 connect
+ip msdp description 192.168.1.2 router at customer a
+end
+configure terminal
+ip msdp shutdown 192.168.1.3
+end
+configure terminal
+ip msdp password peer 10.32.43.144 0 test
+end
+show ip msdp peer
+configure terminal
+ip msdp sa
+end
+show ip msdp count
+show ip msdp peer
+show ip msdp summary
+configure terminal
+ip msdp keepalive 10.1.1.3 40 55
+end
+configure terminal
+ip msdp timer 45
+end
+configure terminal
+ip msdp rpf rfc3618
+end
+show ip msdp rpf
+configure terminal
+ip msdp default
+end
+configure terminal
+ip msdp mesh
+end
+configure terminal
+ip msdp redistribute route
+end
+configure terminal
+ip msdp sa
+end
+configure terminal
+ip msdp sa
+end
+configure terminal
+ip msdp ttl
+end
+configure terminal
+ip msdp sa
+end
+configure terminal
+ip msdp filter sa
+end
+configure terminal
+ip msdp border sa
+end
+configure terminal
+ip msdp originator
+end
+enable
+debug ip msdp
+debug ip msdp resets
+show ip msdp count
+SA learned
+sources
+show ip msdp peer 192.168.4.4
+show ip msdp sa
+show ip msdp summary
+clear ip msdp peer
+clear ip msdp statistics
+clear ip msdp sa
+snmp
+snmp
+end
+config t
+feature msdp
+show running
+copy running
+config t
+ip msdp peer 192.168.1.10 connect
+show ip msdp summary
+copy running
+config t
+ip msdp description 192.168.1.10 peer in Engineering network
+ip msdp shutdown 192.168.1.10
+ip msdp password 192.168.1.10 my_md5_password
+ip msdp sa
+ip msdp sa
+ip msdp sa
+show ip msdp peer 1.1.1.1
+copy running
+config t
+ip msdp originator
+ip msdp group
+ip msdp sa
+show ip msdp summary
+copy running
+config t
+ip msdp mesh
+show ip msdp summary
+copy running
+restart msdp
+config t
+ip msdp flush
+show running
+copy running
+config tswitch
+config tswitch
+config tswitch
+config tswitch
+configure terminal
+ip msdp default
+prefix
+ip msdp description peer
+show running
+copy running
+configure terminal
+ip msdp cache
+access
+show running
+copy running
+configure terminal
+ip msdp sa
+show running
+copy running
+configure terminal
+ip msdp redistribute list 21
+access list 21 permit 194.1.22.0
+access list 21 permit ip 194.1.22.0 1.1.1.1 194.3.44.0 1.1.1.1
+show running
+copy running
+configure terminal
+ip msdp filter sa
+access
+show running
+copy running
+configure terminal
+ip msdp sa
+ip msdp sa
+ip msdp sa
+access list 100 permit ip 194.1.22.0 1.1.1.1 194.3.44.0 1.1.1.1
+show running
+copy running
+configure terminal
+ip msdp ttl
+show running
+copy running
+configure terminal
+ip msdp sa
+ip msdp sa
+ip msdp sa
+access list 100 permit ip 194.1.22.0 1.1.1.1 194.3.44.0 1.1.1.1
+show running
+copy running
+configure terminal
+ip msdp mesh
+exit
+show running
+copy running
+configure terminal
+ip msdp shutdown 192.168.1.3
+end
+show running
+copy running
+configure terminal
+ip msdp border sa
+ip msdp redistribute list 100
+show running
+copy running
+configure terminal
+ip msdp originator
+exit
+show running
+copy running
+enable
+debug ip msdp
+debug ip msdp resets
+show ip msdp count
+SA learned
+sources
+show ip msdp peer 192.168.4.4
+show ip msdp sa
+show ip msdp summary
+clear  ip  msdp  peer
+clear ip msdp statistics
+clear ip msdp sa
+ip msdp default
+ip msdp default
+ip prefix
+ip msdp default
+ip prefix
+ip msdp cache
+access
+ip msdp sa
+ip msdp filter sa
+access
+ip msdp peer switch.cisco.com connect
+ip msdp sa
+access
+ip msdp peer switch.cisco.com connect
+ip msdp sa
+ip msdp sa
+ip msdp description 192.168.1.10 engineering peer
+no ip msdp description 192.168.1.10
+ip msdp event
+show running
+ip msdp flush
+no ip msdp flush
+ip msdp group
+no ip msdp group
+ip msdp keepalive 192.168.1.10 60 80
+no ip msdp keepalive 192.168.1.10
+ip msdp mesh
+no ip msdp mesh
+ip msdp originator
+no ip msdp originator
+ip msdp password 192.168.1.10 my_password
+no ip msdp password 192.168.1.10
+ip msdp peer 192.168.1.10 connect
+no ip msdp peer 192.168.1.10
+ip msdp reconnect
+no ip msdp reconnect
+show running
+ip msdp sa
+no ip msdp sa
+ip msdp sa
+no ip msdp sa
+ip msdp sa
+no ip msdp sa
+ip msdp sa
+no ip msdp sa
+ip msdp shutdown 192.168.1.10
+no ip msdp shutdown 192.168.1.10
+ip msdp peer 192.168.1.10 connect
+no ip msdp peer 192.168.1.10
+show ip msdp count
+show ip msdp event
+show ip msdp mesh
+show ip msdp peer
+show ip msdp policy statistics sa
+show ip msdp route
+show ip msdp rpf 192.168.1.10
+show ip msdp sa
+show ip msdp sa
+show ip msdp sources
+show ip msdp summary
+show running
+show startup
+configure terminal
+ip msdp peer 192.168.1.5 connect
+ip msdp sa
+access
+ip multicast
+configure terminal
+ip pim spt
+clear ip msdp peer 10.3.32.154
+clear ip msdp sa
+clear ip msdp statistics sanjose
+show ip msdp count
+SA learned
+sources
+show ip msdp peer 192.135.250.116
+show ip msdp sa
+show ip msdp sa
+show ip msdp summary
+ip msdp default
+ip msdp default
+ip prefix
+ip msdp default
+ip prefix
+ip msdp cache
+access
+ip msdp sa
+ip msdp filter sa
+access
+ip msdp peer switch.cisco.com connect
+ip msdp sa
+access
+ip msdp peer switch.cisco.com connect
+ip msdp sa
+show forwarding distribution ip igmp snooping
+show forwarding distribution ipv6 multicast route
+show forwarding distribution multicast
+show forwarding distribution multicast client
+show forwarding distribution multicast outgoing
+show forwarding distribution multicast route
+show forwarding ipv6 multicast route
+show forwarding multicast outgoing
+show forwarding multicast route
+show ip igmp event
+show ip igmp groups
+show ip igmp interface vlan 5
+show ip igmp interface brief
+show ip igmp local
+show ip igmp route
+show ip igmp snooping vlan 1
+show ip igmp snooping event
+show ip igmp snooping explicit
+show ip igmp snooping groups
+show ip igmp snooping mrouter
+show ip igmp snooping querier
+show ip igmp snooping statistics vlan 1
+show ip mroute
+show ip mroute summary
+show ip msdp count
+show ip msdp event
+show ip msdp mesh
+show ip msdp peer
+show ip msdp policy statistics sa
+show ip msdp route
+show ip msdp rpf 192.168.1.10
+show ip msdp sa
+show ip msdp sources
+show ip msdp summary
+show ip netstack mroute
+show ip pim df
+show ip pim event
+show ip pim group
+show ip pim interface ethernet 2
+show ip pim neighbor
+show ip pim oif
+show ip pim policy statistics auto
+show ip pim policy statistics bsr bsr
+show ip pim policy statistics jp
+show ip pim policy statistics neighbor
+show ip pim policy statistics register
+show ip pim route 224.1.1.1
+show ip pim rp
+show ip pim rp
+show ip pim statistics
+show ip pim vrf
+show ipv6 mld groups
+show ipv6 mld local
+show ipv6 mroute
+show ipv6 mroute summary
+show ipv6 pim df
+show ipv6 pim event
+show ipv6 pim group
+show ipv6 pim interface
+show ipv6 pim neighbor
+show ipv6 pim oif
+show ipv6 pim policy statistics jp
+show ipv6 pim policy statistics neighbor
+show ipv6 pim route
+show ipv6 pim rp
+show ipv6 pim rp
+show ip igmp snooping explicit
+show ipv6 pim statistics
+show ipv6 pim vrf
+show routing ip multicast event
+show routing ipv6 multicast
+show routing ipv6 multicast clients icmpv6
+show routing ipv6 multicast event
+show routing multicast
+show routing multicast clients pim
+show running
+show running
+show running
+show running
+show startup
+show startup
+show startup
+show startup
+clear ip msdp peer 192.168.1.10
+ip msdp password 192.168.1.10 my_password
+no ip msdp password 192.168.1.10
+ip msdp description 192.168.1.10 engineering peer
+no ip msdp description 192.168.1.10
+show running
+ip msdp flush
+no ip msdp flush
+ip multicast
+ip pim sparse
+ip vrf vrf
+mdt default group
+ip vrf vrf
+mdt data group
+ip pim
+ip multicast
+ip msdp
+ip multicast route
+show ip msdp peer 224.135.250.116
+show ip msdp summary
+show ip pim mdt bgp
+show ip pim vrf vpn8 mdt receive detail
+show ip pim mdt send
+clear ip igmp group
+clear ip mroute
+clear ip msdp peer
+clear ip msdp sa
+clear ip msdp statistics
+clear ip pim auto
+show ip igmp groups
+show ip igmp interface
+show ip mcache
+show ip mds interface
+show ip mpacket
+show ip mroute
+show ip msdp count
+show ip msdp peer
+show ip msdp sa
+show ip msdp summary
+show ip pim bsr
+show ip pim interface
+show ip pim mdt bgp
+show ip pim mdt receive
+show ip pim mdt send
+show ip pim neighbor
+show ip pim rp
+show ip pim rp
+show ip rpf
+ip vrf blue
+rd 55
+route
+mdt default 239.1.1.1
+mdt data 239.1.2.0 0.0.0.3
+ip pim register
+ip multicast vrf vrf1 cache
+ip multicast vrf vrf2 cache
+show running
+debug ip igmp
+debug ip mcache
+clear ip mroute
+debug ip mpacket 224.2.0.1
+debug ip mrouting 224.2.0.1
+debug ip msdp
+debug ip pim 224.2.0.1
+debug ip pim auto
+debug ip pim auto
+show ip igmp groups
+show ip igmp groups 232.1.1.1 detail
+show ip igmp interface
+show ip mds interface
+show ip mpacket smallgroup
+show ip mroute cbone
+show ip mroute
+show ip mroute 224.1.1.1
+show ip mroute summary
+show ip mroute active
+show ip mroute count
+show ip mroute 232.6.6.6
+show ip msdp count
+SA learned
+sources
+show ip msdp peer 224.135.250.116
+show ip msdp sa
+show ip msdp summary
+show ip pim bsr
+show ip pim interface
+show ip pim interface count
+show ip pim interface count
+show ip pim interface fastethernet 0
+show ip pim mdt bgp
+show ip pim vrf blue mdt history interval 20
+show ip pim vrf vpn8 mdt receive detail
+show ip pim mdt send
+show ip pim neighbor
+show ip pim rp
+show ip pim rp mapping
+show ip pim rp metric
+show ip pim rp
+show ip rpf 172.16.10.13
+show ip rpf 172.16.10.13 metric

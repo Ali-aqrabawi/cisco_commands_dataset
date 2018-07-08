@@ -1,0 +1,215 @@
+configure terminal
+lldp holdtime 120
+lldp reinit 2
+lldp timer 30
+configure terminal
+no lldp receive
+configure terminal
+lldp receive
+configure terminal
+no lldp run
+end
+configure terminal
+lldp run
+configure terminal
+interface GigabitEthernet 1
+lldp transmit
+lldp receive
+configure terminal
+interface GigabitEthernet1
+lldp med
+qQFJ1
+qQFJ1
+configure terminal
+lldp run
+end
+configure terminal
+interface gigabitethernet0
+lldp transmit
+lldp receive
+end
+configure terminal
+lldp holdtime 120
+lldp reinit 2
+lldp timer 30
+end
+configure terminal
+interface gigabitethernet0
+lldp med
+end
+configure terminal
+network
+voice vlan 100 cos 4
+exit
+interface gigabitethernet0
+network
+lldp med
+voice vlan dot1p cos 4
+voice vlan dot1p dscp 34
+location civic
+nmsp enable
+nmsp notification interval location 10
+qQFJ1
+configure terminal
+lldp run
+end
+configure terminal
+no lldp run
+end
+configure terminal
+interface ethernet 0
+no lldp receive
+end
+configure terminal
+interface ethernet 0
+lldp transmit
+end
+configure terminal
+lldp holdtime 100
+end
+configure terminal
+lldp timer 75
+end
+show lldp entry
+clear lldp counters
+end
+configure terminal
+interface ethernet 0
+lldp tlv
+end
+configure terminal
+interface ethernet 0
+no lldp tlv
+end
+configure terminal
+interface ethernet 0
+lldp med
+end
+configure terminal
+interface ethernet 0
+no lldp med
+end
+configure terminal
+location admin
+exit
+interface fastethernet 0
+location civic
+end
+configure terminal
+lldp run
+lldp holdtime 150
+lldp timer 15
+lldp tlv
+lldp tlv
+interface ethernet 0
+show running
+configure terminal
+lldp run
+lldp holdtime 150
+lldp timer 15
+lldp tlv
+lldp tlv
+interface ethernet 0
+show running
+show lldp traffic
+show lldp neighbors
+show lldp traffic
+show lldp neighbors
+qQFJ1
+qQFJ1
+to display the option. If the edit option still does not display
+qQFJ1
+aaa new
+aaa accounting dot1x default start
+radius
+radius
+configure terminal
+device
+end
+configure terminal
+device
+tlv number 10
+end
+configure terminal
+device
+tlv number 10
+end
+configure terminal
+device
+option number 50
+end
+configure terminal
+device
+end
+configure terminal
+device
+end
+device
+show device
+show device
+configure terminal
+device
+tlv name address
+tlv name device
+tlv number 34
+configure terminal
+device
+tlv name chassis
+tlv name management
+tlv number 28
+configure terminal
+device
+option name domain
+option name host
+option number 50
+configure terminal
+device
+configure terminal
+device
+aaa new
+aaa accounting dot1x default start
+radius
+radius
+configure terminal
+device
+configure terminal
+device
+configure terminal
+device
+option name domain
+option name host
+option number 50
+configure terminal
+device
+tlv name address
+tlv name device
+tlv number 34
+configure terminal
+device
+configure terminal
+device
+tlv name address
+tlv name device
+tlv number 34
+show device
+show device
+debug device
+configure terminal
+lldp holdtime 120
+lldp reinit 2
+lldp timer 30
+configure terminal
+no lldp run
+end
+configure terminal
+lldp run
+configure terminal
+interface GigabitEthernet1
+no shutdown
+port
+lldp transmit
+lldp receive
+configure terminal
+interface GigabitEthernet1
+lldp med
+show vstack config Role

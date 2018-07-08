@@ -1,0 +1,446 @@
+configure terminal
+router rip
+network 10.1.1.0
+neighbor 10.1.1.2
+offset
+timers basic 1 2 3 4
+configure terminal
+router rip
+version 2
+exit
+interface Ethernet 3
+ip rip send version 2
+ip rip receive version 2
+ip rip authentication key
+ip rip authentication mode md5
+interface Ethernet 1
+ip summary
+configure terminal
+interface Ethernet 3
+ip summary
+exit
+router rip
+no auto
+configure terminal
+interface Ethernet 3
+ip split
+no ip split
+configure terminal
+interface Ethernet 3
+ip split
+exit
+router rip
+no validate
+configure terminal
+interface Ethernet 3
+exit
+router rip
+output
+configure terminal
+interface serial3
+ip rip triggered
+show ip rip database
+configure terminal
+router rip
+network 192.168.0.0
+version 2
+no auto
+configure terminal
+interface serial3
+no ip address
+encapsulation frame
+frame
+exit
+interface serial3
+frame
+configure terminal
+key chain rip
+key 123456
+exit
+exit
+interface serial 3
+no cdp enable
+ip address 172.16.10.1 255.255.255.0
+ip rip authentication mode md5
+ip rip authentication key
+ip rip initial
+interface Serial 0
+encapsulation x25
+no ip split
+router rip
+version 2
+timers basic 5 10 15 20
+redistribute connected
+network 5.0.0.0
+default
+no auto
+address
+timers basic 10 20 20 20
+redistribute connected
+network 10.0.0.0
+default
+no auto
+version 2
+exit
+address
+timers basic 20 40 60 80
+redistribute connected
+network 20.0.0.0
+default
+no auto
+version 2
+exit
+address
+redistribute connected
+network 20.0.0.0
+default
+no auto
+version 2
+exit
+configure terminal
+ipv6 unicast
+interface Ethernet 0
+ipv6 enable
+ipv6 rip process1 enable
+configure terminal
+ipv6 router rip process1
+maximum
+exit
+interface Ethernet 0
+ipv6 rip process1 default
+configure terminal
+interface Ethernet 0
+ipv6 router one enable
+redistribute bgp 65001 route
+configure terminal
+route
+match ipv6 address prefix
+set tag 4
+configure terminal
+ipv6 prefix
+ipv6 prefix
+ipv6 router rip process1
+distribute
+debug ipv6 rip
+debug ipv6 rip
+configure terminal
+interface cable
+ip address 10.5.5.5 255.255.255.0
+service
+exit
+router rip
+version 2
+no validate
+network 10.0.0.0
+configure terminal
+interface cable
+ip address 10.5.5.5 255.255.255.0
+service
+no ip split
+exit
+router rip
+version 2
+no validate
+network 10.0.0.0
+show running
+configure terminal
+snmp
+configure terminal
+ipv6 unicast
+interface gigabitethernet 0
+ipv6 rip process1 enable
+configure terminal
+ipv6 router rip process1
+maximum
+exit
+interface gigabitethernet 0
+ipv6 rip process1 default
+debug ipv6 rip
+configure terminal  switch
+feature rip
+show feature
+copy running
+no feature rip
+configure terminal  switch
+router RIP Enterprise  switch
+address
+show ip rip
+copy running
+no router rip Enterprise
+distance 30
+maximum
+ configure terminal
+ router rip Enterprise
+ address
+ max
+ copy running
+restart rip Enterprise
+configure terminal  switch
+interface ethernet 1
+ip router rip Enterprise
+show ip rip Enterprise tethernet 1
+copy running
+ configure terminal
+ interface ethernet 1
+ ip router rip Enterprise
+ copy running
+configure terminal  switch
+interface ethernet 1
+ip rip authentication mode md5
+ip rip authentication keychain RIPKey
+copy running
+ configure terminal
+ key chain RIPKey
+ key
+ accept
+ send
+ interface ethernet 1
+ ip rip authentication mode md5
+ ip rip authentication keychain RIPKey
+ copy running
+ip rip passive
+ip rip poison
+ip router rip summary
+configure terminal  switch
+router rip Enterprise  switch
+address
+redistribute eigrp 201 route
+default
+distribute level
+show ip rip route
+copy running
+ configure terminal
+ router rip Enterprise
+ address
+ redistribute eigrp 201 route
+ copy running
+configure terminal  switch
+vrf RemoteOfficeVRF  switch
+exit  switch
+router rip Enterprise  switch
+vrf context RemoteOfficeVRF  switch
+address
+redistribute eigrp 201 route
+interface ethernet 1
+vrf member RemoteOfficeVRF
+ip address 192.0.2.1
+ip router rip Enterprise
+show ip rip Enterprise ethernet 1
+copy running
+ configure terminal
+ vrf context RemoteOfficeVRF
+ exit
+ router rip Enterprise
+ vrf RemoteOfficeVRF
+ address
+ redistribute eigrp 201 route
+ interface ethernet 1
+ vrf member RemoteOfficeVRF
+ ip address 192.0.2.1
+ ip router rip Enterprise
+ copy running
+timers basic 40 120 120 100
+ip rip metric
+ip rip route
+configure terminal
+router rip
+network 10.1.1.0
+neighbor 10.1.1.2
+offset
+timers basic 1 2 3 4
+end
+configure terminal
+router rip
+version 2
+exit
+interface Ethernet 3
+ip rip send version 2
+ip rip receive version 2
+ip rip authentication key
+ip rip authentication mode md5
+end
+configure terminal
+interface serial 0
+ip split
+no ip split
+end
+configure terminal
+interface serial 0
+ip split
+exit
+router rip
+no validate
+end
+configure terminal
+router rip
+network 10.1.1.0
+neighbor 10.1.1.2
+offset
+timers basic 1 2 3 4
+configure terminal
+router rip
+version 2
+exit
+interface Ethernet 3
+ip rip send version 2
+ip rip receive version 2
+ip rip authentication key
+ip rip authentication mode md5
+end
+configure terminal
+interface Serial 0
+no ip split
+configure terminal
+interface serial 0
+ip split
+exit
+router rip
+no validate
+end
+version 2
+timers basic 5 10 15 20
+redistribute connected
+network 5.0.0.0
+default
+no auto
+address
+timers basic 10 20 20 20
+redistribute connected
+network 10.0.0.0
+default
+no auto
+version 2
+exit
+address
+timers basic 20 40 60 80
+redistribute connected
+network 20.0.0.0
+default
+no auto
+version 2
+exit
+address
+redistribute connected
+network 20.0.0.0
+default
+no auto
+version 2
+exit
+configure
+router rip
+neighbor 172.160.1.2
+broadcast
+interface GigabitEthernet 0
+receive version 1 2
+send version 1 2
+commit
+configure
+router rip
+auto
+timers basic 5 15 15 30
+output
+nsf
+interface GigabitEthernet 0
+metro
+split
+poison
+commit
+configure
+router rip
+neighbor 172.160.1.2
+interface GigabitEthernet 0
+passive
+exit
+interface GigabitEthernet 0
+route
+commit
+configure
+route
+set rip metric 42
+end  or  RP
+configure
+router rip
+route
+end  or  RP
+show ip rip database 172.19.86.0 255.255.255.0
+interface gigabitEthernet 0
+ip summary
+interface gigabitEthernet 0
+ip summary
+ip summary
+configure terminal
+interface gigabitEthernet 0
+ip summary
+exit
+router rip
+no auto
+end
+configure terminal
+router rip
+version 1
+exit
+interface gigabitEthernet 0
+ip rip send version 1
+ip rip receive version 1
+ip rip authentication key
+ip rip authentication mode md5
+end
+configure terminal
+interface serial 0
+ip split
+exit
+router rip
+no validate
+end
+configure terminal
+ipv6 unicast
+vrf definition vrf1
+address
+exit
+exit
+ipv6 rip vrf
+ipv6 router rip myrip
+exit
+interface Ethernet 0
+vrf forwarding vrf1
+ipv6 enable
+ipv6 rip myrip enable
+debug ipv6 rip vrf vrf1
+show ipv6 rip vrf vrf1 next
+show ipv6 rip vrf vrf1 database
+configure terminal
+ipv6 unicast
+vrf definition vrf1
+address
+exit
+exit
+ipv6 rip vrf
+ipv6 router rip myrip
+exit
+interface Ethernet 0
+vrf forwarding vrf1
+ipv6 enable
+ipv6 rip myrip enable
+configure terminal
+interface gigabitethernet 0
+ipv6 router one enable
+redistribute bgp 65001 route
+configure terminal
+route
+match ipv6 address prefix
+set tag 4
+configure terminal
+ipv6 prefix
+ipv6 prefix
+ipv6 router rip process1
+distribute
+show ip rip database vrf vrf101
+show ip bgp vpnv4 vrf vrf101
+show ip route vrf vrf101
+show ip route
+show tag
+ping 6.6.6.6
+debug ip icmp
+configure terminal
+snmp
+end

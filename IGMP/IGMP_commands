@@ -1,0 +1,393 @@
+configure terminal
+interface
+ip igmp
+show ip igmp interface
+copy running
+configure terminal
+ip igmp profile 10
+exit
+interface
+ip igmp filter 10
+show ip igmp interface
+configure terminal
+interface
+ip igmp
+end
+show ip igmp interface
+copy running
+configure terminal
+interface
+ip igmp
+show ip igmp interface
+copy running
+configure terminal
+interface
+ip igmp
+show ip igmp interface
+copy running
+configure terminal
+interface
+ip igmp static
+show ip igmp interface
+copy running
+configure terminal
+ip igmp profile 3
+permit
+range 229.9.9.0
+show ip igmp profile 3
+copy running
+configure terminal
+interface gigabitethernet1
+ip igmp filter 321
+show running
+copy running
+configure terminal
+interface gigabitethernet1
+ip igmp max
+show running
+copy running
+configure terminal
+interface gigabitethernet 1
+ip igmp max
+show running
+copy running
+configure terminal
+ip igmp snooping
+copy running
+configure terminal
+ip igmp snooping vlan 7
+copy running
+configure terminal
+ip igmp snooping
+show ip igmp snooping
+copy running
+configure terminal
+ip igmp snooping vlan 5 mrouter interface gigabitethernet1
+show ip igmp snooping mrouter vlan 5
+copy running
+configure terminal
+ip igmp snooping vlan 105 static 230.0.0.1 interface gigabitethernet1
+show ip igmp snooping groups
+copy running
+configure terminal
+ip igmp snooping vlan 21 immediate
+show ip igmp snooping vlan 21
+copy running
+configure terminal
+ip igmp snooping last
+ip igmp snooping vlan 210 last
+show ip igmp snooping
+copy running
+configure terminal
+ip igmp snooping
+show ip igmp snooping
+copy running
+configure terminal
+ip igmp snooping last
+show ip igmp snooping
+copy running
+configure terminal
+ip igmp snooping tcn flood query count 3
+show ip igmp snooping
+copy running
+configure terminal
+ip igmp snooping tcn query solicit
+show ip igmp snooping
+copy running
+configure terminal
+interface gigabitethernet 1
+no ip igmp snooping tcn flood
+show ip igmp snooping
+copy running
+configure terminal
+ip igmp snooping querier
+ip igmp snooping querier address 172.16.24.1
+ip igmp snooping querier query
+ip igmp snooping querier tcn query interval 20
+ip igmp snooping querier timer expiry 180
+ip igmp snooping querier version 2
+show ip igmp snooping vlan 30
+copy running
+configure terminal
+no ip igmp snooping report
+show ip igmp snooping
+copy running
+interface gigabitethernet1
+ip igmp join
+configure terminal
+ip igmp profile 10
+range 172.16.5.1
+exit
+interface gigabitEthernet 2
+ip igmp filter 10
+configure terminal
+ip igmp snooping vlan 200 mrouter interface gigabitethernet1
+configure terminal
+ip igmp snooping vlan 105 static 224.2.4.12 interface gigabitethernet1
+configure terminal
+ip igmp snooping vlan 130 immediate
+configure terminal
+ip igmp snooping querier 10.0.0.64
+configure terminal
+ip igmp snooping querier query
+configure terminal
+ip igmp snooping querier timeout expiry 60
+configure terminal
+no ip igmp snooping querier version 2
+ip igmp profile 4
+permit
+range 229.9.9.0
+show ip igmp profile 4
+interface gigabitethernet1
+ip igmp filter 4
+interface gigabitethernet1
+ip igmp max
+ interface GigabitEthernet1
+description interface to be use as routed port
+no switchport
+ip address 20.20.20.1 255.255.255.0
+ip pim sparse
+ip igmp join
+configure terminal
+show run interface gigabitEthernet 1
+interface vlan 150
+ip address 20.20.20.1 255.255.255.0
+ip pim sparse
+ip igmp join
+configure terminal
+ ip igmp snooping vlan 20 static 224.1.2.3
+show run interface vlan 150
+cqFHzRƲ
+configure terminal
+ip igmp snooping vlan 1 mrouter learn cgmp
+end
+configure terminal
+ip igmp snooping vlan 200 mrouter interface gigabitethernet0
+configure terminal
+ip igmp snooping vlan 105 static 224.2.4.12 interface gigabitethernet0
+configure terminal
+ip igmp snooping vlan 130 immediate
+configure terminal
+ip igmp snooping querier 10.0.0.64
+configure terminal
+ip igmp snooping querier query
+configure terminal
+ip igmp snooping querier timeout expiry 60
+configure terminal
+no ip igmp snooping querier version 2
+mvr group 228.1.23.4
+mvr querytime 10
+mvr vlan 22
+mvr mode dynamic
+end
+interface gigabitethernet1
+mvr type receiver
+mvr vlan 22 group 228.1.23.4
+mvr immediate
+end
+show mvr interface
+ip igmp profile 4
+permit
+range 229.9.9.0
+show ip igmp profile 4
+interface gigabitethernet0
+ip igmp filter 4
+interface gigabitethernet0
+ip igmp max
+configure terminal
+interface gigabitethernet 1
+ip igmp join
+ip igmp static
+show ip igmp interface
+configure terminal
+ip multicast
+ip pim ssm default
+ip access
+deny igmp host 10.1.2.3 any
+permit igmp any any
+exit
+interface ethernet 0
+ip igmp access
+ip pim sparse
+ip igmp version 3
+configure terminal
+interface gigabitethernet 1
+ip igmp unidirectional
+configure terminal
+interface gigabitethernet 0
+ip igmp unidirectional
+exit
+interface gigabitethernet 1
+ip igmp mroute
+exit
+interface loopback 0
+ip igmp helper
+ip igmp proxy
+show ip igmp interface
+show ip igmp udlr
+WbfWJ9g8W
+ ip igmp snooping querier
+ vlan configuration  vlan_ID
+ ip igmp snooping querier address  ip_address
+ ip igmp snooping querier
+ end
+ip igmp snooping querier
+vlan configuration 200
+ip igmp snooping querier address 10.1.1.1
+igmp snooping querier
+end
+ ip igmp snooping
+ end
+ip igmp snooping
+end
+show ip igmp interface vlan 200 | include globally
+ vlan configuration  vlan_ID
+ ip igmp snooping
+ end
+vlan configuration 25
+ip igmp snooping
+end
+show ip igmp snooping vlan 25
+ multicast snooping lookup
+ mac address
+mac address
+vlan configuration 200
+ip igmp snooping static 224.1.2.3 interface g3
+ip igmp snooping static 224.1.2.3 source 20.1.1.1 interface Gi3
+ ip igmp snooping mrouter interface  type slot
+ end
+ip igmp snooping mrouter interface gigabitethernet 5
+ vlan configuration  vlan_ID
+ ip igmp snooping last
+ip igmp snooping last
+exit
+show ip igmp interface vlan 200 | include last
+ vlan configuration  vlan_ID
+ ip igmp snooping
+ ip igmp snoopin  g immediate
+interface vlan 200
+ip igmp snooping
+ip igmp snooping immediate
+end
+show ip igmp interface vlan 200 | include immediate
+ vlan configuration  vlan_ID
+ ip igmp snooping explicit
+ip igmp snooping explicit
+show ip igmp snooping vlan 200
+ip igmp snooping static 224.1.2.3 source 10.1.1.1 interface Gi3
+show ip igmp snooping groups vlan 200
+ show ip igmp snooping vlan    vlan_ID
+show ip igmp snooping vlan 200
+ show mac address
+show mac address
+show mac address
+ show ip igmp interface  vlan_ID
+show ip igmp interface vlan 43
+interface ethernet 2
+ip igmp immediate
+interface ethernet 2
+no ip igmp immediate
+configure
+ipv4 access
+router igmp
+interface GigE 0
+access
+configure
+ipv4 access
+router igmp
+interface GigE 0
+access
+configure
+ipv6 access
+10 permit ipv6 any host ff3e
+exit
+router mld
+access
+show igmp traffic
+clear igmp counters
+show igmp traffic
+show igmp groups tenGigE 0
+clear igmp groups tenGigE 0
+show igmp groups tenGigE 0
+clear igmp reset
+clear mld counters
+clear mld group pos 0
+clear igmp mld reset
+router igmp
+explicit
+interface GigabitEthernet 0
+explicit
+router igmp
+interface GigabitEthernet 0
+join
+show igmp summary
+configure
+router igmp
+maximum groups 10
+commit
+show configuration failed
+configure
+router igmp
+maximum groups 65
+commit
+show igmp summary
+show igmp summary
+configure
+router igmp
+maximum groups
+commit
+show igmp summary
+configure
+router igmp
+maximum groups
+interface POS 0
+maximum groups
+router igmp
+nsf lifetime 120
+router igmp
+interface gigabitEthernet
+query
+router igmp
+interface gigabitEthernet 0
+query
+router igmp
+interface gigabitEthernet 0
+query
+configure
+router igmp
+robustness
+router igmp
+interface gigabitEthernet 0
+router enable
+router igmp
+router mld
+show igmp groups tenGigE 0
+show igmp interface
+show igmp nsf
+show igmp summary
+show igmp ssm map 232.1.1.1
+show igmp traffic
+show mld groups
+show mld interface
+show mld nsf
+show mld ssm map 2001
+show mld summary
+show mld traffic
+configuration
+router igmp
+ssm map static 10.0.0.1 mc2
+router igmp
+interface GigE 0
+static
+router igmp
+version 3
+router igmp
+vrf
+interface ethernet 2
+ip igmp join
+interface ethernet 2
+no ip igmp join
+show cdp neighbor
+show ip igmp snooping vlan 159
+debug ip igmp snooping vlan
+module vem 3 execute vemcmd show vlan 159

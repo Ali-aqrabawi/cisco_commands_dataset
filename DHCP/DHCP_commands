@@ -1,0 +1,268 @@
+show running
+show running
+sh running
+configure terminal
+ip dhcp relay bootp ignore
+configure terminal
+ip dhcp relay prefer known
+interface Ethernet0
+ip dhcp relay information option server
+configure terminal
+interface FastEthernet 0
+ip dhcp relay information policy
+configure terminal
+interface Ethernet0
+ip dhcp relay information policy
+ip dhcp
+interface loopback 0
+ip address 10.2.2.1 255.255.255.0
+interface Ethernet 0
+ip dhcp server use subscriber
+ip dhcp snooping
+no ip dhcp snooping
+ip dhcp snooping binding 0001.1234.1234 vlan 1 172.20.50.5 interface gi1
+ip dhcp snooping database tftp
+ip dhcp snooping database write
+ip dhcp snooping detect spurious vlan 3
+ip dhcp snooping detect spurious interval
+show ip dhcp snooping detect spurious
+show ip dhcp snooping detect spurious entry
+clear ip dhcp snooping detect spurious entry
+show ip dhcp snooping detect spurious
+sh ip dhcp sn det sp en
+ip dhcp snooping detect spurious interval 350
+ip dhcp snooping detect spurious vlan 3
+configure terminal
+ip dhcp snooping glean
+interface gigabitEthernet 1
+ip dhcp snooping trust
+ip dhcp snooping limit rate 150
+no ip dhcp snooping limit rate
+configure terminal
+template user
+ip dhcp snooping limit rate 150
+ip dhcp snooping packets
+no ip dhcp snooping packets
+ip dhcp snooping verify mac
+no ip dhcp snooping verify mac
+ip dhcp snooping vlan 10
+no ip dhcp snooping vlan 10
+ip dhcp snooping vlan 10
+no ip dhcp snooping vlan 10
+ip dhcp use subscriber
+ip dhcp subscriber
+ip dhcp excluded
+ip dhcp pool dhcppool
+network 10.1.1.0 255.255.255.0
+address 10.1.1.7 client
+configure terminal
+ip dhcp support option55
+ip dhcp support tunnel unicast
+ip dhcp use class
+no ip dhcp use vrf connected
+ip dhcp use subscriber
+ip dhcp subscriber
+ip dhcp excluded
+ip dhcp pool dhcppool
+network 10.1.1.0 255.255.255.0
+address 10.1.1.7 client
+ip dhcp
+clear ip dhcp snooping binding
+clear ip dhcp snooping binding vlan 23 mac 0060.3aeb.54f0 ip 10.34.54.9 interface ethernet 2
+configure terminal
+ip dhcp database ftp
+no ip dhcp conflict logging
+configure terminal
+ip dhcp excluded
+prompt
+configure terminal
+ip dhcp pool 1
+utilization mark high 80 log
+utilization mark low 70 log
+network 172.16.0.0
+domain
+dns server 172.16.1.103 172.16.2.103
+bootfile xllboot
+next
+netbios
+netbios
+default
+option 19 hex 01
+lease 30
+configure terminal
+ip dhcp pool 1
+utilization mark high 80 log
+utilization mark low 70 log
+network 172.16.0.0
+domain
+dns server 172.16.1.103 172.16.2.103
+bootfile xllboot
+next
+netbios
+netbios
+default
+option 19 hex 01
+lease 30
+network 10.10.0.0 255.255.0.0 secondary
+prompt. In this mode
+override default
+override utilization high 60
+override utilization low 40
+show ip dhcp pool
+show ip dhcp binding
+show ip dhcp conflict
+show ip dhcp database
+show ip dhcp server statistics
+configure terminal
+ip dhcp pool pool1
+host 172.16.0.1
+client
+hardware
+client
+debug ip dhcp server packet
+configure terminal
+ip dhcp pool pool1
+origin file tftp
+show ip dhcp binding
+show ip dhcp binding
+debug ip dhcp server
+configure terminal
+ip dhcp ping packets 5
+ip dhcp ping timeout 850
+ip dhcp bootp ignore
+configure terminal
+ip dhcp pool 1
+network 172.16.0.0
+dns server 172.16.1.103 172.16.2.103
+configure terminal
+ip dhcp pool pool1
+network 172.30.0.0
+import all
+exit
+interface FastEthernet 0
+ip address dhcp
+show ip dhcp import
+configure terminal
+ip dhcp use class
+configure terminal
+ip dhcp class CLASS1
+relay agent information
+relay
+configure terminal
+ip dhcp pool ABC
+network 10.0.20.0
+class CLASS1
+address range 10.0.20.1 10.0.20.100
+configure terminal
+ip route 192.168.1.1 255.255.255.255 192.168.2.2 dhcp
+show ip route
+clear ip dhcp binding
+clear ip dhcp conflict 172.16.1.103
+clear ip dhcp server statistics
+configure terminal
+ip sla 10
+dhcp 10.10.10.3
+frequency 30
+end
+configure terminal
+ip sla 10
+dhcp 10.10.10.3
+history buckets
+history distributions
+history filter failures
+frequency 30
+history hours
+history lives
+owner admin
+history statistics
+tag TelnetPollServer1
+threshold 10000
+timeout 10000
+configure terminal
+ip sla schedule 10 life forever start
+ip sla group schedule 10 schedule
+ip sla group schedule 1 3
+ip sla schedule 1 3
+show ip sla group schedule
+show ip sla configuration
+ip dhcp snooping
+no ip dhcp snooping
+do show ip dhcp snooping |
+configure terminal
+ip dhcp snooping
+do how ip dhcp snooping | include Switch
+ip dhcp snooping information
+no ip dhcp snooping information
+do show ip dhcp snooping |
+configure terminal
+no ip dhcp snooping information option
+do show ip dhcp snooping | include 82
+configure terminal
+ip dhcp snooping information option
+do show ip dhcp snooping | include 82
+ip dhcp snooping information
+no ip dhcp snooping information
+do show ip dhcp snooping
+configure terminal
+ip dhcp snooping information option allow
+ip dhcp snooping verify
+no ip dhcp snooping verify
+do show ip dhcp snooping |
+no ip dhcp snooping verify mac
+do show ip dhcp snooping | include hwaddr
+ip dhcp snooping verify mac
+do show ip dhcp snooping | include hwaddr
+ip dhcp snooping vlan
+no ip dhcp snooping
+do show ip dhcp snooping
+configure terminal
+ip dhcp snooping vlan 10 12
+configure terminal
+ip dhcp snooping vlan 10
+configure terminal
+ip dhcp snooping vlan 10
+configure terminal
+ip dhcp snooping vlan 10
+do show ip dhcp snooping
+interface
+ip dhcp snooping trust
+no ip dhcp snooping trust
+do show ip dhcp snooping |
+configure terminal
+interface FastEthernet 5
+ip dhcp snooping trust
+do show ip dhcp snooping | begin pps
+configure terminal
+interface FastEthernet 5
+no ip dhcp snooping trust
+do show ip dhcp snooping | begin pps
+interface
+ip dhcp snooping limit rate
+no ip dhcp snooping limit rate
+do show ip dhcp snooping |
+configure terminal
+interface FastEthernet 5
+ip dhcp snooping limit rate 100
+do show ip dhcp snooping | begin pps
+configure terminal
+ip dhcp snooping database tftp
+end
+show ip dhcp snooping database detail
+show ip dhcp snooping database
+renew ip dhcp snoop data url
+show ip dhcp snoop data
+show ip dhcp snoop bind
+show ip dhcp snooping database
+renew ip dhcp snoop data tftp
+show ip dhcp snoop data
+show ip dhcp snoop bind
+clear ip dhcp snoop bind
+show ip dhcp snoop bind
+show ip dhcp snooping binding
+ip dhcp snooping binding binding_id vlan
+show ip dhcp snooping binding
+show ip dhcp snooping binding
+ip dhcp snooping binding 1.1.1 vlan 1 1.1.1.1 interface gi1
+show ip dhcp snooping binding
+show ip dhcp snooping binding
+
