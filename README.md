@@ -2,8 +2,8 @@
 
 this reprositry contain cisco commands dataset , 
 all commands were collected from the following sites :
-	1) www.cisco.com
-	2) www.supportforums.cisco.com
+- www.cisco.com
+- www.supportforums.cisco.com
 
 the perpose of this dataset is to do machine learning stuff on cisco commands . 
 
